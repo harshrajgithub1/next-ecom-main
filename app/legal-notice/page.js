@@ -1,18 +1,21 @@
+import Link from 'next/link'
 import React from 'react'
 
-const ServicesDetails = () => {
+const LegalNotice = () => {
   return (
     <div>
-      <section className="banner" style="background-image:url(assets/img/banner1.jpg)">
+      
+      <section className="banner" 
+    //   style="background-image:url(assets/img/banner6.jpg)"
+    >
     <div className="container">
         <div className="row">
             <div className="col-md-12">
                 <div className="banner-caption">
-                    <h3>Service Details</h3>
-
+                    <h3>Legal Notice</h3>
                     <ul className="breadcrumb">
-                        <li><a href="index.php">Start</a></li>
-                        <li>Service Details</li>
+                        <li><Link href="/">Start</Link></li>
+                        <li>Legal Notice</li>
                     </ul>
                 </div>
             </div>
@@ -24,4 +27,4 @@ const ServicesDetails = () => {
   )
 }
 
-export default ServicesDetails
+export default LegalNotice

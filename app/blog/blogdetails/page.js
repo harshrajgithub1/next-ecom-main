@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const BlogDetails = () => {
@@ -14,7 +15,7 @@ const BlogDetails = () => {
                 <h3>Blog Details</h3>
                 <ul className="breadcrumb">
                   <li>
-                    <a href="index.php">Start</a>
+                    <Link href="/">Start</Link>
                   </li>
                   <li>Blog Details</li>
                 </ul>

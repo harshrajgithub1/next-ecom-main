@@ -1,5 +1,6 @@
-import React from "react";
 import Link from 'next/link';
+import React from "react";
+
 
 const Contact = () => {
   return (
@@ -15,8 +16,7 @@ const Contact = () => {
                 <h3>Contact us</h3>
                 <ul className="breadcrumb">
                   <li>
-                    <a href="/">Start</a>
-                  </li>
+                    <Link href="/">Start</Link></li>
                   <li>Contact us</li>
                 </ul>
               </div>

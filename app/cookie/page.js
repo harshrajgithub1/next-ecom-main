@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Cookies = () => {
@@ -10,7 +11,7 @@ const Cookies = () => {
             <div className="banner-caption">
               <h3>Cookie Policy</h3>
               <ul className="breadcrumb">
-                <li><a href="/">Start</a></li>
+                <li><Link href="/">Start</Link></li>
                 <li>Cookie Policy</li>
               </ul>
             </div>

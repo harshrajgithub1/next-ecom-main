@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Contractors = () => {
@@ -5,7 +6,9 @@ const Contractors = () => {
     <div>
       
 
-      <section class="banner" style="background-image:url(assets/img/banner1.jpg)">
+      <section class="banner" 
+    //   style="background-image:url(assets/img/banner1.jpg)"
+      >
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -13,7 +16,7 @@ const Contractors = () => {
 					<h3>Contractors</h3>
 
 					<ul class="breadcrumb">
-						<li><a href="index.php">Start</a></li>
+						<li><Link href="/">Start</Link></li>
 						<li>Contractors</li>
 					</ul>
 				</div>

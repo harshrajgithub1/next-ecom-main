@@ -1,20 +1,21 @@
+
 import React from "react";
 
 const Impressum = () => {
   return (
     <div>
       <section
-        class="banner"
-        style="background-image:url(assets/img/banner6.jpg)"
+        className="banner"
+        // style="background-image:url(/assets/img/banner6.jpg)"
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="banner-caption">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="banner-caption">
                 <h3>Impressum</h3>
-                <ul class="breadcrumb">
+                <ul className="breadcrumb">
                   <li>
-                    <a href="index.php">Start</a>
+                    <a href="/">Start</a>
                   </li>
                   <li>Impressum</li>
                 </ul>
@@ -26,35 +27,35 @@ const Impressum = () => {
 
       <section
         id="cookies-page"
-        class="gr--whitesmoke pb-80 inner-page-hero division"
+        className="gr--whitesmoke pb-80 inner-page-hero division"
       >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10">
-              <div class="inner-page-title">
-                <h2 class="s-52">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-10">
+              <div className="inner-page-title">
+                <h2 className="s-52">
                   Impressum <span>für Trisfusa</span>
                 </h2>
-                <p class="p-lg">Verantwortlich für den Inhalt:</p>
+                <p className="p-lg">Verantwortlich für den Inhalt:</p>
               </div>
-              <div class="txt-block legal-info">
-                <h5 class="s-24 w-700">
+              <div className="txt-block legal-info">
+                <h5 className="s-24 w-700">
                   Arthur Peter Lorenzen Smarthomeconsulting Bachtelstrasse 68
                   8342 Wernetshausen Schweiz
                 </h5>
 
-                <ul class="simple-list">
-                  <li class="list-item">
+                <ul className="simple-list">
+                  <li className="list-item">
                     <p>
                       <strong>Telefon:</strong> 0789600300 / 044 938 07 15
                     </p>
                   </li>
-                  <li class="list-item">
+                  <li className="list-item">
                     <p>
                       <strong>E-Mail:</strong> info@smarthomeconsulting.ch
                     </p>
                   </li>
-                  <li class="list-item">
+                  <li className="list-item">
                     <p>
                       <strong>E-UID:</strong> CHE-324.168.761
                       Handelsregistereintrag: 22698

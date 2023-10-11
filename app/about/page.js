@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const About = () => {
@@ -10,7 +11,7 @@ const About = () => {
             <div className="banner-caption">
               <h3>About us</h3>
               <ul className="breadcrumb">
-                <li><a href="index.php">Start</a></li>
+                <li><Link href="/">Start</Link></li>
                 <li>About us</li>
               </ul>
             </div>

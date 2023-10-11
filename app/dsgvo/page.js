@@ -1,23 +1,23 @@
+import Link from "next/link";
 import React from "react";
 
-const PrivacyPolicy = () => {
+const Dsgvo = () => {
   return (
     <div>
       <section
-        class="banner"
-        style="background-image:url(assets/img/banner1.jpg)"
+        className="banner"
+        // style="background-image:url(assets/img/banner6.jpg)"
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="banner-caption">
-                <h3>Privicy Policy</h3>
-
-                <ul class="breadcrumb">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="banner-caption">
+                <h3>DSGVO</h3>
+                <ul className="breadcrumb">
                   <li>
-                    <a href="index.php">Start</a>
+                    <Link href="/">Start</Link>
                   </li>
-                  <li>Privicy Policy</li>
+                  <li>DSGVO</li>
                 </ul>
               </div>
             </div>
@@ -26,23 +26,48 @@ const PrivacyPolicy = () => {
       </section>
 
       <section
-        id="privacy-page"
-        class="gr--whitesmoke pb-80 inner-page-hero division"
+        id="cookies-page"
+        className="gr--whitesmoke pb-80 inner-page-hero division"
       >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10">
-              <div class="inner-page-title">
-                <h2 class="s-52">
-                  Privacy and <span>Policy</span>
-                </h2>
-                <p class="p-lg">
-                  This policy is effective as of 11th November 2022
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-10">
+              <div className="inner-page-title">
+                <h2 className="s-52">DSGVO</h2>
+                <p className="p-lg">
+                  This policy is effective as of 2th March 2022
                 </p>
               </div>
-              <div class="txt-block legal-info">
-                <h4 class="s-30 w-700">
-                  <span>1.</span> Introduction
+              <div className="txt-block legal-info">
+                <p>
+                  Integer congue sagittis augue egestas{" "}
+                  <a href="#" className="color--theme">
+                    Global Privacy Policy
+                  </a>{" "}
+                  nec suscipit egestas magna undo aliquam ipsum vitae purus
+                  justo lacus ligula ipsum primis cubilia donec undo augue
+                  luctus vitae egestas a molestie donec libero
+                  <a href="#" className="color--theme">
+                    Privacy Policy
+                  </a>{" "}
+                  tempor undo quisque fusce a cursus neque diam augue fusce
+                  sapien nulla a primis lacinia ipsum a molestie blandit and
+                  justo an aliquet eget molestie cursus quaerat
+                </p>
+                <p>
+                  Sagittis congue augue egestas integer velna purus purus magna
+                  nec suscipit and egestas magna aliquam ipsum vitae purus justo
+                  lacus ligula ipsum primis cubilia donec undo augue luctus
+                  vitae egestas a molestie donec{" "}
+                  <a href="#" className="color--theme">
+                    https://Trisfusa.com/software
+                  </a>{" "}
+                  undo quisque fusce cursus neque blandit fusce an aliquam nulla
+                  lacinia justo molestie blandit justo diam aliquet tortor non
+                  molestie sagittis lacinia
+                </p>
+                <h4 className="s-30 w-700">
+                  <span>1.</span> What is a Cookie?
                 </h4>
                 <p>
                   Sagittis congue augue egestas integer velna purus purus magna
@@ -64,11 +89,11 @@ const PrivacyPolicy = () => {
                   aliquam nulla lacinia justo molestie blandit justo diam
                   aliquet tortor molestie non sagittis lacinia
                 </p>
-                <h4 class="s-30 w-700">
-                  <span>2.</span> Personal Information We Collect
+                <h4 className="s-30 w-700">
+                  <span>2.</span> What Types of Cookies Are There?
                 </h4>
-                <h5 class="s-24 w-700">
-                  <span>2.1.</span> Information you provide to us
+                <h5 className="s-24 w-700">
+                  <span>2.1.</span> Essential cookies
                 </h5>
                 <p>
                   Congue augue sagittis egestas integer velna purus purus magna
@@ -76,11 +101,11 @@ const PrivacyPolicy = () => {
                   lacus ligula ipsum primis cubilia donec undo augue luctus
                   vitae egestas a molestie donec libero sapien dapibus congue
                   tempor undo quisque fusce cursus neque blandit fusce lorem
-                  nulla an aliquam acinia justo molestie blandit justo diam an
+                  nulla an aliquam lacinia justo molestie blandit justo diam an
                   aliquet tortor sagittis lacinia molestie diam egestas
                 </p>
-                <ul class="simple-list">
-                  <li class="list-item">
+                <ul className="simple-list">
+                  <li className="list-item">
                     <p>
                       Quaerat sodales sapien undo velna purus euismod purus
                       velna blandit vitae auctor and congue magna tempor sapien
@@ -88,15 +113,13 @@ const PrivacyPolicy = () => {
                       dictum tempor
                     </p>
                   </li>
-
-                  <li class="list-item">
+                  <li className="list-item">
                     <p>
                       Nemo ipsam egestas volute turpis dolores ut aliquam
                       quaerat sodales sapien congue and augue egestas
                     </p>
                   </li>
-
-                  <li class="list-item">
+                  <li className="list-item">
                     <p>
                       Nemo ipsam egestas volute turpis dolores ut aliquam
                       quaerat sodales sapien congue augue egestas sagittis massa
@@ -104,8 +127,7 @@ const PrivacyPolicy = () => {
                       vulputate purus
                     </p>
                   </li>
-
-                  <li class="list-item">
+                  <li className="list-item">
                     <p>
                       Sapien sodales quaerat undo velna purus euismod purus
                       velna blandit vitae auctor and congue magna tempor sapien
@@ -114,8 +136,8 @@ const PrivacyPolicy = () => {
                     </p>
                   </li>
                 </ul>
-                <h5 class="s-24 w-700">
-                  <span>2.2.</span> Automatic data collection
+                <h5 className="s-24 w-700">
+                  <span>2.2.</span> Performance cookies
                 </h5>
                 <p>
                   Congue sagittis augue egestas integer velna purus purus magna
@@ -133,8 +155,8 @@ const PrivacyPolicy = () => {
                   aliquam nulla lacinia justo molestie blandit justo diam
                   aliquet tortor molestie non sagittis lacinia
                 </p>
-                <h5 class="s-24 w-700">
-                  <span>2.3.</span> User comments and content
+                <h5 className="s-24 w-700">
+                  <span>2.3.</span> Functionality cookies
                 </h5>
                 <p>
                   Integer congue sagittis augue egestas velna purus purus magna
@@ -145,8 +167,8 @@ const PrivacyPolicy = () => {
                   nulla a primis lacinia ipsum a molestie blandit and justo an
                   aliquet eget molestie sagittis at quaerat sodales
                 </p>
-                <ul class="simple-list">
-                  <li class="list-item">
+                <ul className="simple-list">
+                  <li className="list-item">
                     <p>
                       Quaerat sodales sapien undo velna purus euismod purus
                       velna blandit vitae auctor and congue magna tempor sapien
@@ -154,16 +176,15 @@ const PrivacyPolicy = () => {
                       dictum tempor
                     </p>
                   </li>
-
-                  <li class="list-item">
+                  <li className="list-item">
                     <p>
                       Nemo ipsam egestas volute turpis dolores ut aliquam
                       quaerat sodales sapien congue and augue egestas
                     </p>
                   </li>
                 </ul>
-                <h5 class="s-24 w-700">
-                  <span>2.4.</span> Information from other sources
+                <h5 className="s-24 w-700">
+                  <span>2.4.</span> Targeting/advertising cookies
                 </h5>
                 <p>
                   Sagittis congue augue egestas integer velna purus purus magna
@@ -176,9 +197,21 @@ const PrivacyPolicy = () => {
                   luctus donec bibendum aliquet massa elementum. Libero quisque
                   lacus and ligula massa lorem.
                 </p>
-                <h4 class="s-30 w-700">
-                  <span>3.</span> Types of Information
+                <h4 className="s-30 w-700">
+                  <span>3.</span> Third-Party Cookies on Our Site
                 </h4>
+                <p>
+                  Integer congue sagittis augue egestas velna purus purus magna
+                  nec suscipit and egestas magna aliquam ipsum vitae purus justo
+                  lacus ligula ipsum primis cubilia donec undo augue luctus
+                  vitae egestas a molestie donec libero sapien dapibus congue
+                  tempor undo quisque fusce cursus neque diam augue fusce sapien
+                  nulla a rimis lacinia ipsum a molestie blandit and justo an
+                  aliquet eget molestie sagittis at quaerat sodales
+                </p>
+                <p>
+                  Aliqum mullam tincidunt a sapien gravida and diam donec porta.
+                </p>
                 <p>
                   Integer congue sagittis augue egestas velna purus purus magna
                   nec suscipit and egestas magna aliquam ipsum vitae purus justo
@@ -188,9 +221,9 @@ const PrivacyPolicy = () => {
                   nulla a primis lacinia ipsum a molestie blandit and justo an
                   aliquet eget molestie sagittis at quaerat sodales
                 </p>
-                <p>
-                  Aliqum mullam tincidunt a sapien gravida and diam donec porta.
-                </p>
+                <h5 className="s-24 w-700">
+                  <span>3.1.</span> Targeting/advertising cookies
+                </h5>
                 <p>
                   Sagittis congue augue egestas integer velna purus purus magna
                   nec suscipit and egestas magna aliquam ipsum vitae purus justo
@@ -202,8 +235,8 @@ const PrivacyPolicy = () => {
                   luctus donec bibendum aliquet massa elementum. Libero quisque
                   lacus and ligula massa lorem.
                 </p>
-                <h4 class="s-30 w-700">
-                  <span>4.</span> How We Use Personal Information
+                <h4 className="s-30 w-700">
+                  <span>4.</span> Cookies and Your Personal Information
                 </h4>
                 <p>
                   Congue augue sagittis egestas integer velna purus purus magna
@@ -221,9 +254,9 @@ const PrivacyPolicy = () => {
                   vitae egestas a molestie donec libero sapien dapibus congue
                   tempor undo quisque fusce cursus neque aliquam fusce blandit
                 </p>
-                <h5 class="s-24 w-700">
-                  <span>4.1.</span> In mails and contact forms
-                </h5>
+                <h4 className="s-30 w-700">
+                  <span>5.</span> How to Configure and Disable Cookies
+                </h4>
                 <p>
                   Integer congue sagittis augue egestas velna purus purus magna
                   nec suscipit and egestas magna aliquam ipsum vitae purus justo
@@ -231,11 +264,8 @@ const PrivacyPolicy = () => {
                   vitae egestas a molestie donec libero sapien dapibus congue
                   tempor undo quisque fusce cursus neque diam augue fusce sapien
                 </p>
-                <h4 class="s-30 w-700">
-                  <span>5.</span> Price and Taxes
-                </h4>
-                <ul class="simple-list">
-                  <li class="list-item">
+                <ul className="simple-list">
+                  <li className="list-item">
                     <p>
                       Quaerat sodales sapien undo velna purus euismod purus
                       velna blandit vitae auctor and congue magna tempor sapien
@@ -243,8 +273,7 @@ const PrivacyPolicy = () => {
                       tempor pulvinar
                     </p>
                   </li>
-
-                  <li class="list-item">
+                  <li className="list-item">
                     <p>
                       Nemo ipsam egestas volute turpis dolores ut aliquam
                       quaerat sodales sapien congue and augue egestas
@@ -260,8 +289,8 @@ const PrivacyPolicy = () => {
                   diam lorem sodales an aliquam lacinia justo sapien congue
                   aliquet and sodales a quaerat tortor lacinia egestas
                 </p>
-                <h4 class="s-30 w-700">
-                  <span>5.</span> Children's Privacy
+                <h4 className="s-30 w-700">
+                  <span>6.</span> How to Contact Us
                 </h4>
                 <p>
                   Integer congue sagittis augue egestas velna purus purus magna
@@ -270,84 +299,10 @@ const PrivacyPolicy = () => {
                   vitae egestas a molestie donec libero sapien dapibus congue
                   tempor undo quisque fusce cursus neque diam augue fusce sapien
                 </p>
-                <p>
-                  Sagittis augue congue egestas integer velna purus purus magna
-                  nec suscipit and egestas magna aliquam ipsum vitae purus justo
-                  lacus ligula ipsum primis cubilia donec and augue luctus
-                  congue
-                </p>
-                <h4 class="s-30 w-700">
-                  <span>6.</span> Data Shared with Third Parties
-                </h4>
-                <p>
-                  Integer congue sagittis augue egestas velna purus purus magna
-                  nec suscipit and egestas magna aliquam ipsum vitae purus justo
-                  lacus ligula ipsum primis cubilia donec undo augue luctus
-                  vitae egestas a molestie donec libero sapien dapibus congue
-                  tempor undo quisque fusce cursus neque diam augue fusce sapien
-                  nulla a primis lacinia ipsum a molestie blandit and justo an
-                  aliquet eget molestie sagittis at quaerat sodales
-                </p>
-                <p>
-                  Aliqum mullam tincidunt a sapien gravida and diam donec porta.
-                </p>
-                <p>
-                  Sagittis congue augue egestas integer velna purus purus magna
-                  nec suscipit and egestas magna aliquam ipsum vitae purus justo
-                  lacus ligula ipsum primis cubilia donec undo augue luctus
-                  vitae egestas a molestie donec libero sapien dapibus congue
-                  tempor undo quisque fusce cursus neque blandit fusce lacinia
-                  placerat and nulla justo molestie blandit justo diam aliquet
-                  tortor molestie sagittis lacinia undo and mullam molestie diam
-                  luctus donec bibendum aliquet massa elementum. Libero quisque
-                  lacus and ligula massa lorem.
-                </p>
-                <h4 class="s-30 w-700">
-                  <span>7.</span> Security Measures
-                </h4>
-                <p>
-                  Sagittis congue augue egestas integer velna purus purus magna
-                  nec suscipit and egestas magna aliquam ipsum vitae purus justo
-                  lacus ligula ipsum primis cubilia donec undo augue luctus
-                  vitae egestas a molestie donec libero sapien dapibus congue
-                  tempor undo quisque fusce cursus neque blandit fusce lacinia
-                  placerat and nulla justo molestie blandit justo diam aliquet
-                  tortor molestie sagittis lacinia undo and mullam molestie diam
-                  luctus donec bibendum aliquet massa elementum. Libero quisque
-                  lacus and ligula massa lorem fusce cursus fusce nulla vitae
-                  massa placerat and mollis, sapien gravida aliquet ipsum
-                  ultrices aliquet lorem diam purus undo vitae aliquam auris
-                  dapibus libero fusce blandit.
-                </p>
-                <h4 class="s-30 w-700">
-                  <span>8.</span> Changes in the Privacy Policy
-                </h4>
-                <p>
-                  Congue augue sagittis egestas integer velna purus purus magna
-                  nec suscipit and egestas magna aliquam ipsum vitae purus justo
-                  lacus ligula ipsum primis cubilia donec undo augue luctus
-                  vitae egestas a molestie donec libero sapien dapibus congue
-                  tempor undo quisque fusce cursus neque blandit fusce lorem
-                  nulla an aliquam lacinia justo molestie blandit justo diam an
-                  aliquet tortor sagittis lacinia molestie diam egestas
-                </p>
-                <p>
-                  Aliqum mullam tincidunt a sapien gravida and diam donec porta.
-                </p>
-                <p>
-                  Sagittis augue congue egestas integer velna purus purus magna
-                  nec suscipit and egestas magna aliquam ipsum vitae purus justo
-                  lacus ligula ipsum primis cubilia donec undo augue luctus
-                  vitae egestas a molestie donec libero sapien dapibus congue
-                  tempor undo quisque fusce cursus neque aliquam fusce blandit
-                </p>
-                <h4 class="s-30 w-700">
-                  <span>9.</span> How to Contact Us
-                </h4>
                 <p>
                   If you have any questions or suggestions about this Terms of
                   Service, do not hesitate to contact us at{" "}
-                  <a href="mailto:yourdomain@mail.com" class="color--theme">
+                  <a href="mailto:yourdomain@mail.com" className="color--theme">
                     hello@yourdomain.com
                   </a>
                 </p>
@@ -360,4 +315,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default Dsgvo;

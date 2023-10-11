@@ -1,20 +1,21 @@
+import Link from "next/link";
 import React from "react";
 
 const Faqs = () => {
   return (
     <div>
       <section
-        class="banner"
-        style="background-image:url(assets/img/banner1.jpg)"
+        className="banner"
+        // style="background-image:url(assets/img/banner1.jpg)"
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="banner-caption">
-                <h3>Faqs</h3>{" "}
-                <ul class="breadcrumb">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="banner-caption">
+                <h3>Faqs</h3>
+                <ul className="breadcrumb">
                   <li>
-                    <a href="index.php">Start</a>
+                    <Link href="/">Start</Link>
                   </li>
                   <li>Faqs</li>
                 </ul>
@@ -26,32 +27,32 @@ const Faqs = () => {
 
       <section
         id="faqs-2"
-        class="gr--whitesmoke pb-30 inner-page-hero faqs-section division"
+        className="gr--whitesmoke pb-30 inner-page-hero faqs-section division"
       >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-11 col-xl-10">
-              <div class="inner-page-title">
-                <h2 class="s-52 w-700">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-11 col-xl-10">
+              <div className="inner-page-title">
+                <h2 className="s-52 w-700">
                   Questions & Answers <span>FAQ's</span>
                 </h2>
-                <p class="p-lg">Some common questions we get about Trisfusa</p>
+                <p className="p-lg">Some common questions we get about Trisfusa</p>
               </div>
-              <div class="accordion-wrapper">
-                <ul class="accordion">
-                  <li class="accordion-item is-active">
-                    <div class="accordion-thumb">
-                      <h4 class="s-28 w-700">Getting Started</h4>
+              <div className="accordion-wrapper">
+                <ul className="accordion">
+                  <li className="accordion-item is-active">
+                    <div className="accordion-thumb">
+                      <h4 className="s-28 w-700">Getting Started</h4>
                     </div>
-                    <div class="accordion-panel">
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                    <div className="accordion-panel">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>1.</span> What is Trisfusa and how does it
                             work?
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas magna ipsum vitae purus congue
@@ -60,13 +61,13 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>2.</span> What's inside the package?
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas and magna ipsum vitae purus and
@@ -81,16 +82,16 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>3.</span> Which languages does Trisfusa
                             support?
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
-                          <ul class="simple-list">
-                            <li class="list-item">
+                        <div className="faqs-2-answer color--grey">
+                          <ul className="simple-list">
+                            <li className="list-item">
                               <p>
                                 Curabitur ac dapibus libero quisque eu congue
                                 tristique neque. Phasellus blandit tristique
@@ -99,7 +100,7 @@ const Faqs = () => {
                                 tempor{" "}
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                                 magna suscipit egestas magna ipsum undo purus
@@ -111,13 +112,13 @@ const Faqs = () => {
                           </ul>
                         </div>
                       </div>
-                      <div class="accordion-panel-item">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>4.</span> Automate testing with API
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             An augue cubilia laoreet and magna suscipit egestas
                             magna ipsum purus ipsum primis and augue ultrice
@@ -128,46 +129,46 @@ const Faqs = () => {
                       </div>
                     </div>
                   </li>
-                  <li class="accordion-item">
-                    <div class="accordion-thumb">
-                      <h4 class="s-28 w-700">Manage your account</h4>
+                  <li className="accordion-item">
+                    <div className="accordion-thumb">
+                      <h4 className="s-28 w-700">Manage your account</h4>
                     </div>
-                    <div class="accordion-panel">
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                    <div className="accordion-panel">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>1.</span> Sign up and manage your account
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
-                          <ol class="digit-list">
-                            <li class="list-item">
+                        <div className="faqs-2-answer color--grey">
+                          <ol className="digit-list">
+                            <li className="list-item">
                               <p>
                                 Curabitur ac dapibus libero eu congue tristique
                                 neque
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>An aliquam justo suscipit congue augue</p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>Gestas integer congue a lectus porta</p>
                             </li>
                           </ol>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>2.</span> Manage account settings
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas magna ipsum vitae purus congue and
@@ -176,13 +177,13 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>3.</span> Change language or location settings
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet gestas neque pulvinar
@@ -195,13 +196,13 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>4.</span> Troubleshoot account issues
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             An augue cubilia laoreet and magna suscipit egestas
                             magna ipsum purus ipsum primis and augue ultrice
@@ -220,13 +221,13 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>5.</span> Manage accessibility settings
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet at gestas neque cubilia
@@ -245,18 +246,18 @@ const Faqs = () => {
                       </div>
                     </div>
                   </li>
-                  <li class="accordion-item">
-                    <div class="accordion-thumb">
-                      <h4 class="s-28 w-700">Purchase and License</h4>
+                  <li className="accordion-item">
+                    <div className="accordion-thumb">
+                      <h4 className="s-28 w-700">Purchase and License</h4>
                     </div>
-                    <div class="accordion-panel">
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                    <div className="accordion-panel">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>1.</span> How much does Trisfusa cost?
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             An augue cubilia laoreet and magna suscipit egestas
                             magna ipsum purus ipsum primis and augue ultrice
@@ -265,14 +266,14 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>2.</span> Do you offer discounts for annual
                             plans?
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas and magna ipsum vitae{" "}
@@ -285,16 +286,16 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>3.</span> I didn't receive the license key
                             after purchased
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
-                          <ul class="simple-list">
-                            <li class="list-item">
+                        <div className="faqs-2-answer color--grey">
+                          <ul className="simple-list">
+                            <li className="list-item">
                               <p>
                                 Curabitur ac dapibus libero. Quisque eu congue
                                 tristique neque phasellus blandit tristique
@@ -303,7 +304,7 @@ const Faqs = () => {
                                 tempor{" "}
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                                 magna suscipit egestas magna ipsum vitae purus
@@ -315,13 +316,13 @@ const Faqs = () => {
                           </ul>
                         </div>
                       </div>
-                      <div class="accordion-panel-item">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>4.</span> I can't activate Trisfusa
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet gestas neque pulvinar
@@ -340,21 +341,21 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>5.</span> How to request a refund?
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
-                          <ul class="simple-list">
-                            <li class="list-item">
+                        <div className="faqs-2-answer color--grey">
+                          <ul className="simple-list">
+                            <li className="list-item">
                               <p>
                                 Curabitur ac dapibus libero. Quisque eu congue
                                 tristique
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Congue tristique neque phasellus blandit
                                 tristique justo undo aliquam aliquam vitae
@@ -362,7 +363,7 @@ const Faqs = () => {
                                 molestie purus tempor{" "}
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                                 magna suscipit egestas magna ipsum{" "}
@@ -373,18 +374,18 @@ const Faqs = () => {
                       </div>
                     </div>
                   </li>
-                  <li class="accordion-item">
-                    <div class="accordion-thumb">
-                      <h4 class="s-28 w-700">Policy, Safety & Copyright</h4>
+                  <li className="accordion-item">
+                    <div className="accordion-thumb">
+                      <h4 className="s-28 w-700">Policy, Safety & Copyright</h4>
                     </div>
-                    <div class="accordion-panel">
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                    <div className="accordion-panel">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>1.</span> Copyright and rights management
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet gestas neque pulvinar
@@ -397,27 +398,27 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>2.</span> Manage privacy settings
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas magna ipsum vitae purus congue
                             efficitur ipsum and primis undo cubilia a laoreet
                             augue egestas luctus donec and curabitur dapibus{" "}
                           </p>
-                          <ol class="digit-list">
-                            <li class="list-item">
+                          <ol className="digit-list">
+                            <li className="list-item">
                               <p>Gestas integer congue a lectus porta</p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>An aliquam justo suscipit congue augue</p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                               </p>
@@ -425,14 +426,14 @@ const Faqs = () => {
                           </ol>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>3.</span> Change your subscription privacy
                             settings
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet and gestas neque vitae
@@ -441,8 +442,8 @@ const Faqs = () => {
                             undo gravida porttitor nunc, quis vehicula magna
                             luctus tempor. Quisque vel laoreet turpis augue{" "}
                           </p>
-                          <ul class="simple-list">
-                            <li class="list-item">
+                          <ul className="simple-list">
+                            <li className="list-item">
                               <p>
                                 Congue tristique neque phasellus blandit
                                 tristique justo undo aliquam aliquam vitae
@@ -450,7 +451,7 @@ const Faqs = () => {
                                 molestie purus tempor{" "}
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                                 magna suscipit egestas magna ipsum{" "}
@@ -459,13 +460,13 @@ const Faqs = () => {
                           </ul>
                         </div>
                       </div>
-                      <div class="accordion-panel-item">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>4.</span> Protecting your identity
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet gestas neque pulvinar
@@ -486,18 +487,18 @@ const Faqs = () => {
                       </div>
                     </div>
                   </li>
-                  <li class="accordion-item acc-last-item">
-                    <div class="accordion-thumb">
-                      <h4 class="s-28 w-700">Other Questions</h4>
+                  <li className="accordion-item acc-last-item">
+                    <div className="accordion-thumb">
+                      <h4 className="s-28 w-700">Other Questions</h4>
                     </div>
-                    <div class="accordion-panel">
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                    <div className="accordion-panel">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>1.</span> How do I get the error log?
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas and magna ipsum vitae{" "}
@@ -510,28 +511,28 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>2.</span> I forgot my folder password, what
                             should I do?
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas magna ipsum vitae purus congue
                             efficitur ipsum and primis in cubilia laoreet augue
                             egestas luctus donec and curabitur dapibus{" "}
                           </p>
-                          <ol class="digit-list">
-                            <li class="list-item">
+                          <ol className="digit-list">
+                            <li className="list-item">
                               <p>Gestas integer congue a lectus porta</p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>An aliquam justo suscipit congue augue</p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                               </p>
@@ -539,14 +540,14 @@ const Faqs = () => {
                           </ol>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>3.</span> Limitations of folder password
                             protection
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet gestas neque pulvinar
@@ -559,13 +560,13 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item mb-35">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item mb-35">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>4.</span> Import existing library
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             an ipsum mauris lectus laoreet gestas neque vitae
@@ -582,14 +583,14 @@ const Faqs = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="accordion-panel-item">
-                        <div class="faqs-2-question">
-                          <h5 class="s-22 w-700">
+                      <div className="accordion-panel-item">
+                        <div className="faqs-2-question">
+                          <h5 className="s-22 w-700">
                             <span>5.</span> I lost my license. Can you send it
                             to me?
                           </h5>
                         </div>
-                        <div class="faqs-2-answer color--grey">
+                        <div className="faqs-2-answer color--grey">
                           <p>
                             An augue cubilia laoreet and magna suscipit egestas
                             magna ipsum purus ipsum primis augue ultrice ligula
@@ -606,11 +607,11 @@ const Faqs = () => {
                   </li>
                 </ul>
               </div>
-              <div class="more-questions">
-                <div class="more-questions-txt bg--white-400 r-100">
-                  <p class="p-lg">
+              <div className="more-questions">
+                <div className="more-questions-txt bg--white-400 r-100">
+                  <p className="p-lg">
                     Have any questions?{" "}
-                    <a href="contacts.php" class="color--theme">
+                    <a href="contacts.php" className="color--theme">
                       Get in Touch
                     </a>
                   </p>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
@@ -51,22 +52,22 @@ const Footer = () => {
                     <h6 className="s-17">Quicklinks</h6>
                     <ul className="foo-links clearfix">
                       <li>
-                        <p><a href="about.php">Über uns</a></p>
+                        <p><Link href="about">Über uns</Link></p>
                       </li>
                       <li>
-                        <p><a href="comparison.php">Vergleich</a></p>
+                        <p><Link href="comparison">Vergleich</Link></p>
                       </li>
                       <li>
-                        <p><a href="services.php">Produkte</a></p>
+                        <p><Link href="services">Produkte</Link></p>
                       </li>
                       <li>
-                        <p><a href="suppliers.php">Lieferanten</a></p>
+                        <p><Link href="suppliers">Lieferanten</Link></p>
                       </li>
                       <li>
-                        <p><a href="electrician.php">Handwerker</a></p>
+                        <p><Link href="handyman">Handwerker</Link></p>
                       </li>
                       <li>
-                        <p><a href="review.php">Zeugnis</a></p>
+                        <p><Link href="transcript">Zeugnis</Link></p>
                       </li>
                     </ul>
                   </div>
@@ -76,22 +77,22 @@ const Footer = () => {
                     <h6 className="s-17">Kundendienst</h6>
                     <ul className="foo-links clearfix">
                       <li>
-                        <p><a href="terms-condition.php">Nutzungsbedingungen</a></p>
+                        <p><Link href="terms-condition">Nutzungsbedingungen</Link></p>
                       </li>
                       <li>
-                        <p><a href="cookie-policy.php">Cookie-Richtlinie</a></p>
+                        <p><Link href="cookie">Cookie-Richtlinie</Link></p>
                       </li>
                       <li>
-                        <p><a href="privicy-policy.php">Datenschutz und Richtlinien</a></p>
+                        <p><Link href="privacy-policy">Datenschutz und Richtlinien</Link></p>
                       </li>
                       <li>
-                        <p><a href="help-center.php">Hilfezentrum</a></p>
+                        <p><Link href="help-center">Hilfezentrum</Link></p>
                       </li>
                       <li>
-                        <p><a href="faqs.php">FAQ's</a></p>
+                        <p><Link href="faqs">FAQ's</Link></p>
                       </li>
                       <li>
-                        <p><a href="contact.php">Kontaktiere uns</a></p>
+                        <p><Link href="contact">Kontaktiere uns</Link></p>
                       </li>
                     </ul>
                   </div>
@@ -119,10 +120,10 @@ const Footer = () => {
             <div className="col-md-12">
               <div className="inline-menu">
                 <ul>
-                  <li><a href="data-protection.php">data protection</a></li>
-                  <li><a href="legal-notice.php">legal notice</a></li>
-                  <li><a href="impressum.php">Impressum</a></li>
-                  <li><a href="dsgvo.php">DSGVO</a></li>
+                  <li><Link href="data-protection">data protection</Link></li>
+                  <li><Link href="legal-notice">legal notice</Link></li>
+                  <li><Link href="impressum">Impressum</Link></li>
+                  <li><Link href="dsgvo">DSGVO</Link></li>
                 </ul>
               </div>
             </div>

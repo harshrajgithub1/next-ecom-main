@@ -1,21 +1,22 @@
+import Link from "next/link";
 import React from "react";
 
 const HelpCenter = () => {
   return (
     <div>
       <section
-        class="banner"
-        style="background-image:url(assets/img/banner1.jpg)"
+        className="banner"
+        //style="background-image:url(assets/img/banner1.jpg)"
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="banner-caption">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="banner-caption">
                 <h3>Help Center</h3>
 
-                <ul class="breadcrumb">
+                <ul className="breadcrumb">
                   <li>
-                    <a href="index.php">Start</a>
+                    <Link href="/">Start</Link>
                   </li>
                   <li>Help Center</li>
                 </ul>
@@ -27,43 +28,43 @@ const HelpCenter = () => {
 
       <section
         id="faqs-4"
-        class="gr--whitesmoke inner-page-hero pb-100 faqs-section division"
+        className="gr--whitesmoke inner-page-hero pb-100 faqs-section division"
       >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-11 col-xl-10">
-              <div class="inner-page-title">
-                <h2 class="s-52">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-11 col-xl-10">
+              <div className="inner-page-title">
+                <h2 className="s-52">
                   How Can <span>We Help?</span>
                 </h2>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <div class="tabs-nav tabs--theme clearfix">
-                <ul class="tabs-1">
-                  <li class="tab-link current ico-45 r-16" data-tab="tab-1">
-                    <div class="tab-link-ico">
-                      <span class="flaticon-mechanics"></span>
+          <div className="row">
+            <div className="col">
+              <div className="tabs-nav tabs--theme clearfix">
+                <ul className="tabs-1">
+                  <li className="tab-link current ico-45 r-16" data-tab="tab-1">
+                    <div className="tab-link-ico">
+                      <span className="flaticon-mechanics"></span>
                     </div>
                     <p>Getting Started</p>
                   </li>
-                  <li class="tab-link ico-45 r-16" data-tab="tab-2">
-                    <div class="tab-link-ico">
-                      <span class="flaticon-suit"></span>
+                  <li className="tab-link ico-45 r-16" data-tab="tab-2">
+                    <div className="tab-link-ico">
+                      <span className="flaticon-suit"></span>
                     </div>
                     <p>My Account</p>
                   </li>
-                  <li class="tab-link ico-45 r-16" data-tab="tab-3">
-                    <div class="tab-link-ico">
-                      <span class="flaticon-price-label"></span>
+                  <li className="tab-link ico-45 r-16" data-tab="tab-3">
+                    <div className="tab-link-ico">
+                      <span className="flaticon-price-label"></span>
                     </div>
                     <p>Pricing Plans</p>
                   </li>
-                  <li class="tab-link ico-45 r-16" data-tab="tab-4">
-                    <div class="tab-link-ico">
-                      <span class="flaticon-screenplay"></span>
+                  <li className="tab-link ico-45 r-16" data-tab="tab-4">
+                    <div className="tab-link-ico">
+                      <span className="flaticon-screenplay"></span>
                     </div>
                     <p>Other Questions</p>
                   </li>
@@ -71,19 +72,19 @@ const HelpCenter = () => {
               </div>
             </div>
           </div>
-          <div class="tabs-content">
-            <div class="row justify-content-center">
-              <div class="col-xl-10">
-                <div id="tab-1" class="tab-content current">
-                  <div class="accordion-wrapper">
-                    <ul class="accordion">
-                      <li class="accordion-item is-active">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+          <div className="tabs-content">
+            <div className="row justify-content-center">
+              <div className="col-xl-10">
+                <div id="tab-1" className="tab-content current">
+                  <div className="accordion-wrapper">
+                    <ul className="accordion">
+                      <li className="accordion-item is-active">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             What is Trisfusa and how does it work?
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas magna ipsum vitae purus congue
@@ -92,11 +93,11 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">What's inside the package?</h5>
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">What's inside the package?</h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas tempor magna undo ipsum vitae purus
@@ -115,11 +116,11 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">General settings</h5>
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">General settings</h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             An augue cubilia laoreet magna suscipit egestas
                             magna ipsum purus ipsum a primis an augue ultrice
@@ -138,13 +139,13 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             Which languages does Trisfusa support?
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             An augue cubilia laoreet and magna suscipit egestas
                             magna ipsum purus ipsum primis undo augue ultrice
@@ -161,13 +162,13 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item acc-last-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">Automate testing with API</h5>
+                      <li className="accordion-item acc-last-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">Automate testing with API</h5>
                         </div>
-                        <div class="accordion-panel color--grey">
-                          <ul class="simple-list">
-                            <li class="list-item">
+                        <div className="accordion-panel color--grey">
+                          <ul className="simple-list">
+                            <li className="list-item">
                               <p>
                                 Curabitur ac dapibus libero quisque eu congue
                                 tristique egestas phasellus blandit tristique
@@ -178,13 +179,13 @@ const HelpCenter = () => {
                                 massa{" "}
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Aliquam vitae molestie nunc. Quisque sapien
                                 justo, aliquet non molestie sed purus, venenatis{" "}
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                                 magna suscipit egestas magna ipsum vitae an
@@ -199,42 +200,42 @@ const HelpCenter = () => {
                     </ul>
                   </div>
                 </div>
-                <div id="tab-2" class="tab-content">
-                  <div class="accordion-wrapper">
-                    <ul class="accordion">
-                      <li class="accordion-item is-active">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                <div id="tab-2" className="tab-content">
+                  <div className="accordion-wrapper">
+                    <ul className="accordion">
+                      <li className="accordion-item is-active">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             Sign up and manage your account
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
-                          <ol class="digit-list">
-                            <li class="list-item">
+                        <div className="accordion-panel color--grey">
+                          <ol className="digit-list">
+                            <li className="list-item">
                               <p>
                                 Curabitur ac dapibus libero eu congue tristique
                                 neque
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>An aliquam justo suscipit congue augue</p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>Gestas integer congue a lectus porta</p>
                             </li>
                           </ol>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">Manage account settings</h5>
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">Manage account settings</h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet gestas neque and vitae
@@ -247,13 +248,13 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             Change language or location settings
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet gestas neque and vitae
@@ -266,13 +267,13 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             Troubleshoot account issues
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             An augue cubilia laoreet and magna suscipit egestas
                             magna ipsum purus ipsum primis an augue ultrice
@@ -289,13 +290,13 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item acc-last-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                      <li className="accordion-item acc-last-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             Manage accessibility settings
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet gestas neque and vitae
@@ -317,16 +318,16 @@ const HelpCenter = () => {
                     </ul>
                   </div>
                 </div>
-                <div id="tab-3" class="tab-content">
-                  <div class="accordion-wrapper">
-                    <ul class="accordion">
-                      <li class="accordion-item is-active">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                <div id="tab-3" className="tab-content">
+                  <div className="accordion-wrapper">
+                    <ul className="accordion">
+                      <li className="accordion-item is-active">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             How much does Trisfusa cost?
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             An augue cubilia laoreet and magna suscipit egestas
                             magna ipsum purus ipsum primis undo augue ultrice
@@ -335,15 +336,15 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             I didn't receive the license key after purchased
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
-                          <ul class="simple-list">
-                            <li class="list-item">
+                        <div className="accordion-panel color--grey">
+                          <ul className="simple-list">
+                            <li className="list-item">
                               <p>
                                 Curabitur ac dapibus libero. Quisque eu congue
                                 tristique neque. Phasellus blandit tristique
@@ -352,7 +353,7 @@ const HelpCenter = () => {
                                 tempor{" "}
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                                 magna suscipit egestas magna ipsum vitae purus
@@ -364,15 +365,15 @@ const HelpCenter = () => {
                           </ul>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             Do you offer discounts for annual plans?
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
-                          <ul class="simple-list">
-                            <li class="list-item">
+                        <div className="accordion-panel color--grey">
+                          <ul className="simple-list">
+                            <li className="list-item">
                               <p>
                                 Curabitur ac dapibus libero. Quisque eu congue
                                 justo undo tristique neque phasellus and blandit
@@ -381,7 +382,7 @@ const HelpCenter = () => {
                                 tempor{" "}
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                                 magna suscipit egestas magna ipsum vitae purus
@@ -393,11 +394,11 @@ const HelpCenter = () => {
                           </ul>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">How safe is my data?</h5>
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">How safe is my data?</h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             An augue cubilia laoreet and magna suscipit egestas
                             magna an ipsum purus ipsum primis an augue ultrice
@@ -414,19 +415,19 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item acc-last-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">How to request a refund?</h5>
+                      <li className="accordion-item acc-last-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">How to request a refund?</h5>
                         </div>
-                        <div class="accordion-panel color--grey">
-                          <ul class="simple-list">
-                            <li class="list-item">
+                        <div className="accordion-panel color--grey">
+                          <ul className="simple-list">
+                            <li className="list-item">
                               <p>
                                 Curabitur ac dapibus libero. Quisque eu congue
                                 tristique
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Congue tristique neque phasellus blandit
                                 tristique justo undo aliquam. Aliquam vitae
@@ -434,7 +435,7 @@ const HelpCenter = () => {
                                 molestie purus tempor{" "}
                               </p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                                 magna suscipit egestas magna ipsum{" "}
@@ -446,16 +447,16 @@ const HelpCenter = () => {
                     </ul>
                   </div>
                 </div>
-                <div id="tab-4" class="tab-content">
-                  <div class="accordion-wrapper">
-                    <ul class="accordion">
-                      <li class="accordion-item is-active">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                <div id="tab-4" className="tab-content">
+                  <div className="accordion-wrapper">
+                    <ul className="accordion">
+                      <li className="accordion-item is-active">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             How do I get the error log?
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas and magna ipsum vitae{" "}
@@ -468,27 +469,27 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             I forgot my folder password, what should I do?
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             Sagittis congue augue egestas volutpat egestas magna
                             suscipit egestas magna ipsum vitae purus congue
                             efficitur ipsum primis in cubilia laoreet augue
                             egestas luctus donec and curabitur dapibus{" "}
                           </p>
-                          <ol class="digit-list">
-                            <li class="list-item">
+                          <ol className="digit-list">
+                            <li className="list-item">
                               <p>Gestas integer congue a lectus porta</p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>An aliquam justo suscipit congue augue</p>
                             </li>
-                            <li class="list-item">
+                            <li className="list-item">
                               <p>
                                 Sagittis congue augue egestas volutpat egestas
                               </p>
@@ -496,13 +497,13 @@ const HelpCenter = () => {
                           </ol>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             Limitations of folder password protection
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet gestas neque and vitae
@@ -515,11 +516,11 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">Import existing library</h5>
+                      <li className="accordion-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">Import existing library</h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             Sapien egestas, congue gestas posuere cubilia congue
                             ipsum mauris lectus laoreet gestas neque and vitae
@@ -538,13 +539,13 @@ const HelpCenter = () => {
                           </p>
                         </div>
                       </li>
-                      <li class="accordion-item acc-last-item">
-                        <div class="accordion-thumb">
-                          <h5 class="s-22 w-700">
+                      <li className="accordion-item acc-last-item">
+                        <div className="accordion-thumb">
+                          <h5 className="s-22 w-700">
                             I lost my license. Can you send it to me?
                           </h5>
                         </div>
-                        <div class="accordion-panel color--grey">
+                        <div className="accordion-panel color--grey">
                           <p>
                             An augue cubilia laoreet and magna suscipit egestas
                             magna ipsum purus ipsum primis undo augue ultrice
@@ -566,29 +567,29 @@ const HelpCenter = () => {
         </div>
       </section>
 
-      <section id="banner-9" class="bg--02 py-70 x-border banner-section">
-        <div class="container">
-          <div class="banner-7-wrapper">
-            <div class="row justify-content-center d-flex align-items-center">
-              <div class="col-md-7 col-xl-5">
-                <div class="banner-9-txt">
-                  <h3 class="s-40 w-700">Still need help?</h3>
-                  <p class="p-lg">
+      <section id="banner-9" className="bg--02 py-70 x-border banner-section">
+        <div className="container">
+          <div className="banner-7-wrapper">
+            <div className="row justify-content-center d-flex align-items-center">
+              <div className="col-md-7 col-xl-5">
+                <div className="banner-9-txt">
+                  <h3 className="s-40 w-700">Still need help?</h3>
+                  <p className="p-lg">
                     Don't hesitate to contact us about any question you might be
                     interested in
                   </p>
                   <a
                     href="contacts.php"
-                    class="btn r-04 btn--theme hover--theme"
+                    className="btn r-04 btn--theme hover--theme"
                   >
                     Ask your question here
                   </a>
                 </div>
               </div>
-              <div class="col-md-5 col-xl-5">
-                <div class="banner-9-img text-end">
+              <div className="col-md-5 col-xl-5">
+                <div className="banner-9-img text-end">
                   <img
-                    class="img-fluid"
+                    className="img-fluid"
                     src="/assets/images/help.png"
                     alt="banner-image"
                   />

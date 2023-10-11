@@ -1,20 +1,21 @@
+import Link from "next/link";
 import React from "react";
 
 const Electrician = () => {
   return (
     <div>
       <section
-        class="banner"
-        style="background-image:url(assets/img/banner6.jpg)"
+        className="banner"
+        // style="background-image:url(assets/img/banner6.jpg)"
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="banner-caption">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="banner-caption">
                 <h3>Handwerker</h3>
-                <ul class="breadcrumb">
+                <ul className="breadcrumb">
                   <li>
-                    <a href="index.php">Start</a>
+                    <Link href="/">Start</Link>
                   </li>
                   <li>Handwerker</li>
                 </ul>
@@ -26,17 +27,17 @@ const Electrician = () => {
 
       <section
         id="comparison"
-        class="comparison rel inner-page-hero about-section division"
+        className="comparison rel inner-page-hero about-section division"
       >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8">
-              <div class="about-2-title mb-60 text-center wow fadeInUp">
-                <span class="section-id">Vergleich</span>
-                <h2 class="s-52 mb-30">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <div className="about-2-title mb-60 text-center wow fadeInUp">
+                <span className="section-id">Vergleich</span>
+                <h2 className="s-52 mb-30">
                   We Have <span>Many Service</span> Currentrly
                 </h2>
-                <p class="mb-0">
+                <p className="mb-0">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quaerat alias possimus vitae. Eveniet dicta voluptatem
                   voluptatibus soluta vero enim iusto maxime cum corrupti odio
@@ -47,98 +48,98 @@ const Electrician = () => {
           </div>
         </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInUp">
-                <div class="img-style">
-                  <img src="/assets/img/img1.jpg" alt="" class="img-fluid" />
+        <div className="container">
+          <div className="row">
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInUp">
+                <div className="img-style">
+                  <img src="/assets/img/img1.jpg" alt="" className="img-fluid" />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
                   <a href="#">Compare</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInUp">
-                <div class="img-style">
-                  <img src="/assets/img/img1.jpg" alt="" class="img-fluid" />
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInUp">
+                <div className="img-style">
+                  <img src="/assets/img/img1.jpg" alt="" className="img-fluid" />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
                   <a href="#">Compare</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInUp">
-                <div class="img-style">
-                  <img src="/assets/img/img1.jpg" alt="" class="img-fluid" />
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInUp">
+                <div className="img-style">
+                  <img src="/assets/img/img1.jpg" alt="" className="img-fluid" />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
                   <a href="#">Compare</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInUp">
-                <div class="img-style">
-                  <img src="/assets/img/img1.jpg" alt="" class="img-fluid" />
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInUp">
+                <div className="img-style">
+                  <img src="/assets/img/img1.jpg" alt="" className="img-fluid" />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
                   <a href="#">Compare</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInUp">
-                <div class="img-style">
-                  <img src="/assets/img/img1.jpg" alt="" class="img-fluid" />
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInUp">
+                <div className="img-style">
+                  <img src="/assets/img/img1.jpg" alt="" className="img-fluid" />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
                   <a href="#">Compare</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInUp">
-                <div class="img-style">
-                  <img src="/assets/img/img1.jpg" alt="" class="img-fluid" />
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInUp">
+                <div className="img-style">
+                  <img src="/assets/img/img1.jpg" alt="" className="img-fluid" />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
                   <a href="#">Compare</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInUp">
-                <div class="img-style">
-                  <img src="/assets/img/img1.jpg" alt="" class="img-fluid" />
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInUp">
+                <div className="img-style">
+                  <img src="/assets/img/img1.jpg" alt="" className="img-fluid" />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
                   <a href="#">Compare</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInUp">
-                <div class="img-style">
-                  <img src="/assets/img/img1.jpg" alt="" class="img-fluid" />
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInUp">
+                <div className="img-style">
+                  <img src="/assets/img/img1.jpg" alt="" className="img-fluid" />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
                   <a href="#">Compare</a>
@@ -151,17 +152,17 @@ const Electrician = () => {
 
       <section
         id="about-2"
-        class="rel inner-page-hero about-section division vergleich_pg"
+        className="rel inner-page-hero about-section division vergleich_pg"
       >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8">
-              <div class="about-2-title mb-60 text-center wow fadeInUp">
-                <span class="section-id">Trisfusa Service</span>
-                <h2 class="s-52 mb-30">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <div className="about-2-title mb-60 text-center wow fadeInUp">
+                <span className="section-id">Trisfusa Service</span>
+                <h2 className="s-52 mb-30">
                   We Have <span>Many Service</span> Currentrly
                 </h2>
-                <p class="mb-0">
+                <p className="mb-0">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quaerat alias possimus vitae. Eveniet dicta voluptatem
                   voluptatibus soluta vero enim iusto maxime cum corrupti odio
@@ -172,66 +173,66 @@ const Electrician = () => {
           </div>
         </div>
 
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInRight">
-                <div class="img-style">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInRight">
+                <div className="img-style">
                   <img
                     src="/assets/img/projects/img1.jpg"
                     alt=""
-                    class="img-fluid"
+                    className="img-fluid"
                   />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
                   <a href="#">Compare</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInRight">
-                <div class="img-style">
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInRight">
+                <div className="img-style">
                   <img
                     src="/assets/img/projects/img2.jpg"
                     alt=""
-                    class="img-fluid"
+                    className="img-fluid"
                   />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Cubic Rome</h3>
                   <p>Smart Museum</p>
                   <a href="#">Compare</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInLeft">
-                <div class="img-style">
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInLeft">
+                <div className="img-style">
                   <img
                     src="/assets/img/projects/img3.jpg"
                     alt=""
-                    class="img-fluid"
+                    className="img-fluid"
                   />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Belleco House</h3>
                   <p>Smart House</p>
                   <a href="#">Compare</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="vergleich wow fadeInLeft">
-                <div class="img-style">
+            <div className="col-md-3">
+              <div className="vergleich wow fadeInLeft">
+                <div className="img-style">
                   <img
                     src="/assets/img/projects/img4.jpg"
                     alt=""
-                    class="img-fluid"
+                    className="img-fluid"
                   />
                 </div>
-                <div class="content-style">
+                <div className="content-style">
                   <h3>Redo Co-Working</h3>
                   <p>Smart Co-Working</p>
                   <a href="#">Compare</a>
@@ -244,17 +245,17 @@ const Electrician = () => {
 
       <section
         id="about-2"
-        class="rel inner-page-hero about-section division bg_gray pb-100"
+        className="rel inner-page-hero about-section division bg_gray pb-100"
       >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8">
-              <div class="about-2-title mb-60 text-center wow fadeInUp">
-                <span class="section-id">How To Set Up Smart Device</span>
-                <h2 class="s-52 mb-30">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <div className="about-2-title mb-60 text-center wow fadeInUp">
+                <span className="section-id">How To Set Up Smart Device</span>
+                <h2 className="s-52 mb-30">
                   Simple To <span>Set Up & Use</span> Smart Device
                 </h2>
-                <p class="mb-0">
+                <p className="mb-0">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quaerat alias possimus vitae. Eveniet dicta voluptatem
                   voluptatibus soluta vero enim iusto maxime cum corrupti odio
@@ -264,10 +265,10 @@ const Electrician = () => {
             </div>
           </div>
 
-          <div class="row wow fadeInUp">
-            <div class="col-md-4">
-              <div class="text-content">
-                <div class="top_content">
+          <div className="row wow fadeInUp">
+            <div className="col-md-4">
+              <div className="text-content">
+                <div className="top_content">
                   <h3>Plug In Smart Device</h3>
                   <span>01</span>
                 </div>
@@ -278,9 +279,9 @@ const Electrician = () => {
               </div>
             </div>
 
-            <div class="col-md-4">
-              <div class="text-content">
-                <div class="top_content">
+            <div className="col-md-4">
+              <div className="text-content">
+                <div className="top_content">
                   <h3>Set Up Using Smartphone</h3>
                   <span>02</span>
                 </div>
@@ -291,9 +292,9 @@ const Electrician = () => {
               </div>
             </div>
 
-            <div class="col-md-4">
-              <div class="text-content">
-                <div class="top_content">
+            <div className="col-md-4">
+              <div className="text-content">
+                <div className="top_content">
                   <h3>Smart Device Ready</h3>
                   <span>03</span>
                 </div>
@@ -309,15 +310,15 @@ const Electrician = () => {
 
       <section
         id="features-12"
-        class="shape--bg shape--white-500 py-100 features-section division"
+        className="shape--bg shape--white-500 py-100 features-section division"
       >
-        <div class="container">
-          <div class="row d-flex align-items-center">
-            <div class="col-md-5">
-              <div class="txt-block left-column wow fadeInRight">
-                <span class="section-id">Lorem ipsum dolor sit</span>
-                <div class="section-title text-start">
-                  <h2 class="s-50">
+        <div className="container">
+          <div className="row d-flex align-items-center">
+            <div className="col-md-5">
+              <div className="txt-block left-column wow fadeInRight">
+                <span className="section-id">Lorem ipsum dolor sit</span>
+                <div className="section-title text-start">
+                  <h2 className="s-50">
                     Lorem <span>ipsum dolor</span> sit amet consectetur
                   </h2>
                 </div>
@@ -327,55 +328,55 @@ const Electrician = () => {
                   doloremque quaerat vitae magni enim doloribus molestiae autem
                   mollitia eos unde reiciendis asperiores? Tempora?
                 </p>
-                <div class="cbox-1 ico-15">
-                  <div class="ico-wrap color--theme">
-                    <div class="cbox-1-ico">
-                      <span class="flaticon-check"></span>
+                <div className="cbox-1 ico-15">
+                  <div className="ico-wrap color--theme">
+                    <div className="cbox-1-ico">
+                      <span className="flaticon-check"></span>
                     </div>
                   </div>
-                  <div class="cbox-1-txt">
+                  <div className="cbox-1-txt">
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                   </div>
                 </div>
-                <div class="cbox-1 ico-15">
-                  <div class="ico-wrap color--theme">
-                    <div class="cbox-1-ico">
-                      <span class="flaticon-check"></span>
+                <div className="cbox-1 ico-15">
+                  <div className="ico-wrap color--theme">
+                    <div className="cbox-1-ico">
+                      <span className="flaticon-check"></span>
                     </div>
                   </div>
-                  <div class="cbox-1-txt">
+                  <div className="cbox-1-txt">
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     </p>
                   </div>
                 </div>
-                <div class="cbox-1 ico-15">
-                  <div class="ico-wrap color--theme">
-                    <div class="cbox-1-ico">
-                      <span class="flaticon-check"></span>
+                <div className="cbox-1 ico-15">
+                  <div className="ico-wrap color--theme">
+                    <div className="cbox-1-ico">
+                      <span className="flaticon-check"></span>
                     </div>
                   </div>
-                  <div class="cbox-1-txt">
-                    <p class="mb-0">
+                  <div className="cbox-1-txt">
+                    <p className="mb-0">
                       Lorem ipsum dolor sit amet, consectetur adipisicing.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-7">
-              <div class="fbox-12-wrapper wow fadeInLeft">
-                <div class="row">
-                  <div class="col-md-6">
+            <div className="col-md-7">
+              <div className="fbox-12-wrapper wow fadeInLeft">
+                <div className="row">
+                  <div className="col-md-6">
                     <div
                       id="fb-12-1"
-                      class="fbox-12 bg--white-100 block-shadow r-12 mb-30"
+                      className="fbox-12 bg--white-100 block-shadow r-12 mb-30"
                     >
-                      <div class="fbox-ico ico-50">
-                        <div class="shape-ico color--theme">
-                          <span class="flaticon-layers-1"></span>
+                      <div className="fbox-ico ico-50">
+                        <div className="shape-ico color--theme">
+                          <span className="flaticon-layers-1"></span>
                           <svg
                             viewBox="0 0 200 200"
                             xmlns="http://www.w3.org/2000/svg"
@@ -387,8 +388,8 @@ const Electrician = () => {
                           </svg>
                         </div>
                       </div>
-                      <div class="fbox-txt">
-                        <h5 class="s-19 w-700">Lorem, ipsum dolor</h5>
+                      <div className="fbox-txt">
+                        <h5 className="s-19 w-700">Lorem, ipsum dolor</h5>
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Mollitia, blanditiis.
@@ -397,11 +398,11 @@ const Electrician = () => {
                     </div>
                     <div
                       id="fb-12-2"
-                      class="fbox-12 bg--white-100 block-shadow r-12"
+                      className="fbox-12 bg--white-100 block-shadow r-12"
                     >
-                      <div class="fbox-ico ico-50">
-                        <div class="shape-ico color--theme">
-                          <span class="flaticon-tutorial"></span>
+                      <div className="fbox-ico ico-50">
+                        <div className="shape-ico color--theme">
+                          <span className="flaticon-tutorial"></span>
                           <svg
                             viewBox="0 0 200 200"
                             xmlns="http://www.w3.org/2000/svg"
@@ -413,8 +414,8 @@ const Electrician = () => {
                           </svg>
                         </div>
                       </div>
-                      <div class="fbox-txt">
-                        <h5 class="s-19 w-700">Lorem, ipsum dolor</h5>
+                      <div className="fbox-txt">
+                        <h5 className="s-19 w-700">Lorem, ipsum dolor</h5>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit. Tenetur?
@@ -422,14 +423,14 @@ const Electrician = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div className="col-md-6">
                     <div
                       id="fb-12-3"
-                      class="fbox-12 bg--white-100 block-shadow r-12 mb-30"
+                      className="fbox-12 bg--white-100 block-shadow r-12 mb-30"
                     >
-                      <div class="fbox-ico ico-50">
-                        <div class="shape-ico color--theme">
-                          <span class="flaticon-pay-per-click"></span>
+                      <div className="fbox-ico ico-50">
+                        <div className="shape-ico color--theme">
+                          <span className="flaticon-pay-per-click"></span>
                           <svg
                             viewBox="0 0 200 200"
                             xmlns="http://www.w3.org/2000/svg"
@@ -441,8 +442,8 @@ const Electrician = () => {
                           </svg>
                         </div>
                       </div>
-                      <div class="fbox-txt">
-                        <h5 class="s-19 w-700">Lorem ipsum dolor sit</h5>
+                      <div className="fbox-txt">
+                        <h5 className="s-19 w-700">Lorem ipsum dolor sit</h5>
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Reprehenderit!
@@ -451,11 +452,11 @@ const Electrician = () => {
                     </div>
                     <div
                       id="fb-12-4"
-                      class="fbox-12 bg--white-100 block-shadow r-12"
+                      className="fbox-12 bg--white-100 block-shadow r-12"
                     >
-                      <div class="fbox-ico ico-50">
-                        <div class="shape-ico color--theme">
-                          <span class="flaticon-taxes"></span>
+                      <div className="fbox-ico ico-50">
+                        <div className="shape-ico color--theme">
+                          <span className="flaticon-taxes"></span>
                           <svg
                             viewBox="0 0 200 200"
                             xmlns="http://www.w3.org/2000/svg"
@@ -467,8 +468,8 @@ const Electrician = () => {
                           </svg>
                         </div>
                       </div>
-                      <div class="fbox-txt">
-                        <h5 class="s-19 w-700">Lorem ipsum dolor</h5>
+                      <div className="fbox-txt">
+                        <h5 className="s-19 w-700">Lorem ipsum dolor</h5>
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Adipisci?

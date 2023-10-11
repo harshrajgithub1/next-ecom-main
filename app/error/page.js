@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import React from 'react'
 
 const ErrorPage = () => {
     const bannerStyle = {
-        backgroundImage: 'url(assets/img/banner1.jpg)',
+        backgroundImage: 'url(/assets/img/banner1.jpg)',
       };
     
       return (
@@ -15,7 +16,7 @@ const ErrorPage = () => {
                   <h3>404</h3>
     
                   <ul className="breadcrumb">
-                    <li><a href="/">Start</a></li>
+                    <li><Link href="/">Start</Link></li>
                     <li>404 page</li>
                   </ul>
                 </div>
@@ -37,9 +38,9 @@ const ErrorPage = () => {
                 Oops! The page you are looking for might have been moved, renamed, or might 
                 never have existed.
               </h6>
-              <a href="/" className="btn btn--theme hover--theme">
+              <Link href="/" className="btn btn--theme hover--theme">
                 Back to home
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const TermsAndConditions = () => {
@@ -5,14 +6,18 @@ const TermsAndConditions = () => {
     <div>
       
 
-      <section className="banner" style="background-image:url(assets/img/banner1.jpg)">
+      <section className="banner" 
+    //   style="background-image:url(assets/img/banner1.jpg)"
+      >
     <div className="container">
         <div className="row">
             <div className="col-md-12">
                 <div className="banner-caption">
                     <h3>Terms Condition</h3>
                     <ul className="breadcrumb">
-                        <li><a href="index.php">Start</a></li>
+                        <li>
+                        <Link href="/">Start</Link>
+                        </li>
                         <li>Terms Condition</li>
                     </ul>
                 </div>

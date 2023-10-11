@@ -36,9 +36,9 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nl-simple">
-                  <a href="comparison" className="h-link ">
+                  <Link href="comparison" className="h-link ">
                     Vergleich
-                  </a>
+                  </Link>
                 </li>
                 {/* <li><a href="services.php" class="h-link">Produkte <span class="wsarrow"></span></a>
                   <ul class="sub-menu">
@@ -55,17 +55,16 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nl-simple">
-                  <a href="contact.php" className="h-link ">
+                  <Link href="contact" className="h-link ">
                     Kontakt
-                  </a>
+                  </Link>
                 </li>
                 <li className="nl-simple">
-                  <a
-                    href="login.php"
-                    className="btn r-04 btn--theme hover--tra-white last-link"
-                  >
+                  <Link
+                    href="login"
+                    className="btn r-04 btn--theme hover--tra-white last-link">
                     Anmeldung
-                  </a>
+                  </Link>
                 </li>
                 <li className="language">
                   <select name="lang" id="lang" className="form-control">
