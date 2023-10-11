@@ -6,7 +6,14 @@ const Comparison = () => {
     <div>
       <section
         className="banner"
-        // style="background-ima ge:url(assets/img/banner2.jpg)"
+        // style="background-image:url(assets/img/banner2.jpg)"
+        style={{
+        background: `url('/assets/img/banner2.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '440px', // Set your desired height
+      }}
       >
         <div className="container">
           <div className="row">

@@ -8,6 +8,14 @@ const Contractors = () => {
 
       <section class="banner" 
     //   style="background-image:url(assets/img/banner1.jpg)"
+
+	style={{
+        backgroundImage: 'url(/assets/img/banner1.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '300px', // Set your desired height
+      }}
       >
 	<div class="container">
 		<div class="row">

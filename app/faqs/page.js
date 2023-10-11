@@ -7,6 +7,14 @@ const Faqs = () => {
       <section
         className="banner"
         // style="background-image:url(assets/img/banner1.jpg)"
+
+        style={{
+        backgroundImage: 'url(/assets/img/banner1.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '540px', // Set your desired height
+      }}
       >
         <div className="container">
           <div className="row">
