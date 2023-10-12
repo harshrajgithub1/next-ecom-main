@@ -76,11 +76,11 @@ style={{
           </div>
           <div className="col-md-6 order-first order-md-2">
             <div className="img-block j-img video-preview right-column wow fadeInLeft">
-              <a className="video-popup2" href="https://www.youtube.com/embed/yDNWVRmRHlY">
+              <Link className="video-popup2" href="https://www.youtube.com/embed/yDNWVRmRHlY">
                 <div className="video-btn video-btn-xl bg--theme">
                   <div className="video-block-wrapper"><span className="flaticon-play-button"></span></div>
                 </div>
-              </a>
+              </Link>
               <img className="img-fluid r-20" src="assets/img/img-17.jpg" alt="video-preview" />
             </div>
           </div>

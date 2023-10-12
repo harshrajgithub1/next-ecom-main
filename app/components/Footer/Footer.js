@@ -58,7 +58,7 @@ const Footer = () => {
                         <p><Link href="comparison">Vergleich</Link></p>
                       </li>
                       <li>
-                        <p><Link href="services">Produkte</Link></p>
+                        <p><Link href="service">Produkte</Link></p>
                       </li>
                       <li>
                         <p><Link href="suppliers">Lieferanten</Link></p>
@@ -122,7 +122,7 @@ const Footer = () => {
                 <ul>
                   <li><Link href="data-protection">data protection</Link></li>
                   <li><Link href="legal-notice">legal notice</Link></li>
-                  <li><Link href="impressum">Impressum</Link></li>
+                  <li><Link href="impressum">impressum</Link></li>
                   <li><Link href="dsgvo">DSGVO</Link></li>
                 </ul>
               </div>
