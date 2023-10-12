@@ -4,7 +4,17 @@ import React from 'react';
 const About = () => {
   return (
    <div>
-<section className="banner" style={{ backgroundImage: 'url(assets/img/banner6.jpg)' }}>
+<section className="banner" 
+// style={{ backgroundImage: 'url(assets/img/banner6.jpg)' }}
+
+style={{
+        backgroundImage: `url(/assets/img/banner6.jpg)`,
+        backgroundSize: 'cover', // You can adjust these styles as needed
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        height: '540px', // Set the width and height as needed
+      }}
+>
       <div className="container">
         <div className="row">
           <div className="col-md-12">

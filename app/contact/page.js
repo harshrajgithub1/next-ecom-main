@@ -7,7 +7,15 @@ const Contact = () => {
     <div>
       <section
         className="banner"
-        style={{ backgroundImage: "url(/assets/img/banner7.jpg)" }}
+        // style={{ backgroundImage: "url(/assets/img/banner7.jpg)" }}
+
+        style={{
+        backgroundImage: `url(/assets/img/banner7.jpg)`,
+        backgroundSize: 'cover', // You can adjust these styles as needed
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        height: '540px', // Set the width and height as needed
+      }}
       >
         <div className="container">
           <div className="row">
@@ -118,7 +126,7 @@ const Contact = () => {
                       relevant content, products, and services. You may
                       unsubscribe from these communications at any time. For
                       more information, check out our{" "}
-                      <a href="privicy-policy.php">Privacy Policy</a>.
+                      <Link href="privacy-policy">Privacy Policy</Link>.
                     </p>
                   </div>
                   <div className="col-lg-12 contact-form-msg">

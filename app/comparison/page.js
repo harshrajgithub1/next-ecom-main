@@ -12,7 +12,7 @@ const Comparison = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: '100%',
-        height: '440px', // Set your desired height
+        height: '540px', // Set your desired height
       }}
       >
         <div className="container">
