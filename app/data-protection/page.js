@@ -23,7 +23,7 @@ const Dataprotection = () => {
                 <div className="banner-caption">
                     <h3>Data Protection</h3>
                     <ul className="breadcrumb">
-                        <li><Link href="index.php">Start</Link></li>
+                        <li><Link href="/">Start</Link></li>
                         <li>Data Protection</li>
                     </ul>
                 </div>

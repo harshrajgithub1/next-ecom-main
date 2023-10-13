@@ -143,37 +143,37 @@ const Contact = () => {
                   <span>Address and Contact information</span>
                   <ul>
                     <li>
-                      <a href="javascript:;">
+                      <Link href="javascript:;">
                         <span className="flaticon-map"></span> Bachtelstrasse 68
                         CH-8342 Wernetshausen
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="mailto:info@smarthomeconsulting.ch">
+                      <Link href="mailto:info@smarthomeconsulting.ch">
                         <span className="flaticon-email"></span>{" "}
                         info@smarthomeconsulting.ch
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="https://www.smarthomeconsulting.ch/"
                         target="_blank"
                       >
                         <span className="flaticon-email"></span>{" "}
                         www.smarthomeconsulting.ch
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="tel:+410449380715">
+                      <Link href="tel:+410449380715">
                         <span className="flaticon-mobile-search"></span> +41 (0)
                         44 938 07 15
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="https://wa.me/+410449380715" target="_blank">
+                      <Link href="https://wa.me/+410449380715" target="_blank">
                         <span className="flaticon-whatsapp"></span> +41 78 960
                         03 00
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>

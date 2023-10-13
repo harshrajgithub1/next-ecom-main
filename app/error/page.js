@@ -4,6 +4,7 @@ import React from 'react'
 const ErrorPage = () => {
     const bannerStyle = {
         backgroundImage: 'url(/assets/img/banner1.jpg)',
+        
       };
     
       return (

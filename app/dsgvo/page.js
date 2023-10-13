@@ -49,15 +49,15 @@ const Dsgvo = () => {
               <div className="txt-block legal-info">
                 <p>
                   Integer congue sagittis augue egestas{" "}
-                  <a href="#" className="color--theme">
+                  <Link href="#" className="color--theme">
                     Global Privacy Policy
-                  </a>{" "}
+                  </Link>{" "}
                   nec suscipit egestas magna undo aliquam ipsum vitae purus
                   justo lacus ligula ipsum primis cubilia donec undo augue
                   luctus vitae egestas a molestie donec libero
-                  <a href="#" className="color--theme">
+                  <Link href="#" className="color--theme">
                     Privacy Policy
-                  </a>{" "}
+                  </Link>{" "}
                   tempor undo quisque fusce a cursus neque diam augue fusce
                   sapien nulla a primis lacinia ipsum a molestie blandit and
                   justo an aliquet eget molestie cursus quaerat
@@ -67,9 +67,9 @@ const Dsgvo = () => {
                   nec suscipit and egestas magna aliquam ipsum vitae purus justo
                   lacus ligula ipsum primis cubilia donec undo augue luctus
                   vitae egestas a molestie donec{" "}
-                  <a href="#" className="color--theme">
+                  <Link href="#" className="color--theme">
                     https://Trisfusa.com/software
-                  </a>{" "}
+                  </Link>{" "}
                   undo quisque fusce cursus neque blandit fusce an aliquam nulla
                   lacinia justo molestie blandit justo diam aliquet tortor non
                   molestie sagittis lacinia
@@ -310,9 +310,9 @@ const Dsgvo = () => {
                 <p>
                   If you have any questions or suggestions about this Terms of
                   Service, do not hesitate to contact us at{" "}
-                  <a href="mailto:yourdomain@mail.com" className="color--theme">
+                  <Link href="mailto:yourdomain@mail.com" className="color--theme">
                     hello@yourdomain.com
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

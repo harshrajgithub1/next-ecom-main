@@ -9,9 +9,9 @@ const Footer = () => {
           <div className="row">
             <div className="col-xl-3">
               <div className="footer-info">
-                <a href="index.php">
+                <Link href="index.php">
                   <img className="footer-logo" src="/assets/img/logo-dark.svg" alt="footer-logo" />
-                </a>
+                </Link>
                 <p>Trisfusa ist die führende Plattform für die Bewertung und Vergleichbarkeit von Smarthome-Systemen weltweit. Unsere Mission ist es, Endnutzern, Architekten und Bauherren dabei zu helfen, die besten Lösungen für ihr perfekte Smarthomeumgebung zu finden</p>
                 <h2 className="heading-title">Hotline : <span className="style-color"><span>+41 44938 07 15</span></span></h2>
               </div>
@@ -25,7 +25,7 @@ const Footer = () => {
                       <i className="jki jki-phone-handset-light"></i>
                       <div className="box-dtl">
                         <h4>Telefon</h4>
-                        <a href="tel:+41449380715">+41 44938 07 15</a>
+                        <Link href="tel:+41449380715">+41 44938 07 15</Link>
                       </div>
                     </div>
 
@@ -33,7 +33,7 @@ const Footer = () => {
                       <i className="jki jki-email-light"></i>
                       <div className="box-dtl">
                         <h4>Email</h4>
-                        <a href="mailto:info@smarthomeconsulting.ch">info@smarthomeconsulting.ch</a>
+                        <Link href="mailto:info@smarthomeconsulting.ch">info@smarthomeconsulting.ch</Link>
                       </div>
                     </div>
 
@@ -41,7 +41,7 @@ const Footer = () => {
                       <i className="jki jki-placeholder2-light"></i>
                       <div className="box-dtl">
                         <h4>Standort</h4>
-                        <a href="#">Bachtelstrasse 68 CH-8342 Wernetshausen</a>
+                        <Link href="#">Bachtelstrasse 68 CH-8342 Wernetshausen</Link>
                       </div>
                     </div>
                   </div>
@@ -141,10 +141,10 @@ const Footer = () => {
             </div>
             <div className="col">
               <ul className="bottom-footer-socials ico-20 text-end">
-                <li><a href="#"><span className="flaticon-facebook"></span></a></li>
-                <li><a href="#"><span className="flaticon-twitter"></span></a></li>
-                <li><a href="#"><span className="flaticon-instagram"></span></a></li>
-                <li><a href="#"><span className="flaticon-youtube"></span></a></li>
+                <li><Link href="#"><span className="flaticon-facebook"></span></Link></li>
+                <li><Link href="#"><span className="flaticon-twitter"></span></Link></li>
+                <li><Link href="#"><span className="flaticon-instagram"></span></Link></li>
+                <li><Link href="#"><span className="flaticon-youtube"></span></Link></li>
               </ul>
             </div>
           </div>

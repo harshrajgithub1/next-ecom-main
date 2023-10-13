@@ -39,7 +39,7 @@ const page = () => {
             <div className="col-md-3 col-lg-2">
                 <div className="sidebar-header">
                     <h3>Filter</h3>
-                    <Link href="#">Collapse all</Link>
+                    <Link href="Javscript:void{0}">Collapse all</Link>
                 </div>
 
                 <div className="search">
@@ -50,7 +50,7 @@ const page = () => {
                 </div>
 
                 <div className="sidebar">
-                    <h3>Categories <a href="#"><i className="jki jki-chevron-down-light"></i></a></h3>
+                    <h3>Categories <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link></h3>
 
                     <div className="sidebar-inpup">
                         <div className="form-group">
@@ -74,7 +74,7 @@ const page = () => {
 
                 <div className="sidebar">
                     <h3>Price
-                        <a href="#"><i className="jki jki-chevron-down-light"></i></a>
+                        <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link>
                     </h3>
 
                     <div className="sidebar-inpup">
@@ -95,7 +95,7 @@ const page = () => {
 
                 <div className="sidebar">
                     <h3>Manufacturer
-                        <a href="#"><i className="jki jki-chevron-down-light"></i></a>
+                        <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link>
                     </h3>
 
                     <div className="sidebar-inpup">
@@ -116,7 +116,7 @@ const page = () => {
 
                 <div className="sidebar">
                     <h3>Compatibility
-                        <a href="#"><i className="jki jki-chevron-down-light"></i></a>
+                        <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link>
                     </h3>
 
                     <div className="sidebar-inpup">
@@ -141,7 +141,7 @@ const page = () => {
 
                 <div className="sidebar">
                     <h3>Connectivity
-                        <a href="#"><i className="jki jki-chevron-down-light"></i></a>
+                        <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link>
                     </h3>
 
                     <div className="sidebar-inpup">
@@ -166,7 +166,7 @@ const page = () => {
 
                 <div className="sidebar">
                     <h3>Handling
-                        <a href="#"><i className="jki jki-chevron-down-light"></i></a>
+                        <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link>
                     </h3>
 
                     <div className="sidebar-inpup">
@@ -210,7 +210,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -222,7 +222,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -234,7 +234,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -246,7 +246,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -258,7 +258,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -270,7 +270,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -282,7 +282,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -294,7 +294,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -306,7 +306,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -318,7 +318,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -330,7 +330,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -342,7 +342,7 @@ const page = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <a href="#">Compare</a>
+                                <Link href="Javscript:void{0}">Compare</Link>
                             </div>
                         </div>
                     </div>

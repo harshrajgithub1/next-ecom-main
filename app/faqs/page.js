@@ -619,9 +619,9 @@ const Faqs = () => {
                 <div className="more-questions-txt bg--white-400 r-100">
                   <p className="p-lg">
                     Have any questions?{" "}
-                    <a href="contacts.php" className="color--theme">
+                    <Link  href="contact" className="color--theme">
                       Get in Touch
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
