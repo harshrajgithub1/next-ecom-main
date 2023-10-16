@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 import React from "react";
 
 const Impressum = () => {
@@ -23,7 +24,7 @@ const Impressum = () => {
                 <h3>Impressum</h3>
                 <ul className="breadcrumb">
                   <li>
-                    <a href="/">Start</a>
+                    <Link href="/">Start</Link>
                   </li>
                   <li>Impressum</li>
                 </ul>

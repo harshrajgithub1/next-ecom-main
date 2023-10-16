@@ -66,13 +66,13 @@ const Gallery = () => {
                   <div className="item-overlay"></div>
                 </div>
                 <div className="project-link ico-35 color--white">
-                  <a
+                  <Link
                     className="image-link"
                     href="assets/img/projects/project-10.jpg"
                     title=""
                   >
                     <span className="flaticon-visibility"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -88,13 +88,13 @@ const Gallery = () => {
                   <div className="item-overlay"></div>
                 </div>
                 <div className="project-link ico-35 color--white">
-                  <a
+                  <Link
                     className="image-link"
                     href="assets/img/projects/project-11.jpg"
                     title=""
                   >
                     <span className="flaticon-visibility"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -110,13 +110,13 @@ const Gallery = () => {
                   <div className="item-overlay"></div>
                 </div>
                 <div className="project-link ico-35 color--white">
-                  <a
+                  <Link
                     className="image-link"
                     href="assets/img/projects/project-10a.jpg"
                     title=""
                   >
                     <span className="flaticon-visibility"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -132,13 +132,13 @@ const Gallery = () => {
                   <div className="item-overlay"></div>
                 </div>
                 <div className="project-link ico-35 color--white">
-                  <a
+                  <Link
                     className="image-link"
                     href="assets/img/projects/project-13.jpg"
                     title=""
                   >
                     <span className="flaticon-visibility"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -154,13 +154,13 @@ const Gallery = () => {
                   <div className="item-overlay"></div>
                 </div>
                 <div className="project-link ico-35 color--white">
-                  <a
+                  <Link
                     className="image-link"
                     href="assets/img/projects/project-15.jpg"
                     title=""
                   >
                     <span className="flaticon-visibility"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -176,13 +176,13 @@ const Gallery = () => {
                   <div className="item-overlay"></div>
                 </div>
                 <div className="project-link ico-35 color--white">
-                  <a
+                  <Link
                     className="image-link"
                     href="assets/img/projects/project-17.jpg"
                     title=""
                   >
                     <span className="flaticon-visibility"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -198,13 +198,13 @@ const Gallery = () => {
                   <div className="item-overlay"></div>
                 </div>
                 <div className="project-link ico-35 color--white">
-                  <a
+                  <Link
                     className="image-link"
                     href="assets/img/projects/project-14.jpg"
                     title=""
                   >
                     <span className="flaticon-visibility"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -220,13 +220,13 @@ const Gallery = () => {
                   <div className="item-overlay"></div>
                 </div>
                 <div className="project-link ico-35 color--white">
-                  <a
+                  <Link
                     className="image-link"
                     href="assets/img/projects/project-16.jpg"
                     title=""
                   >
                     <span className="flaticon-visibility"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -242,13 +242,13 @@ const Gallery = () => {
                   <div className="item-overlay"></div>
                 </div>
                 <div className="project-link ico-35 color--white">
-                  <a
+                  <Link
                     className="image-link"
                     href="assets/img/projects/project-08.jpg"
                     title=""
                   >
                     <span className="flaticon-visibility"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

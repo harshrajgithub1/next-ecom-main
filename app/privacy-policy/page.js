@@ -356,9 +356,9 @@ const PrivacyPolicy = () => {
                 <p>
                   If you have any questions or suggestions about this Terms of
                   Service, do not hesitate to contact us at{" "}
-                  <a href="mailto:yourdomain@mail.com" className="color--theme">
+                  <Link href="mailto:yourdomain@mail.com" className="color--theme">
                     hello@yourdomain.com
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

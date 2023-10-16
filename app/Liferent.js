@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Liferent = () => {
@@ -15,7 +16,7 @@ const Liferent = () => {
 
                 <ul className="breadcrumb">
                   <li>
-                    <a href="index.php">Start</a>
+                    <Link href="index">Start</Link>
                   </li>
                   <li>Liferent</li>
                 </ul>
@@ -91,7 +92,7 @@ const Liferent = () => {
                       Lorem ipsum dolor sit amet consect adipiscing elit ligula
                       pretium lacosa consequat.
                     </p>
-                    <a href="#">Read More</a>
+                    <Link href="#">Read More</Link>
                   </div>
                 </div>
               </div>
@@ -108,7 +109,7 @@ const Liferent = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt sed do eiusmod.
                   </p>
-                  <a href="#">View Details</a>
+                  <Link href="#">View Details</Link>
                   <i aria-hidden="true" className="hover jki jki-cast-line"></i>
                 </div>
               </div>
@@ -123,7 +124,7 @@ const Liferent = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt sed do eiusmod.
                   </p>
-                  <a href="#">View Details</a>
+                  <Link href="#">View Details</Link>
                   <i
                     aria-hidden="true"
                     className="hover jki jki-Safe-house-light"
@@ -141,7 +142,7 @@ const Liferent = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt sed do eiusmod.
                   </p>
-                  <a href="#">View Details</a>
+                  <Link href="#">View Details</Link>
                   <i aria-hidden="true" className="hover jki jki-padlock-light"></i>
                 </div>
               </div>

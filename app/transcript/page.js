@@ -179,23 +179,23 @@ const Review = () => {
                 <nav aria-label="Page navigation">
                     <ul className="pagination ico-20 justify-content-center">
                         <li className="page-item disabled">
-                            <a className="page-link" href="#" tabindex="-1">
+                            <Link className="page-link" href="#" tabindex="-1">
                                 <span className="flaticon-back"></span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="page-item active" aria-current="page">
-                            <a className="page-link" href="#">1</a>
+                            <Link className="page-link" href="#">1</Link>
                         </li>
                         <li className="page-item">
-                            <a className="page-link" href="#">2</a>
+                            <Link className="page-link" href="#">2</Link>
                         </li>
                         <li className="page-item">
-                            <a className="page-link" href="#">3</a>
+                            <Link className="page-link" href="#">3</Link>
                         </li>
                         <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Next">
+                            <Link className="page-link" href="#" aria-label="Next">
                                 <span className="flaticon-next"></span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>

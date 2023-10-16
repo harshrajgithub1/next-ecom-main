@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Index = () => {
@@ -30,12 +31,12 @@ const Index = () => {
                   Trishala Connect bietet dir einzigartige Moglichkeiten auf den
                   neusten Stand der Technik zu kommen. Simple better advice
                 </p>
-                <a
+                <Link
                   href="#banner-3"
                   className="btn r-04 btn--theme hover--tra-white"
                 >
                   Get started for free
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -932,9 +933,9 @@ const Index = () => {
                       Endecke Trisfusa und helfe dabei noch mehr Vergleiche zu
                       machen, sende uns deine Produkte die wir nicht kennen
                     </p>
-                    <a href="#" className="btn r-04 btn--theme hover--tra-white">
+                    <Link href="#" className="btn r-04 btn--theme hover--tra-white">
                       Jetzt Produkte senden
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

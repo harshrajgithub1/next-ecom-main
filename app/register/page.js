@@ -44,13 +44,13 @@ const Registration = () => {
                     <div className="register-page-form">
                       <form name="signupform" className="row sign-up-form">
                         <div className="col-md-12">
-                          <a href="#" className="btn btn-google ico-left">
+                          <Link href="#" className="btn btn-google ico-left">
                             <img
                               src="/assets/img/google.png"
                               alt="google-icon"
                             />{" "}
                             Sign up with Google
-                          </a>
+                          </Link>
                         </div>
                         <div className="col-md-12 text-center">
                           <div className="separator-line">

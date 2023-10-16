@@ -110,9 +110,9 @@ const BlogDetails = () => {
                     <li className="list-item">
                       <p>
                         Quaerat sodales sapien undo{" "}
-                        <a href="#" className="color--theme">
+                        <Link href="#" className="color--theme">
                           create an API Key
-                        </a>
+                        </Link>
                         blandit velna vitae auctor and congue magna tempor
                         sapien eget gravida laoreet turpis urna augue, viverra a
                         augue eget tempor diam
@@ -356,19 +356,19 @@ const BlogDetails = () => {
                   <div className="col post-share-list">
                     <ul className="share-social-icons ico-20 text-center clearfix">
                       <li>
-                        <a href="#" className="share-ico">
+                        <Link href="#" className="share-ico">
                           <span className="flaticon-twitter"></span>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#" className="share-ico">
+                        <Link href="#" className="share-ico">
                           <span className="flaticon-facebook"></span>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#" className="share-ico">
+                        <Link href="#" className="share-ico">
                           <span className="flaticon-bookmark"></span>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -390,7 +390,7 @@ const BlogDetails = () => {
                       luctus placerat a magna cursus congue magna nihil mpedit.
                     </p>
                     <div className="author-follow-btn r-04">
-                      <a href="#">Follow</a>
+                      <Link href="#">Follow</Link>
                     </div>
                   </div>
                 </div>
@@ -408,10 +408,10 @@ const BlogDetails = () => {
                           <h6 className="s-17 w-700">Jack H.</h6>
                           <span className="comment-date">2 days ago&#8194;- </span>
                           <span className="btn-reply ico-20">
-                            <a href="#leave-comment">
+                            <Link href="#leave-comment">
                               <span className="flaticon-reply-arrow"></span>
                               Reply
-                            </a>
+                            </Link>
                           </span>
                         </div>
 
@@ -424,12 +424,12 @@ const BlogDetails = () => {
                         </p>
                         <hr />
                         <div className="comment d-flex">
-                          <a href="#" className="pr-3">
+                          <Link href="#" className="pr-3">
                             <img
                               src="assets/img/comment-author-2.jpg"
                               alt="comment-avatar"
                             />
-                          </a>
+                          </Link>
                           <div className="comment-body">
                             <div className="comment-meta">
                               <h6 className="s-17 w-700">S. Parker</h6>
@@ -437,10 +437,10 @@ const BlogDetails = () => {
                                 4 days ago&#8194;-{" "}
                               </span>
                               <span className="btn-reply ico-20">
-                                <a href="#leave-comment">
+                                <Link href="#leave-comment">
                                   <span className="flaticon-reply-arrow"></span>
                                   Reply
-                                </a>
+                                </Link>
                               </span>
                             </div>
                             <p>
@@ -464,10 +464,10 @@ const BlogDetails = () => {
                           <h6 className="s-17 w-700">Sarah Griffi</h6>
                           <span className="comment-date">16 days ago&#8194;- </span>
                           <span className="btn-reply ico-20">
-                            <a href="#leave-comment">
+                            <Link href="#leave-comment">
                               <span className="flaticon-reply-arrow"></span>
                               Reply
-                            </a>
+                            </Link>
                           </span>
                         </div>
 
@@ -492,10 +492,10 @@ const BlogDetails = () => {
                           <h6 className="s-17 w-700">Joshua A.</h6>
                           <span className="comment-date">30 days ago&#8194;- </span>
                           <span className="btn-reply ico-20">
-                            <a href="#leave-comment">
+                            <Link href="#leave-comment">
                               <span className="flaticon-reply-arrow"></span>
                               Reply
-                            </a>
+                            </Link>
                           </span>
                         </div>
 

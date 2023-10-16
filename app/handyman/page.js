@@ -90,7 +90,7 @@ const Electrician = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -102,7 +102,7 @@ const Electrician = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Electrician = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@ const Electrician = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@ const Electrician = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -150,7 +150,7 @@ const Electrician = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -195,7 +195,7 @@ const Electrician = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -211,7 +211,7 @@ const Electrician = () => {
                 <div className="content-style">
                   <h3>Cubic Rome</h3>
                   <p>Smart Museum</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -227,7 +227,7 @@ const Electrician = () => {
                 <div className="content-style">
                   <h3>Belleco House</h3>
                   <p>Smart House</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -243,7 +243,7 @@ const Electrician = () => {
                 <div className="content-style">
                   <h3>Redo Co-Working</h3>
                   <p>Smart Co-Working</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>

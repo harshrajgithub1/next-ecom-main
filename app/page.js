@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
                 <h2 className="s-47">Jetzt vergleichen und deine Wohnung <span>optimal vernetzen</span></h2>
                 <p className="p-xl">Trishala Connect bietet dir einzigartige Möglichkeiten auf 
                 den neusten Stand der Technik zu kommen. Simple better advice</p>
-                <a href="#banner-3" className="btn r-04 btn--theme hover--tra-white">Get started for free</a>
+                <Link href="#banner-3" className="btn r-04 btn--theme hover--tra-white">Get started for free</Link>
               </div>
             </div>
 

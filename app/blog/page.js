@@ -44,7 +44,7 @@ const blog = () => {
                 <div className="col-md-6">
                     <div className="blog-post-txt"> <span className="post-tag color--blue-400">Social Media</span>
                         <h3 className="s-38 w-700">
-                            <a href="blog-detail.php">Prep Your Security System For Daylight</a>
+                            <Link href="blog-detail">Prep Your Security System For Daylight</Link>
                         </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -79,7 +79,7 @@ const blog = () => {
                         <div className="blog-post-txt">
                             <span className="post-tag color--red-400">Product</span>
                             <h6 className="s-20 w-700">
-                                <a href="blog-detail.php">The Backbone Of The Connected Home</a>
+                                <Link href="blog-detail">The Backbone Of The Connected Home</Link>
                             </h6>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta aperiam voluptatum
                                 necessitatibus deserunt itaque, doloribus fuga corrupti, qui delectus repellendus natus
@@ -108,8 +108,8 @@ const blog = () => {
                         <div className="blog-post-txt">
                             <span className="post-tag color--green-400">Community</span>
                             <h6 className="s-20 w-700">
-                                <a href="blog-detail.php">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-                                    nihil voluptatibus magni?</a>
+                                <Link href="blog-detail">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                    nihil voluptatibus magni?</Link>
                             </h6>
                             <p>Aliqum mullam ipsum vitae and blandit vitae tempor sapien and donec lipsum</p>
                             <div className="blog-post-meta mt-20">
@@ -136,7 +136,7 @@ const blog = () => {
                         <div className="blog-post-txt">
                             <span className="post-tag color--violet-400">Product</span>
                             <h6 className="s-20 w-700">
-                                <a href="blog-detail.php">Cubilia laoreet ipsum augue eget egestas Trisfusa magna</a>
+                                <Link href="blog-detail">Cubilia laoreet ipsum augue eget egestas Trisfusa magna</Link>
                             </h6>
                             <p>Luctus vitae egestas augue and ipsum ultrice quisque in cursus lacus feugiat
                                 egets congue ultrice sagittis laoreet
@@ -176,9 +176,9 @@ const blog = () => {
                         <div className="blog-post-txt">
                             <span className="post-tag color--pink-400">Tutorials</span>
                             <h6 className="s-20 w-700">
-                                <a href="blog-detail.php">Phasellus blandit justo undo aliquam vitae molestie
+                                <Link href="blog-detail">Phasellus blandit justo undo aliquam vitae molestie
                                     nunc sapien augue justo aliquet
-                                </a>
+                                </Link>
                             </h6>
                             <p>Aliqum mullam ipsum vitae and blandit vitae tempor sapien and donec lipsum</p>
                             <div className="blog-post-meta mt-20">
@@ -205,9 +205,9 @@ const blog = () => {
                         <div className="blog-post-txt">
                             <span className="post-tag color--violet-400">Services</span>
                             <h6 className="s-20 w-700">
-                                <a href="blog-detail.php">Blandit justo phasellus undo aliquam diam molestie
+                                <Link href="blog-detail">Blandit justo phasellus undo aliquam diam molestie
                                     vitae
-                                </a>
+                                </Link>
                             </h6>
                             <p>Luctus vitae egestas augue and ipsum ultrice quisque in cursus lacus feugiat
                                 egets congue ultrice sagittis laoreet
@@ -236,9 +236,9 @@ const blog = () => {
                         <div className="blog-post-txt">
                             <span className="post-tag color--blue-400">Extensions</span>
                             <h6 className="s-20 w-700">
-                                <a href="blog-detail.php">Cursus porttitor fusce neque CEO egestas cursus magna
+                                <Link href="blog-detail">Cursus porttitor fusce neque CEO egestas cursus magna
                                     sapien and ipsum suscipit
-                                </a>
+                                </Link>
                             </h6>
                             <p>Mullam ipsum aliqum vitae and blandit vitae tempor sapien and lipsum donec</p>
                             <div className="blog-post-meta mt-20">
@@ -268,9 +268,9 @@ const blog = () => {
                                 <div className="blog-post-txt color--white">
                                     <span className="post-tag color--pink-400">Video Tutorials</span>
                                     <h4 className="s-34 w-700 mb-20">
-                                        <a href="blog-detail.php">Lipsum sodales sapien Trisfusa aliquet blandit
+                                        <Link href="blog-detail">Lipsum sodales sapien Trisfusa aliquet blandit
                                             augue gravida posuere
-                                        </a>
+                                        </Link>
                                     </h4>
                                     <p>Aliqum mullam blandit vitae and tempor sapien and donec lipsum gravida porta
                                         undo velna dolor libero risus aliquet tempus posuere vitae tempor
@@ -292,12 +292,12 @@ const blog = () => {
                             </div>
                             <div className="col-md-6 order-first order-md-2">
                                 <div className="blog-post-img video-preview">
-                                    <a className="video-popup1" href="https://www.youtube.com/embed/SZEflIVnhH8">
+                                    <Link className="video-popup1" href="https://www.youtube.com/embed/SZEflIVnhH8">
                                         <div className="video-btn video-btn-xl bg--pink-400 ico-90">
                                             <div className="video-block-wrapper"><span className="flaticon-play-button"></span>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                     <img className="img-fluid" src="/assets/img/blog/post-10-img.jpg" alt="video-preview"/>
                                 </div>
                             </div>
@@ -323,9 +323,9 @@ const blog = () => {
                         <div className="blog-post-txt">
                             <span className="post-tag color--red-400">Product</span>
                             <h6 className="s-20 w-700">
-                                <a href="blog-detail.php">Phasellus blandit justo undo aliquam diam vitae
+                                <Link href="blog-detail">Phasellus blandit justo undo aliquam diam vitae
                                     molestie
-                                </a>
+                                </Link>
                             </h6>
                             <p>Egestas luctus vitae augue and ipsum ultrice quisque in cursus lacus feugiat
                                 congue diam ultrice laoreet sagittis
@@ -354,9 +354,9 @@ const blog = () => {
                         <div className="blog-post-txt">
                             <span className="post-tag color--violet-400">Service</span>
                             <h6 className="s-20 w-700">
-                                <a href="blog-detail.php">Porttitor cursus fusce neque CEO egestas cursus
+                                <Link href="blog-detail">Porttitor cursus fusce neque CEO egestas cursus
                                     magna sapien and suscipit ipsum
-                                </a>
+                                </Link>
                             </h6>
                             <p>Aliqum mullam ipsum vitae and blandit vitae tempor sapien and donec lipsum</p>
                             <div className="blog-post-meta mt-20">
@@ -383,9 +383,9 @@ const blog = () => {
                         <div className="blog-post-txt">
                             <span className="post-tag color--green-400">Community</span>
                             <h6 className="s-20 w-700">
-                                <a href="blog-detail.php">Aliqum mullam porta blandit: lacus and sapien
+                                <Link href="blog-detail">Aliqum mullam porta blandit: lacus and sapien
                                     gravida
-                                </a>
+                                </Link>
                             </h6>
                             <p>Luctus vitae egestas augue and ipsum ultrice quisque in cursus lacus feugiat
                                 egets congue ultrice sagittis laoreet
@@ -417,14 +417,14 @@ const blog = () => {
             <div className="col-md-12">
                 <nav aria-label="Page navigation">
                     <ul className="pagination ico-20 justify-content-center">
-                        <li className="page-item disabled"><a className="page-link" href="#" tabindex="-1"><span
-                                    className="flaticon-back"></span></a>
+                        <li className="page-item disabled"><Link className="page-link" href="#" tabindex="-1"><span
+                                    className="flaticon-back"></span></Link>
                         </li>
-                        <li className="page-item active" aria-current="page"><a className="page-link" href="#">1</a></li>
-                        <li className="page-item"><a className="page-link" href="#">2</a></li>
-                        <li className="page-item"><a className="page-link" href="#">3</a></li>
-                        <li className="page-item"><a className="page-link" href="#" aria-label="Next"><span
-                                    className="flaticon-next"></span></a></li>
+                        <li className="page-item active" aria-current="page"><Link className="page-link" href="#">1</Link></li>
+                        <li className="page-item"><Link className="page-link" href="#">2</Link></li>
+                        <li className="page-item"><Link className="page-link" href="#">3</Link></li>
+                        <li className="page-item"><Link className="page-link" href="#" aria-label="Next"><span
+                                    className="flaticon-next"></span></Link></li>
                     </ul>
                 </nav>
             </div>

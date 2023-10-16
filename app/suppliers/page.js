@@ -86,7 +86,7 @@ const Suppliers = () => {
                             <h3>Smart Device</h3>
                             <p>Lorem ipsum dolor sit amet consect adipiscing elit ligula pretium lacosa
                              consequat.</p>
-                            <a href="#">Read More</a>
+                            <Link href="#">Read More</Link>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ const Suppliers = () => {
                         <h3>Wirelessly Smart</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                         tempor incididunt sed do eiusmod.</p>
-                        <a href="#">View Details</a>
+                        <Link href="#">View Details</Link>
                         <i aria-hidden="true" className="hover jki jki-cast-line"></i>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ const Suppliers = () => {
                         <h3>24x7 Monitoring</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                         tempor incididunt sed do eiusmod.</p>
-                        <a href="#">View Details</a>
+                        <Link href="#">View Details</Link>
                         <i aria-hidden="true" className="hover jki jki-Safe-house-light"></i>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ const Suppliers = () => {
                         <h3>Smart Lock</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                         tempor incididunt sed  do eiusmod.</p>
-                        <a href="#">View Details</a>
+                        <Link href="#">View Details</Link>
                         <i aria-hidden="true" className="hover jki jki-padlock-light"></i>
                     </div>
                 </div>

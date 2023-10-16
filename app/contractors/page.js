@@ -6,7 +6,7 @@ const Contractors = () => {
     <div>
       
 
-      <section class="banner" 
+      <section className="banner" 
     //   style="background-image:url(assets/img/banner1.jpg)"
 
 	style={{
@@ -17,13 +17,13 @@ const Contractors = () => {
         height: '300px', // Set your desired height
       }}
       >
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="banner-caption">
+	<div className="container">
+		<div className="row">
+			<div className="col-md-12">
+				<div className="banner-caption">
 					<h3>Contractors</h3>
 
-					<ul class="breadcrumb">
+					<ul className="breadcrumb">
 						<li><Link href="/">Start</Link></li>
 						<li>Contractors</li>
 					</ul>

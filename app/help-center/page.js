@@ -586,12 +586,12 @@ const HelpCenter = () => {
                     Don't hesitate to contact us about any question you might be
                     interested in
                   </p>
-                  <a
-                    href="contacts.php"
+                  <Link
+                    href="contacts"
                     className="btn r-04 btn--theme hover--theme"
                   >
                     Ask your question here
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-md-5 col-xl-5">

@@ -255,19 +255,19 @@ style={{
                   <h6 className="s-20 color--black w-700">Arthur Lorenzen</h6>
                   <ul className="tm-social ico-20 clearfix">
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         <span className="flaticon-facebook"></span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         <span className="flaticon-twitter"></span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         <span className="flaticon-linkedin-logo"></span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <hr />
@@ -289,19 +289,19 @@ style={{
                   <h6 className="s-20 color--black w-700">Blanka Lorenzen</h6>
                   <ul className="tm-social ico-20 clearfix">
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         <span className="flaticon-facebook"></span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         <span className="flaticon-twitter"></span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         <span className="flaticon-linkedin-logo"></span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <hr />

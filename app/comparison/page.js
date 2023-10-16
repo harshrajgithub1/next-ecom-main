@@ -66,7 +66,7 @@ const Comparison = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@ const Comparison = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -90,7 +90,7 @@ const Comparison = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -102,7 +102,7 @@ const Comparison = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Comparison = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@ const Comparison = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@ const Comparison = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
@@ -150,7 +150,7 @@ const Comparison = () => {
                 <div className="content-style">
                   <h3>Horizon Villa</h3>
                   <p>Smart Villa</p>
-                  <a href="#">Compare</a>
+                  <Link href="#">Compare</Link>
                 </div>
               </div>
             </div>
