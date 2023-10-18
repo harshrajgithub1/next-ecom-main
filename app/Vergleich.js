@@ -24,7 +24,7 @@ const Vergleich = () => {
 
                 <ul className="breadcrumb">
                   <li>
-                    <Link href="/">Start</Link>
+                    <Link href="/" passHref>Start</Link>
                   </li>
                   <li>Vergleich</li>
                 </ul>

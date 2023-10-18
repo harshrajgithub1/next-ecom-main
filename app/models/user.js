@@ -73,49 +73,49 @@
 
 
 
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+// import { useState } from 'react';
+// import { useRouter } from 'next/router';
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const router = useRouter();
+// const Login = () => {
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+//   const router = useRouter();
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const userData = {
-      email: email,
-      password: password,
-    };
-    localStorage.setItem('userData', JSON.stringify(userData));
-    router.push('/dashboard'); // Replace '/dashboard' with your desired route
-  };
+//   const handleLogin = (e) => {
+//     e.preventDefault();
+//     const userData = {
+//       email: email,
+//       password: password,
+//     };
+//     localStorage.setItem('userData', JSON.stringify(userData));
+//     router.push('/dashboard'); // Replace '/dashboard' with your desired route
+//   };
 
-  return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin} method="post"> {/* Set method to "post" */}
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <h1>Login</h1>
+//       <form onSubmit={handleLogin} method="post"> {/* Set method to "post" */}
+//         <div>
+//           <label>Email:</label>
+//           <input
+//             type="email"
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//           />
+//         </div>
+//         <div>
+//           <label>Password:</label>
+//           <input
+//             type="password"
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//           />
+//         </div>
+//         <button type="submit">Login</button>
+//       </form>
+//     </div>
+//   );
+// };
 
-export default Login;
+// export default Login;
 

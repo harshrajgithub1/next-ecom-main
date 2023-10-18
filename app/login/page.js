@@ -1,7 +1,28 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
+
+const validationSchema = Yup.object().shape({
+  email: Yup.string().required("Email is required").email("Email is invalid"),
+  password: Yup.string().required("Password is required"),
+});
+
+const formOptions = { resolver: yupResolver(validationSchema) };
 
 const Login = () => {
+
+  const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
+
+  const onSubmit1 = (formData, event) => {
+    event.preventDefault();
+    console.log(formData);
+    // Backend API Call operation is handled here.
+  };
+
+   
   return (
     <div>
       <section
@@ -63,15 +84,15 @@ const Login = () => {
                   </div>
                   <div className="col-md-6">
                     <div className="register-page-form">
-                      <form name="signinform" className="row sign-in-form">
+                      <form name="signinform" method="post" onSubmit={handleSubmit(onSubmit1)} className="row sign-in-form">
                         <div className="col-md-12">
-                          <Link href="#" className="btn btn-google ico-left">
+                          <a href="#" className="btn btn-google ico-left">
                             <img
                               src="/assets/img/google.png"
                               alt="google-icon"
                             />{" "}
                             Sign in with Google
-                          </Link>
+                          </a>
                         </div>
                         <div className="col-md-12 text-center">
                           <div className="separator-line">
@@ -89,11 +110,15 @@ const Login = () => {
                         <div className="col-md-12">
                           <p className="p-sm input-header">Email address</p>
                           <input
+                          {...register("email")}
                             className="form-control email"
                             type="email"
                             name="email"
                             placeholder="example@example.com"
                           />
+                          <div className="text-red-500 ml-2 mt-2">
+              {errors.email?.message}
+            </div>
                         </div>
                         <div className="col-md-12">
                           <p className="p-sm input-header">Password</p>
@@ -102,17 +127,21 @@ const Login = () => {
                               <span className="flaticon-visibility eye-pass"></span>
                             </span>
                             <input
+                            {...register("password")}
                               className="form-control password"
                               type="password"
                               name="password"
                               placeholder="* * * * * * * * *"
                             />
+                            <div className="text-red-500 ml-2 mt-2">
+              {errors.password?.message}
+            </div>
                           </div>
                         </div>
                         <div className="col-md-12">
                           <div className="reset-password-link">
                             <p className="p-sm">
-                              <Link href="reset-password" className="color--theme">
+                              <Link href="/reset-password" className="color--theme">
                                 Forgot your password?
                               </Link>
                             </p>
@@ -129,7 +158,7 @@ const Login = () => {
                         <div className="col-md-12">
                           <p className="create-account text-center">
                             Don't have an account?{" "}
-                            <Link href="register" className="color--theme">
+                            <Link href="/register" className="color--theme">
                               Sign up
                             </Link>
                           </p>

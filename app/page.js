@@ -1,18 +1,16 @@
+'use client'
+
 import Image from 'next/image';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Link from 'next/link';
 
 export default function Home() {
   return (
-    <>
       <section id="hero-1" className="bg--scroll hero-section">
         <Image src="/assets/img/slider/slider1.jpg" alt="" className="img-fluid banner-img" width={500} height={200} />
         <div className="container container-content">
           <div className="row d-flex align-items-center">
             <div className="col-lg-6 order-lg-2">
               <div className="hero-1-img wow fadeInLeft">
-                <Image src="/assets/img/slider/img1.png" alt="hero-image" width={500} height={200} />
+                {/* <Image src="/assets/img/slider/img1.png" alt="hero-image" width={500} height={200} /> */}
               </div>
             </div>
             <div className="col-lg-6">
@@ -20,7 +18,7 @@ export default function Home() {
                 <h2 className="s-47">Jetzt vergleichen und deine Wohnung <span>optimal vernetzen</span></h2>
                 <p className="p-xl">Trishala Connect bietet dir einzigartige Möglichkeiten auf 
                 den neusten Stand der Technik zu kommen. Simple better advice</p>
-                <Link href="#banner-3" className="btn r-04 btn--theme hover--tra-white">Get started for free</Link>
+                <a href="#banner-3" className="btn r-04 btn--theme hover--tra-white">Get started for free</a>
               </div>
             </div>
 
@@ -31,16 +29,16 @@ export default function Home() {
                   <option value="Privat">Privat</option>
                 </select>
 
-                <select name="" id="select2" className="form-control">
+                {/* <select name="" id="select2" className="form-control">
                   <option value="">Mehrfamilienhaus</option>
                   <option value="">Umbau</option>
                   <option value="">Büro</option>
                   <option value="">Werkstatt</option>
                   <option value="">Lagerhalle</option>
                   <option value="">Produktion</option>
-                </select>
+                </select> */}
 
-                <select name="" id="select3" className="form-control">
+                {/* <select name="" id="select3" className="form-control">
                   <option value="">Systeme</option>
                   <option value="">Einzelsysteme</option>
                   <option value="">Kompaktsysteme</option>
@@ -66,7 +64,7 @@ export default function Home() {
                   <option value="">German</option>
                   <option value="">France</option>
                   <option value="">US</option>
-                </select>
+                </select> */}
 
                 <button className="btn btn-submit">Ich habe schon etwas</button>
               </div>
@@ -74,6 +72,5 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
   );
 }
