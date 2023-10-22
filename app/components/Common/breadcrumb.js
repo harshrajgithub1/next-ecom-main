@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
-import useBreadcrumbs from 'use-react-router-breadcrumbs';
 
 export default function breadcrumb() {
   return (

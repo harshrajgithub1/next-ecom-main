@@ -1,7 +1,35 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
+import axios from 'axios';
 
+const validationSchema = Yup.object().shape({
+  email: Yup.string().required("Email is required").email("Email is invalid"),
+  password: Yup.string().required("Password is required").min(8),
+  name: Yup.string().required("Name is required"),
+  phone: Yup.string().required("Phone is required")
+});
+
+const formOptions = { resolver: yupResolver(validationSchema) };
+
+// http://165.232.130.162/spanisch_lernen/public/api/signup
 const Registration = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
+
+  const onSubmit = (formData, event) => {
+    event.preventDefault();
+    console.log(formData);
+    const res = axios.post('http://165.232.130.162/spanisch_lernen/public/api/signup', {
+      body: JSON.stringify(formData),
+    })
+    console.log(res);
+    // Backend API Call operation is handled here.
+  };
+
   return (
     <div>
       <section
@@ -42,7 +70,7 @@ const Registration = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="register-page-form">
-                      <form name="signupform" className="row sign-up-form">
+                      <form name="signupform" method="post" onSubmit={handleSubmit(onSubmit)} className="row sign-up-form">
                         <div className="col-md-12">
                           <Link href="#" className="btn btn-google ico-left">
                             <img
@@ -60,7 +88,8 @@ const Registration = () => {
                         <div className="col-md-12">
                           <p className="p-sm input-header">Full name</p>
                           <input
-                            className="form-control name"
+                          {...register("name")}
+                          className="form-control name"
                             type="text"
                             name="name"
                             placeholder="John Doe"
@@ -69,10 +98,21 @@ const Registration = () => {
                         <div className="col-md-12">
                           <p className="p-sm input-header">Email address</p>
                           <input
-                            className="form-control email"
+                          {...register("email")}
+                          className="form-control email"
                             type="email"
                             name="email"
                             placeholder="example@example.com"
+                          />
+                        </div>
+                        <div className="col-md-12">
+                          <p className="p-sm input-header">Phone Number</p>
+                          <input
+                          {...register("phone")}
+                          className="form-control email"
+                            type="phone"
+                            name="phone"
+                            placeholder="XXXXXXXXXX"
                           />
                         </div>
                         <div className="col-md-12">
@@ -82,7 +122,8 @@ const Registration = () => {
                               <span className="flaticon-visibility eye-pass"></span>
                             </span>
                             <input
-                              className="form-control password"
+                          {...register("password")}
+                          className="form-control password"
                               type="password"
                               name="password"
                               placeholder="min 8 characters"

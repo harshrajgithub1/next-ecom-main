@@ -1,4 +1,3 @@
-
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import '../public/assets/css/bootstrap.min.css'
@@ -15,7 +14,8 @@ import '../public/assets/css/style.min.css'
 import '../public/assets/css/responsive.css'
 import './globals.css'
 import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
+
+// const inter = Inter({ subsets: ['latin'] })
 
 // export const metadata = {
 //   title: 'Create Next App',
@@ -25,9 +25,11 @@ const inter = Inter({ subsets: ['latin'] })
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <Header></Header>
-      <main className={inter.className}>{children}</main>
-      <Footer></Footer>
+      <body>
+        <Header></Header>
+        <main>{children}</main>
+        <Footer></Footer>
+      </body>
     </html>
     
   )
