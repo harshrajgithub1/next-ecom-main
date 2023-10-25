@@ -20,13 +20,17 @@ const formOptions = { resolver: yupResolver(validationSchema) };
 const Registration = () => {
   const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
 
-  const onSubmit = (formData, event) => {
+  const onSubmit = async (formData, event) => {
     event.preventDefault();
     console.log(formData);
-    const res = axios.post('http://165.232.130.162/spanisch_lernen/public/api/signup', {
-      body: JSON.stringify(formData),
-    })
-    console.log(res);
+    try {
+      const res = await axios.post('http://165.232.130.162/spanisch_lernen/public/api/signup', formData);
+      console.log(res.data); // Assuming res.data contains the response data you want to log.
+      // Handle the response data here.
+    } catch (error) {
+      console.error('Error occurred:', error);
+      // Handle the error here.
+    }
     // Backend API Call operation is handled here.
   };
 

@@ -4,18 +4,26 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import { signIn } from "next-auth/react";
-import { useSession } from "next-auth/react";
+import { useState } from "react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
   password: Yup.string().required("Password is required"),
 });
 
+
 const formOptions = { resolver: yupResolver(validationSchema) };
 
 const Login = () => {
+  const { data: session } = useSession();
+  const [showPassword, setShowPassword] = useState(false);
 
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  console.log(session);
   const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
 
   const onSubmit1 = (formData, event) => {
@@ -24,8 +32,8 @@ const Login = () => {
     // Backend API Call operation is handled here.
 
 
-      const session = useSession();
-      console.log(session);
+      // const session = useSession();
+      // console.log(session);
   };
     
   
@@ -45,6 +53,7 @@ const Login = () => {
         height: '540px', // Set the width and height as needed
       }}
       >
+        
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -63,7 +72,8 @@ const Login = () => {
         </div>
       </section>
 
-      <section id="login" className="bg--scroll login-section division">
+      {!session && (
+        <section id="login" className="bg--scroll login-section division">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-11">
@@ -139,12 +149,12 @@ const Login = () => {
                           <p className="p-sm input-header">Password</p>
                           <div className="wrap-input">
                             <span className="btn-show-pass ico-20">
-                              <span className="flaticon-visibility eye-pass"></span>
+                              <span className="flaticon-visibility eye-pass" onClick={handleTogglePassword} style={{ cursor: 'pointer' }}></span>
                             </span>
                             <input
                             {...register("password")}
                               className="form-control password"
-                              type="password"
+                              type={showPassword ? 'text' : 'password'}
                               name="password"
                               placeholder="* * * * * * * * *"
                             />
@@ -187,6 +197,14 @@ const Login = () => {
           </div>
         </div>
       </section>
+        )}
+        {session && (
+        <>
+          Signed in as {session.user.email} <br />
+          <button onClick={() => signOut()}>Sign out</button>
+        </>
+      )}
+      
     </div>
   );
 };

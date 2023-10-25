@@ -14,7 +14,7 @@ import '../public/assets/css/style.min.css'
 import '../public/assets/css/responsive.css'
 import './globals.css'
 import { Inter } from 'next/font/google'
-
+import AuthProvider from '../app/components/AuthProvider/authProvider'
 // const inter = Inter({ subsets: ['latin'] })
 
 // export const metadata = {
@@ -29,9 +29,9 @@ export default function RootLayout({ children }) {
         <Header></Header>
         
         <main>
-            <authprovider>
+            <AuthProvider>
                {children}
-            </authprovider>
+            </AuthProvider>
         
         </main>
         <Footer></Footer>
