@@ -27,7 +27,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header></Header>
-        <main>{children}</main>
+        
+        <main>
+            <authprovider>
+               {children}
+            </authprovider>
+        
+        </main>
         <Footer></Footer>
       </body>
     </html>

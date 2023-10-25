@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import { signIn } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
@@ -20,9 +22,15 @@ const Login = () => {
     event.preventDefault();
     console.log(formData);
     // Backend API Call operation is handled here.
-  };
 
-   
+
+      const session = useSession();
+      console.log(session);
+  };
+    
+  
+
+
   return (
     <div>
       <section
@@ -85,15 +93,22 @@ const Login = () => {
                   <div className="col-md-6">
                     <div className="register-page-form">
                       <form name="signinform" method="post" onSubmit={handleSubmit(onSubmit1)} className="row sign-in-form">
-                        <div className="col-md-12">
-                          <a href="#" className="btn btn-google ico-left">
-                            <img
-                              src="/assets/img/google.png"
-                              alt="google-icon"
-                            />{" "}
-                            Sign in with Google
-                          </a>
-                        </div>
+                       
+                          <div>
+                            <button onClick={()=>signIn("google")}>
+                              <div className="col-md-12">
+                               <a href="#" className="btn btn-google ico-left">
+                                  <img
+                                    src="/assets/img/google.png"
+                                     alt="google-icon"
+                                   />
+                                   {" "}
+                                    Sign in with Google
+                                </a>
+                            
+                               </div>
+                            </button>
+                          </div>
                         <div className="col-md-12 text-center">
                           <div className="separator-line">
                             Or, sign in with your email
@@ -148,7 +163,7 @@ const Login = () => {
                           </div>
                         </div>
                         <div className="col-md-12">
-                          <button
+                          <button onClick={handleSubmit(onSubmit1)}
                             type="submit"
                             className="btn btn--theme hover--theme submit"
                           >
