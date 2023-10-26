@@ -107,14 +107,14 @@ const Login = () => {
                           <div>
                             <button onClick={()=>signIn("google")}>
                               <div className="col-md-12">
-                               <a href="#" className="btn btn-google ico-left">
+                               <Link href="#" className="btn btn-google ico-left">
                                   <img
                                     src="/assets/img/google.png"
                                      alt="google-icon"
                                    />
                                    {" "}
                                     Sign in with Google
-                                </a>
+                                </Link>
                             
                                </div>
                             </button>
