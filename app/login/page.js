@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
+import axios from 'axios';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
@@ -26,11 +27,26 @@ const Login = () => {
   console.log(session);
   const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
 
-  const onSubmit1 = (formData, event) => {
+  const onSubmit1 = async(formData, event) => {
     event.preventDefault();
     console.log(formData);
     // Backend API Call operation is handled here.
-
+    try {
+      const res = await axios.post(`http://165.232.130.162/Spanisch_lernen/public/api/login?email=${formData.email}&password=${formData.password}`);
+      console.log(res.data); // Assuming res.data contains the response data you want to log.
+      // Handle the response data here.
+      if(res.data.success){
+        sessionStorage.setItem('token', res.data.token); 
+        localStorage.setItem('token', res.data.token);
+        document.cookie = `token=${res.data.token}; path=/;`;
+      }
+      else{
+        alert('Invalid Credentials');
+      }
+    } catch (error) {
+      console.error('Error occurred:', error);
+      // Handle the error here.
+    }
 
       // const session = useSession();
       // console.log(session);

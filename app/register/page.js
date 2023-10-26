@@ -24,7 +24,7 @@ const Registration = () => {
     event.preventDefault();
     console.log(formData);
     try {
-      const res = await axios.post('http://165.232.130.162/spanisch_lernen/public/api/signup', formData);
+      const res = await axios.post('http://165.232.130.162/Spanisch_lernen/public/api/signup', formData);
       console.log(res.data); // Assuming res.data contains the response data you want to log.
       // Handle the response data here.
     } catch (error) {
