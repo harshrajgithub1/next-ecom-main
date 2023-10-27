@@ -13,8 +13,13 @@ import '../public/assets/css/animate.css'
 import '../public/assets/css/style.min.css'
 import '../public/assets/css/responsive.css'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import ToastContainerWrapper from './components/Common/ToastContainerWrapper'
+//import { Inter } from 'next/font/google'
 import AuthProvider from '../app/components/AuthProvider/authProvider'
+//import {Navigation} from "./components/navigation"
+
+
+
 // const inter = Inter({ subsets: ['latin'] })
 
 // export const metadata = {
@@ -31,10 +36,13 @@ export default function RootLayout({ children }) {
         <main>
             <AuthProvider>
                {children}
+               
             </AuthProvider>
-        
+           
         </main>
+       
         <Footer></Footer>
+        <ToastContainerWrapper />
       </body>
     </html>
     

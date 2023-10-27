@@ -1,5 +1,6 @@
 "use client";
 
+
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -7,7 +8,15 @@ import * as Yup from "yup";
 import { useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import axios from 'axios';
+import { useRouter } from "next/navigation";
 
+
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+const router = useRouter();
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
   password: Yup.string().required("Password is required"),
@@ -39,12 +48,18 @@ const Login = () => {
         sessionStorage.setItem('token', res.data.token); 
         localStorage.setItem('token', res.data.token);
         document.cookie = `token=${res.data.token}; path=/;`;
+        toast.success("Login  successful");
+        router.push("/about");
+
       }
+         
       else{
-        alert('Invalid Credentials');
+        toast.error("An error occurred");
+        //alert('Invalid Credentials');
       }
     } catch (error) {
       console.error('Error occurred:', error);
+      toast.error("An error occurred");
       // Handle the error here.
     }
 
