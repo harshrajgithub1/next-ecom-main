@@ -13,7 +13,7 @@ const Header = () => {
             <span></span>
           </a>
         </div>
-        <div className="wsmainfull menu clearfix">
+        <div className="hidden sm:block text-black wsmainfull menu clearfix">
           <div className="wsmainwp">
             <div className="desktoplogo">
               <Link href="/" className="logo-black">

@@ -971,10 +971,10 @@
   }
   
   .shape--06:after {
-    width: 150%;
+    width: 100%;
     height: 75%;
     top: 0;
-    left: -25%;
+    /* left: -25%; */
   }
   
   .shape--07:after {
@@ -7311,8 +7311,9 @@
   }
   
   .ct-04 .img-block img {
-    max-width: none;
-    display: inline-block;
+    /* max-width: none; */
+  max-width: 100%;
+  display: inline-block;
   }
   
   .ct-06 .img-block {
