@@ -16,7 +16,7 @@ import './globals.css'
 import ToastContainerWrapper from './components/Common/ToastContainerWrapper'
 //import { Inter } from 'next/font/google'
 import AuthProvider from '../app/components/AuthProvider/authProvider'
-//import {Navigation} from "./components/navigation"
+import Navbar from '../app/components/Navigation/Navbar/index'
 
 
 
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         <main>
             <AuthProvider>
                {children}
-               
+               <Navbar/>
             </AuthProvider>
            
         </main>

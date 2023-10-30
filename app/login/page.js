@@ -10,22 +10,27 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import axios from 'axios';
 import { useRouter } from "next/navigation";
 
+// import { useRouter } from "next/router";
+// import { useSession } from "next-auth/react";
 
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const router = useRouter();
-const validationSchema = Yup.object().shape({
-  email: Yup.string().required("Email is required").email("Email is invalid"),
-  password: Yup.string().required("Password is required"),
-});
-
-
-const formOptions = { resolver: yupResolver(validationSchema) };
-
 const Login = () => {
+
+
+  const router = useRouter();
+  const validationSchema = Yup.object().shape({
+    email: Yup.string().required("Email is required").email("Email is invalid"),
+    password: Yup.string().required("Password is required"),
+  });
+  
+  
+  const formOptions = { resolver: yupResolver(validationSchema) };
+  
+
   const { data: session } = useSession();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -49,6 +54,7 @@ const Login = () => {
         localStorage.setItem('token', res.data.token);
         document.cookie = `token=${res.data.token}; path=/;`;
         toast.success("Login  successful");
+        //window.location.href='/about';
         router.push("/about");
 
       }

@@ -34,6 +34,7 @@ const Registration = () => {
       // Handle the response data here.
       if (isSuccess) {
         toast.success('Registration successful');
+        window.location.href='/login';
       } else {
         toast.error('Registration failed');
       }
