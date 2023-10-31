@@ -6,21 +6,30 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import axios from 'axios';
+import { useState, useEffect } from "react";
+//import { useSession } from "next-auth/react";
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
-  password: Yup.string().required("Password is required").min(8),
-  name: Yup.string().required("Name is required"),
-  phone: Yup.string().required("Phone is required")
+  password: Yup.string().required("Password is required").min(8) .max(18),  
+  name: Yup.string().matches(/^[a-zA-Z ]+$/, 'Name must contain only letters and spaces').required("Name is required"),
+  phone: Yup.string().matches(/^[0-9]{10}$/, 'Phone number must be 10 digits').required("Phone is required")
 });
 
 const formOptions = { resolver: yupResolver(validationSchema) };
 
+
 // http://165.232.130.162/spanisch_lernen/public/api/signup
 const Registration = () => {
+
+  const [showPassword, setShowPassword] = useState(false);
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
 
   const onSubmit = async (formData, event) => {
@@ -33,8 +42,18 @@ const Registration = () => {
       console.log(res.data); // Assuming res.data contains the response data you want to log.
       // Handle the response data here.
       if (isSuccess) {
-        toast.success('Registration successful');
-        window.location.href='/login';
+        var msg = res.data.message;
+        //toast.success(msg);
+        var message = res.data.success;
+        if(message==true){
+          toast.success(msg);
+        }
+        //window.location.href='/login';
+        if(message==false){
+          toast.error(msg);
+        }
+        
+        //window.location.href='/login';
       } else {
         toast.error('Registration failed');
       }
@@ -87,7 +106,7 @@ const Registration = () => {
                   <div className="col-md-6">
                     <div className="register-page-form">
                       <form name="signupform" method="post" onSubmit={handleSubmit(onSubmit)} className="row sign-up-form">
-                        <div className="col-md-12">
+                        {/* <div className="col-md-12">
                           <Link href="#" className="btn btn-google ico-left">
                             <img
                               src="/assets/img/google.png"
@@ -95,12 +114,12 @@ const Registration = () => {
                             />{" "}
                             Sign up with Google
                           </Link>
-                        </div>
-                        <div className="col-md-12 text-center">
+                        </div> */}
+                        {/* <div className="col-md-12 text-center">
                           <div className="separator-line">
                             Or, sign up with your email
                           </div>
-                        </div>
+                        </div> */}
                         <div className="col-md-12">
                           <p className="p-sm input-header">Full name</p>
                           <input
@@ -126,7 +145,7 @@ const Registration = () => {
                           <input
                           {...register("phone")}
                           className="form-control email"
-                            type="phone"
+                            type="number"
                             name="phone"
                             placeholder="XXXXXXXXXX"
                           />
@@ -135,12 +154,12 @@ const Registration = () => {
                           <p className="p-sm input-header">Password</p>
                           <div className="wrap-input">
                             <span className="btn-show-pass ico-20">
-                              <span className="flaticon-visibility eye-pass"></span>
+                              <span className="flaticon-visibility eye-pass" onClick={handleTogglePassword} style={{cursor:'pointer'}}></span>
                             </span>
                             <input
                           {...register("password")}
                           className="form-control password"
-                              type="password"
+                              type={showPassword ? 'text' : 'password'}
                               name="password"
                               placeholder="min 8 characters"
                             />

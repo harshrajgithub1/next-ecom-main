@@ -61,11 +61,19 @@
 "use client";
 import Link from "next/link"
 import React from "react";
-
+import { useState } from "react";
 import Logo from "./Logo";
 import Button from "./Button";
 
-const Navbar = ({ toggle }) => {
+
+  const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+    const toggle = () => {
+      setIsMenuOpen(!isMenuOpen);
+      console.log("Toggle button clicked!");
+    };
+
   return (
     <>
       <div className="w-full h-20 bg-emerald-800 sticky top-0">

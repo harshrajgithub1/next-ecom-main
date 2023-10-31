@@ -41,6 +41,8 @@ const Login = () => {
   console.log(session);
   const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
 
+  //const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const onSubmit1 = async(formData, event) => {
     event.preventDefault();
     console.log(formData);
