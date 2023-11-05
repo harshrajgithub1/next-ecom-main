@@ -1,7 +1,13 @@
 'use client'
-
+import { useAuth } from '../AuthProvider/useAuth';
 import Link from 'next/link';
 const Header = () => {
+  const { isLoggedIn, logout } = useAuth();
+  console.log(isLoggedIn);
+
+  const handleLogout = () =>{
+    logout();
+  }
   return (
     <header id="header" className="tra-menu navbar-light white-scroll">
       <div className="header-wrapper">
@@ -61,11 +67,23 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nl-simple">
-                  <Link
-                    href="/login"
-                    className="btn r-04 btn--theme hover--tra-white last-link">
-                    Anmeldung
-                  </Link>
+                  <p>{isLoggedIn}</p>
+                {!isLoggedIn ?
+                <Link
+                href="/login"
+                className="btn r-04 btn--theme hover--tra-white last-link">
+                Anmeldung
+              </Link> : 
+              <button
+              onClick={handleLogout}
+              className="btn r-04 btn--theme hover--tra-white last-link">
+              Log out
+            </button>
+                }
+                </li>
+                
+                <li >
+                  
                 </li>
                 <li className="language">
                   <select name="lang" id="lang" className="form-control">

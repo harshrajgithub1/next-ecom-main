@@ -6,20 +6,17 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { useState } from "react";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
 import axios from 'axios';
 import { useRouter } from "next/navigation";
-
-// import { useRouter } from "next/router";
-// import { useSession } from "next-auth/react";
-
+import { CookiesProvider, useCookies } from "react-cookie";
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
-
+  const [cookies, setCookie] = useCookies(["token"]);
 
   const router = useRouter();
   const validationSchema = Yup.object().shape({
@@ -31,30 +28,25 @@ const Login = () => {
   const formOptions = { resolver: yupResolver(validationSchema) };
   
 
-  const { data: session } = useSession();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
 
-  console.log(session);
   const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
 
   //const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const onSubmit1 = async(formData, event) => {
     event.preventDefault();
-    console.log(formData);
     // Backend API Call operation is handled here.
     try {
       const res = await axios.post(`http://165.232.130.162/Spanisch_lernen/public/api/login?email=${formData.email}&password=${formData.password}`);
       console.log(res.data); // Assuming res.data contains the response data you want to log.
       // Handle the response data here.
       if(res.data.success){
-        sessionStorage.setItem('token', res.data.token); 
-        localStorage.setItem('token', res.data.token);
-        document.cookie = `token=${res.data.token}; path=/;`;
+        setCookie("token", res.data.token, { path: "/" });
         toast.success("Login  successful");
         //window.location.href='/about';
         router.push("/about");
@@ -70,9 +62,6 @@ const Login = () => {
       toast.error("An error occurred");
       // Handle the error here.
     }
-
-      // const session = useSession();
-      // console.log(session);
   };
     
   
@@ -111,7 +100,7 @@ const Login = () => {
         </div>
       </section>
 
-      {!session && (
+      
         <section id="login" className="bg--scroll login-section division">
         <div className="container">
           <div className="row justify-content-center">
@@ -236,13 +225,8 @@ const Login = () => {
           </div>
         </div>
       </section>
-        )}
-        {session && (
-        <>
-          Signed in as {session.user.email} <br />
-          <button onClick={() => signOut()}>Sign out</button>
-        </>
-      )}
+        
+        
       
     </div>
   );

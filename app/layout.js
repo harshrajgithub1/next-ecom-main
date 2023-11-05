@@ -1,3 +1,4 @@
+'use client';
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import '../public/assets/css/bootstrap.min.css'
@@ -16,7 +17,6 @@ import './globals.css'
 import ToastContainerWrapper from './components/Common/ToastContainerWrapper'
 //import { Inter } from 'next/font/google'
 import AuthProvider from '../app/components/AuthProvider/authProvider'
-import Navbar from '../app/components/Navigation/Navbar/index'
 
 
 
@@ -34,9 +34,7 @@ export default function RootLayout({ children }) {
         <Header></Header>
         
         <main>
-            <AuthProvider>
                {children}
-            </AuthProvider>
       {/* <Navbar/> */}
            
         </main>
