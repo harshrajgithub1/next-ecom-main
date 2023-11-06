@@ -62,7 +62,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nl-simple">
-                  <Link href="contact" className="h-link ">
+                  <Link href="/contact" className="h-link ">
                     Kontakt
                   </Link>
                 </li>

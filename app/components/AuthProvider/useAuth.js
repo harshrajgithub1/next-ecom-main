@@ -2,15 +2,18 @@
 
 import { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
+//import { useRouter } from 'next/router';
 
 export const useAuth = () => {
   const [cookies] = useCookies(['token']); // Replace yourTokenCookieName with the name of your cookie
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  //const router = useRouter();
 
   useEffect(() => {
     if (cookies.token) {
       setIsLoggedIn(true);
+      //router.replace('/about');
     } else {
       setIsLoggedIn(false);
     }
@@ -26,3 +29,7 @@ export const useAuth = () => {
   };
   return { isLoggedIn, logout };
 };
+
+
+
+
