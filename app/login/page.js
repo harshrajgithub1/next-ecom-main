@@ -44,11 +44,20 @@ const Login = () => {
     try {
       const res = await axios.post(`http://45.79.185.26/trifusa/public/api/login?email=${formData.email}&password=${formData.password}`);
       console.log(res.data); // Assuming res.data contains the response data you want to log.
+      console.log(res.data.user); // Assuming res.data contains the response data you want to log.
+      
       // Handle the response data here.
       if(res.data.success){
-        setCookie("token", res.data.token, { path: "/" });
-        toast.success("Login  successful");
+        const obj={
+          access_token: res.data.access_token,
+          token_type: res.data.token_type,
+          expires_in: res.data.expires_in,
+        };
+        // setCookie("token", res.data.token, { path: "/" });
+        toast.success(res.data.message);
         //window.location.href='/about';
+        sessionStorage.setItem("token", JSON.stringify(obj));
+        sessionStorage.setItem("user", JSON.stringify(res.data.user));
         router.push("/about");
 
       }
@@ -63,11 +72,7 @@ const Login = () => {
       // Handle the error here.
     }
 
-    localStorage.setItem('login'.JSON.stringify({
-      Login :true,
-
-      token:access_token
-    }))
+   
   };
     
   

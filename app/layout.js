@@ -16,7 +16,6 @@ import '../public/assets/css/responsive.css'
 import './globals.css'
 import ToastContainerWrapper from './components/Common/ToastContainerWrapper'
 //import { Inter } from 'next/font/google'
-import AuthProvider from '../app/components/AuthProvider/authProvider'
 
 
 

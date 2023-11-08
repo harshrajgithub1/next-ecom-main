@@ -1,28 +1,24 @@
-// useAuth.js
 
 import { useState, useEffect } from 'react';
-import { useCookies } from 'react-cookie';
 //import { useRouter } from 'next/router';
 
 export const useAuth = () => {
-  const [cookies] = useCookies(['token']); // Replace yourTokenCookieName with the name of your cookie
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   //const router = useRouter();
-
   useEffect(() => {
-    if (cookies.token) {
+    if (session) {
       setIsLoggedIn(true);
       //router.replace('/about');
     } else {
       setIsLoggedIn(false);
     }
     setIsLoading(false); 
-  }, [cookies.token]); // Replace yourTokenCookieName with the name of your cookie
+  }, [session]); // Replace yourTokenCookieName with the name of your cookie
 
   const logout = () => {
     // Clear the authentication token from cookies
-    document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    sessionStorage.removeItem("token");
 
     // Update the isLoggedIn state to reflect that the user is logged out
     setIsLoggedIn(false);
