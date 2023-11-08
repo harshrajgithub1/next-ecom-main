@@ -42,7 +42,7 @@ const Login = () => {
     event.preventDefault();
     // Backend API Call operation is handled here.
     try {
-      const res = await axios.post(`http://165.232.130.162/Spanisch_lernen/public/api/login?email=${formData.email}&password=${formData.password}`);
+      const res = await axios.post(`http://45.79.185.26/trifusa/public/api/login?email=${formData.email}&password=${formData.password}`);
       console.log(res.data); // Assuming res.data contains the response data you want to log.
       // Handle the response data here.
       if(res.data.success){
@@ -62,6 +62,12 @@ const Login = () => {
       toast.error("An error occurred");
       // Handle the error here.
     }
+
+    localStorage.setItem('login'.JSON.stringify({
+      Login :true,
+
+      token:access_token
+    }))
   };
     
   

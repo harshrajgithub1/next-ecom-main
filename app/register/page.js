@@ -16,7 +16,7 @@ const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
   password: Yup.string().required("Password is required").min(8) .max(18),  
   name: Yup.string().matches(/^[a-zA-Z ]+$/, 'Name must contain only letters and spaces').required("Name is required"),
-  phone: Yup.string().matches(/^[0-9]{10}$/, 'Phone number must be 10 digits').required("Phone is required")
+  //phone: Yup.string().matches(/^[0-9]{10}$/, 'Phone number must be 10 digits').required("Phone is required")
 });
 
 const formOptions = { resolver: yupResolver(validationSchema) };
@@ -38,7 +38,7 @@ const Registration = () => {
     console.log(formData);
     const isSuccess = true;
     try {
-      const res = await axios.post('http://165.232.130.162/Spanisch_lernen/public/api/signup', formData);
+      const res = await axios.post('http://45.79.185.26/trifusa/public/api/register', formData);
       console.log(res.data); // Assuming res.data contains the response data you want to log.
       // Handle the response data here.
       if (isSuccess) {
@@ -46,9 +46,10 @@ const Registration = () => {
         //toast.success(msg);
         var message = res.data.success;
         if(message==true){
-          toast.success(msg);
+          //toast.success(msg);
         }
-        //window.location.href='/login';
+        alert("successfully register");
+        window.location.href='/login';
         if(message==false){
           toast.error(msg);
         }
@@ -140,7 +141,7 @@ const Registration = () => {
                             placeholder="example@example.com"
                           />
                         </div>
-                        <div className="col-md-12">
+                        {/* <div className="col-md-12">
                           <p className="p-sm input-header">Phone Number</p>
                           <input
                           {...register("phone")}
@@ -149,7 +150,7 @@ const Registration = () => {
                             name="phone"
                             placeholder="XXXXXXXXXX"
                           />
-                        </div>
+                        </div> */}
                         <div className="col-md-12">
                           <p className="p-sm input-header">Password</p>
                           <div className="wrap-input">
