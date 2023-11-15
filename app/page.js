@@ -1,6 +1,8 @@
 
 import Link from 'next/link'
 import React from 'react'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const page = () => {
   return (
@@ -473,6 +475,7 @@ const page = () => {
 	</div>
 </section>
 
+<Carousel>
 <section id="reviews-1" className="pt-100 shape--06 shape--gr-whitesmoke reviews-section">
 	<div className="container">
 		<div className="row justify-content-center">
@@ -708,7 +711,7 @@ const page = () => {
 		</div>
 	</div>
 </section>
-
+</Carousel>
     </div>
   )
 }
