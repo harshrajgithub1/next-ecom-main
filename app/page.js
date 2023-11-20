@@ -1,14 +1,17 @@
 "use client";
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from 'next-i18next';
+
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
 
 const page = () => {
-  
+  const {t} = useTranslation('common');
 
   return (
+    
     <div>
       <section id="hero-1" className="bg--scroll hero-section">
         <img
@@ -16,7 +19,10 @@ const page = () => {
           alt=""
           className="img-fluid banner-img"
         />
-
+{/* <div>
+      <h1>{t('hello')}</h1>
+      <p>{t('welcome')}</p>
+    </div> */}
         <div className="container container-content">
           <div className="row d-flex align-items-center">
             <div className="col-lg-6 order-lg-2">
