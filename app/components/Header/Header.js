@@ -1,9 +1,6 @@
 'use client'
 import { useAuth } from '../AuthProvider/useAuth';
 import Link from 'next/link';
-import { fetchHeaderData } from '../../api/utils/utils';
-import React, { useState, useEffect } from 'react';
-
 
 const Header = () => {
   const { isLoggedIn, logout } = useAuth();
@@ -13,79 +10,7 @@ const Header = () => {
     logout();
   }
 
-  // const [data, setData] = useState(null);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const result = await fetchHeaderData();
-  //       setData(result);
-  //     } catch (error) {
-  //       console.error('Error in fetchData:', error);
-  //     }
-  //   };
 
-  //   fetchData();
-  // }, []);
-
-
-
-//   fetch('http://45.79.185.26/trifusa/public/api/home/header/image', {
-//     method: 'POST',
-//     headers: {
-//         'Accept': 'application/json',
-//         'Content-Type': 'application/x-www-form-urlencoded',
-//         'Authorization': 'Bearer ' + this.state.clientToken,
-//     },
-//     body: formBody
-// })
-//     .then((response) => response.json())
-//     .then((responseJson) => {
-//         console.log(responseJson, 'res JSON');
-//         if (responseJson.status == "success") {
-//             console.log(this.state);
-//             alert("your todolist is completed!!");
-//         }
-//     })
-//     .catch((error) => {
-//         console.error(error);
-//     });
-
-
-
-    const [clientToken, setClientToken] = useState('yourToken');
-
-  useEffect(() => {
-    const fetchHeaderImage = async () => {
-      try {
-        const formBody = new URLSearchParams();
-        formBody.append('key1', 'value1');
-        formBody.append('key2', 'value2');
-
-        const response = await axios.post(
-          'http://45.79.185.26/trifusa/public/api/home/header/image',
-          formBody,
-          {
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/x-www-form-urlencoded',
-              'Authorization': 'Bearer ' + clientToken,
-            },
-          }
-        );
-
-        console.log('API response:', response.data);
-
-        if (response.data.status === 'success') {
-          console.log(response.data);
-          alert('Your todolist is completed!!');
-        }
-      } catch (error) {
-        console.error('Error submitting data:', error);
-      }
-    };
-
-    fetchHeaderImage();
-  }, [clientToken]);
 
   return (
     <header id="header" className="tra-menu navbar-light white-scroll">
