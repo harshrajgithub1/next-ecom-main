@@ -1,6 +1,8 @@
 "use client"
 import React from 'react'
 import { useState, useEffect } from "react";
+import Link from 'next/link';
+
 const page = () => {
     const [headerData, setHeaderData] = useState();
 
@@ -36,40 +38,37 @@ const page = () => {
   return (
     <div>
         <section id="hero-1" className="bg--scroll hero-section">
-        <img
-          src="/assets/img/slider/slider1.jpg"
-          alt=""
-          className="img-fluid banner-img"
+          <img
+              src={`http://45.79.185.26/trifusa/public/storage/home_images/${headerData?.home_page_image}`}
+               alt=""
+               className="img-fluid banner-img"
         />
-{/* <div>
-      <h1>{t('hello')}</h1>
-      <p>{t('welcome')}</p>
-    </div> */}
+
         <div className="container container-content">
           <div className="row d-flex align-items-center">
-            <div className="col-lg-6 order-lg-2">
+            {/* <div className="col-lg-6 order-lg-2">
               <div className="hero-1-img wow fadeInLeft">
                 <img
                   className="img-fluid"
-                  src="http://45.79.185.26/trifusa/public/storage/home_images/home_page_image"
+                  src={`http://45.79.185.26/trifusa/public/storage/home_images/${headerData?.home_page_image}`}
                   alt="hero-image"
                 />
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-6">
               <div className="hero-1-txt color--white wow fadeInRight">
                 <h2 className="s-47">
                   {headerData?.img_header_1}
                 </h2>
                 <p className="p-xl">
-                    {headerData?.img_para_1}
+                  {headerData?.img_para_1}
                 </p>
-                {/* <Link
+                <Link
                   href="#banner-3"
                   className="btn r-04 btn--theme hover--tra-white"
                 >
-                  Get started for free
-                </Link> */}
+                 {headerData?.img_h_text}
+                </Link>
               </div>
             </div>
 

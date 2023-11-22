@@ -46,16 +46,16 @@ const page = () => {
                 <div className="col">
                   <div className="banner-3-txt color--white">
                    
-                    <h2 className="s-48">Produkte senden</h2>
+                    <h2 className="s-48"> 
+                        {headerData?.img_header_1} </h2>
                     <p className="p-xl">
-                      Endecke Trisfusa und helfe dabei noch mehr Vergleiche zu
-                      machen, sende uns deine Produkte die wir nicht kennen
+                       {headerData?.img_para_1} 
                     </p>
                     <Link
                       href="#"
                       className="btn r-04 btn--theme hover--tra-white"
                     >
-                      Jetzt Produkte senden
+                     {headerData?.img_h_text} 
                     </Link>
                   </div>
                 </div>

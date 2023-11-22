@@ -4716,7 +4716,7 @@ h2.s-48.w-700 {}
   background-size: contain;
   background-position: top;
   min-height: 100vh;
-  background-image: url(../img/slider/slider1.jpg);
+  /* background-image: url(../img/slider/slider1.jpg); */
   background-size: cover;
   background-position: center left;
 }
@@ -13779,6 +13779,10 @@ form.newsletter-form .input-group .btn {
   width: 100%;
 }
 
+.bg_white{
+  background-color: #fff;
+}
+
 .vergleich .content-style {
   background-color: #fff;
   width: 86%;
@@ -14090,6 +14094,10 @@ form.newsletter-form .input-group .btn {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #297768;
+}
+
+.sticky-header .header-wrapper{
+  background-color: #fff;
 }
 
 .sidebar-header a {
