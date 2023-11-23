@@ -38,9 +38,15 @@ const page = () => {
 
   return (
     <div>
-       <section id="banner-3" className="pt-100 banner-section">
+       <section id="banner-3" className="pt-100 banner-section" style={{ backgroundImage: "url: `http://45.79.185.26/trifusa/public/storage/home_images/${headerData?.home_page_image}`)"}}>
+      
         <div className="container">
           <div className="banner-3-wrapper bg--03 bg--scroll r-16">
+          {/* <img
+              src={`http://45.79.185.26/trifusa/public/storage/home_images/${headerData?.home_page_image}`}
+               alt=""
+               className="img-fluid banner-img"
+        /> */}
             <div className="banner-overlay">
               <div className="row">
                 <div className="col">

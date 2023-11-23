@@ -15,6 +15,8 @@ import '../public/assets/css/style.min.css'
 import '../public/assets/css/responsive.css'
 import './globals.css'
 import ToastContainerWrapper from './components/Common/ToastContainerWrapper'
+import Carousel from '../app/components/Home/Section5/page';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //import { Inter } from 'next/font/google'
 
 
@@ -35,7 +37,7 @@ export default function RootLayout({ children }) {
         <main>
                {children}
       {/* <Navbar/> */}
-           
+      <Carousel />
         </main>
        
         <Footer></Footer>

@@ -792,10 +792,26 @@ import { useState, useEffect } from "react";
 const page = () => {
 
   const [headerData, setHeaderData] = useState();
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  
+  let api_url = 'http://45.79.185.26/trifusa/public/api/category';
 
+  const handleCategoryClick = (selectedCategoryId) => {
+   
+   
+    console.log("Before:", selectedCategories);
+    const isSelected = selectedCategories.includes(selectedCategoryId);
+    setSelectedCategories((prevSelectedCategories) =>
+    isSelected
+      ? prevSelectedCategories.filter((id) => id !== selectedCategoryId)
+      : [...prevSelectedCategories, selectedCategoryId]
+  );
+
+  console.log("After:", selectedCategories);
+  };
 
   function getHeaderInfo(){
-      fetch('http://45.79.185.26/trifusa/public/api/category', {
+      fetch(api_url, {
           method: 'POST',
           headers: {
               'Accept': 'application/json',
@@ -830,7 +846,7 @@ const page = () => {
         className="pt-100 pb-50 features-section division"
       >
         <div className="container">
-          <div className="row justify-content-center">
+          {/* <div className="row justify-content-center">
             <div className="col-md-10 col-lg-9">
               <div className="section-title mb-70">
                 <h2 className="s-50">
@@ -842,13 +858,15 @@ const page = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="fbox-wrapper text-center">
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4">
             {headerData &&
               headerData.map((category) => (
               <div className="col" key={category}>
-                <div className="fbox-6 fb-1 wow fadeInUp ">
+            
+                <div className="fbox-6 fb-1 wow fadeInUp "
+                  onClick={() => handleCategoryClick(category.cat_id)}>
                   <div className="img-style">
                     <img
                       src={`http://45.79.185.26/trifusa/public/storage/category/${category?.cat_image}`}

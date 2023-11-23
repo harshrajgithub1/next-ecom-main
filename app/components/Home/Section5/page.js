@@ -1,4 +1,11 @@
+"use client"
+
 import React from 'react'
+import { Carousel } from 'react-responsive-carousel';
+//import 'react-responsive-carousel/lib/styles/carousel.min.css';
+//import { Carousel } from 'react-bootstrap';
+
+
 
 const page = () => {
   return (
@@ -14,30 +21,37 @@ const page = () => {
 				</div>
 			</div>
 		</div>
-		<div className="row">
-			<div className="col">
 
-
-     
+		<Carousel>
+	
+		 <div className="row">
+			 <div className="col">
             
 					<div className="review-1 bg--white-100 block-shadow r-08">
 						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
 						<div className="review-txt">
+						
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
 								numquam adipisci necessitatibus nam quas?
 							</p>
+							
 							<div className="author-data clearfix">
+							
 								<div className="review-avatar">
+						
 									<img src="/assets/img/review-author-1.jpg" alt="review-avatar" />
+					
 								</div>
 								<div className="review-author">
 									<h6 className="s-18 w-700">Scott Boxer</h6>
 									<p className="p-sm">@scott_boxer</p>
+									
 								</div>
 							</div>
 						</div>
 					</div>
-					<div className="review-1 bg--white-100 block-shadow r-08">
+					
+					{/* <div className="review-1 bg--white-100 block-shadow r-08">
 						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
 						<div className="review-txt">
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
@@ -155,12 +169,13 @@ const page = () => {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> */}
 
       
 				
-			</div>
-		</div>
+			 </div>
+		   </div>
+		</Carousel>   
 	</div>
 </section>
     </div>

@@ -21,7 +21,7 @@
 
 
 
-
+"use client"
 import React from 'react'
 import Header from '../app/components/Header/Header';
 import Section1 from './components/Home/Section1/page';
