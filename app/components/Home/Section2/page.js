@@ -794,11 +794,11 @@ const page = () => {
   const [headerData, setHeaderData] = useState();
   const [selectedCategories, setSelectedCategories] = useState([]);
   
-  let api_url = 'http://45.79.185.26/trifusa/public/api/category';
+  let api_category = 'http://45.79.185.26/trifusa/public/api/category';
 
   const handleCategoryClick = (selectedCategoryId) => {
-   
-   
+ 
+
     console.log("Before:", selectedCategories);
     const isSelected = selectedCategories.includes(selectedCategoryId);
     setSelectedCategories((prevSelectedCategories) =>
@@ -811,7 +811,7 @@ const page = () => {
   };
 
   function getHeaderInfo(){
-      fetch(api_url, {
+      fetch(api_category, {
           method: 'POST',
           headers: {
               'Accept': 'application/json',

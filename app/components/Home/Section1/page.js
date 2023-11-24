@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 const page = () => {
     const [headerData, setHeaderData] = useState();
-
+    let api_header = 'http://45.79.185.26/trifusa/public/api/home/header/image';
 
     function getHeaderInfo(){
-        fetch('http://45.79.185.26/trifusa/public/api/home/header/image', {
+        fetch( api_header, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

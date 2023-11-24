@@ -1,7 +1,40 @@
 'use client'
 import Link from 'next/link';
+import { useState, useEffect } from "react";
+
 
 const Footer = () => {
+  const [headerData, setHeaderData] = useState();
+  let api_footer_last = 'http://45.79.185.26/trifusa/public/api/footer/section';
+
+  function getHeaderInfo(){
+      fetch( api_footer_last, {
+          method: 'POST',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/x-www-form-urlencoded'
+          },
+      // body: formBody
+      })
+      .then((response) => response.json())
+      .then((responseJson) => {
+          console.log(responseJson);
+          if (responseJson.success == "true") {
+              setHeaderData(responseJson.header_image[0]);
+              //console.log(headerData.home_page_image)
+          }
+      })
+      .catch((error) => {
+          console.error(error);
+      });
+  }
+  useEffect(() => {
+      getHeaderInfo();
+
+  }, [])
+
+
+
   return (
     <footer id="footer-3" className="pt-100 footer ft-3-ntr">
       <div className="bottom-top">
@@ -9,10 +42,12 @@ const Footer = () => {
           <div className="row">
             <div className="col-xl-3">
               <div className="footer-info">
-                <Link href="/">
-                  <img className="footer-logo" src="/assets/img/logo-dark.svg" alt="footer-logo" />
+                <Link href="/">     
+                  {/* <img className="footer-logo" 
+                  src={`http://45.79.185.26/trifusa/public/storage/footer_image/${footer_image?.footer_logo}`}
+                  alt="footer-logo" /> */}
                 </Link>
-                <p>Trisfusa ist die führende Plattform für die Bewertung und Vergleichbarkeit von Smarthome-Systemen weltweit. Unsere Mission ist es, Endnutzern, Architekten und Bauherren dabei zu helfen, die besten Lösungen für ihr perfekte Smarthomeumgebung zu finden</p>
+                <p>{headerData?.footer_logo}</p>
                 <h2 className="heading-title">Hotline : <span className="style-color"><span>+41 44938 07 15</span></span></h2>
               </div>
             </div>

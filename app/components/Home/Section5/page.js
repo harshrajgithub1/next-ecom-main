@@ -1,15 +1,23 @@
 "use client"
 
 import React from 'react'
-import { Carousel } from 'react-responsive-carousel';
-//import 'react-responsive-carousel/lib/styles/carousel.min.css';
-//import { Carousel } from 'react-bootstrap';
-
-
+// import OwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import jQuery from 'jquery';
 
 const page = () => {
+
+	// const options = {
+	// 	items: 3,
+	// 	loop: true,
+	// 	margin: 10,
+	// 	nav: true,
+	//   };
+	//   window.$ = window.jQuery = jQuery;
+
   return (
-    <div>
+    
            
 <section id="reviews-1" className="pt-100 shape--06 shape--gr-whitesmoke reviews-section">
 	<div className="container">
@@ -22,11 +30,12 @@ const page = () => {
 			</div>
 		</div>
 
-		<Carousel>
+		
 	
-		 <div className="row">
+		  <div className="row">
 			 <div className="col">
-            
+			 {/* <OwlCarousel className="owl-theme" {...options}> */}
+			    <div className="reviews-1-wrapper">
 					<div className="review-1 bg--white-100 block-shadow r-08">
 						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
 						<div className="review-txt">
@@ -51,7 +60,7 @@ const page = () => {
 						</div>
 					</div>
 					
-					{/* <div className="review-1 bg--white-100 block-shadow r-08">
+					<div className="review-1 bg--white-100 block-shadow r-08">
 						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
 						<div className="review-txt">
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
@@ -169,16 +178,16 @@ const page = () => {
 								</div>
 							</div>
 						</div>
-					</div> */}
-
+					</div>
+                </div>   
       
-				
+				{/* </OwlCarousel> */}
 			 </div>
 		   </div>
-		</Carousel>   
+		
 	</div>
 </section>
-    </div>
+   
   )
 }
 

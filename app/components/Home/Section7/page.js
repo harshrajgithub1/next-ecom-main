@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 const page = () => {
 
   const [headerData, setHeaderData] = useState();
-
+  let api_footer = 'http://45.79.185.26/trifusa/public/api/home/footer/image';
 
   function getHeaderInfo(){
-      fetch('http://45.79.185.26/trifusa/public/api/home/footer/image', {
+      fetch(api_footer, {
           method: 'POST',
           headers: {
               'Accept': 'application/json',
@@ -38,7 +38,8 @@ const page = () => {
 
   return (
     <div>
-       <section id="banner-3" className="pt-100 banner-section" style={{ backgroundImage: "url: `http://45.79.185.26/trifusa/public/storage/home_images/${headerData?.home_page_image}`)"}}>
+       <section id="banner-3" className="pt-100 banner-section" 
+       style={{ backgroundImage: "url: `http://45.79.185.26/trifusa/public/storage/home_images/${headerData?.home_page_image}`)"}}>
       
         <div className="container">
           <div className="banner-3-wrapper bg--03 bg--scroll r-16">

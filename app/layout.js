@@ -7,8 +7,8 @@ import '../public/assets/css/jkiticon.css'
 import '../public/assets/css/menu.css'
 import '../public/assets/css/dropdown-effects/fade-down.css'
 import '../public/assets/css/magnific-popup.css'
-// import '../public/assets/css/owl.carousel.min.css'
-// import '../public/assets/css/owl.theme.default.min.css'
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../public/assets/css/lunar.css'
 import '../public/assets/css/animate.css'
 import '../public/assets/css/style.min.css'
@@ -42,6 +42,12 @@ export default function RootLayout({ children }) {
        
         <Footer></Footer>
         <ToastContainerWrapper />
+      
+
+
+
+  
+
       </body>
     </html>
     

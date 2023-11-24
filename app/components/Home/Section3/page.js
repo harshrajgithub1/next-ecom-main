@@ -4,36 +4,36 @@ import { useState, useEffect } from "react";
 
 const page = () => {
 
-  const [headerData, setHeaderData] = useState();
+//   const [headerData, setHeaderData] = useState();
 
 
-  function getHeaderInfo(){
-      fetch('http://45.79.185.26/trifusa/public/api/home/header/image', {
-          method: 'POST',
-          headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/x-www-form-urlencoded'
-          },
-      // body: formBody
-      })
-      .then((response) => response.json())
-      .then((responseJson) => {
-          //console.log(responseJson);
-          if (responseJson.success == "true") {
-              setHeaderData(responseJson.header_image[0]);
-              //console.log(headerData.home_page_image)
-          }
-      })
-      .catch((error) => {
-          console.error(error);
-      });
-  }
-  useEffect(() => {
-      getHeaderInfo();
+//   function getHeaderInfo(){
+//       fetch('http://45.79.185.26/trifusa/public/api/home/header/image', {
+//           method: 'POST',
+//           headers: {
+//               'Accept': 'application/json',
+//               'Content-Type': 'application/x-www-form-urlencoded'
+//           },
+//       // body: formBody
+//       })
+//       .then((response) => response.json())
+//       .then((responseJson) => {
+//           //console.log(responseJson);
+//           if (responseJson.success == "true") {
+//               setHeaderData(responseJson.header_image[0]);
+//               //console.log(headerData.home_page_image)
+//           }
+//       })
+//       .catch((error) => {
+//           console.error(error);
+//       });
+//   }
+//   useEffect(() => {
+//       getHeaderInfo();
 
-  }, [])
+//   }, [])
 
-console.log(headerData);
+// console.log(headerData);
 
   return (
     <div>
