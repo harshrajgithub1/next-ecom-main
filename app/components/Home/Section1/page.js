@@ -46,15 +46,7 @@ const page = () => {
 
         <div className="container container-content">
           <div className="row d-flex align-items-center">
-            {/* <div className="col-lg-6 order-lg-2">
-              <div className="hero-1-img wow fadeInLeft">
-                <img
-                  className="img-fluid"
-                  src={`http://45.79.185.26/trifusa/public/storage/home_images/${headerData?.home_page_image}`}
-                  alt="hero-image"
-                />
-              </div>
-            </div> */}
+            
             <div className="col-lg-6">
               <div className="hero-1-txt color--white wow fadeInRight">
                 <h2 className="s-47">

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Header = () => {
   const { isLoggedIn, logout } = useAuth();
-  console.log(isLoggedIn);
+  //console.log(isLoggedIn);
 
   const handleLogout = () =>{
     logout();

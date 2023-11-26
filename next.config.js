@@ -1,29 +1,3 @@
-// /** @type {import('next').NextConfig} */
-
-
-// const nextConfig = {
-//     path: {
-//     // domains: [
-//     //     "http://165.232.130.162/",
-//     //     // "images.example.com",
-//     // ]
-// }}
-
-// module.exports = nextConfig
-
-
-// const { i18n } = require('next-i18next');
-
-// module.exports = {
-//   i18n,
-//   // Other Next.js configurations...
-// };
-
-
-
-
-/** @type {import('next').NextConfig} */
-
 const { i18n } = require('next-i18next');
 
 const nextConfig = {

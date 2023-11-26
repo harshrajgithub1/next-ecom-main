@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 
 
 const Footer = () => {
-  const [headerData, setHeaderData] = useState();
+  const [footerData, setFooterData] = useState();
   let api_footer_last = 'http://45.79.185.26/trifusa/public/api/footer/section';
 
-  function getHeaderInfo(){
+  function getFooterInfo(){
       fetch( api_footer_last, {
           method: 'POST',
           headers: {
@@ -20,7 +20,7 @@ const Footer = () => {
       .then((responseJson) => {
           console.log(responseJson);
           if (responseJson.success == "true") {
-              setHeaderData(responseJson.header_image[0]);
+            setFooterData(responseJson.footer_section[0]);
               //console.log(headerData.home_page_image)
           }
       })
@@ -29,7 +29,7 @@ const Footer = () => {
       });
   }
   useEffect(() => {
-      getHeaderInfo();
+      getFooterInfo();
 
   }, [])
 
@@ -43,12 +43,12 @@ const Footer = () => {
             <div className="col-xl-3">
               <div className="footer-info">
                 <Link href="/">     
-                  {/* <img className="footer-logo" 
-                  src={`http://45.79.185.26/trifusa/public/storage/footer_image/${footer_image?.footer_logo}`}
-                  alt="footer-logo" /> */}
+                  <img className="footer-logo" 
+                  src={`http://45.79.185.26/trifusa/public/storage/footer_images/${footerData?.footer_logo}`}
+                  alt="footer-logo" />
                 </Link>
-                <p>{headerData?.footer_logo}</p>
-                <h2 className="heading-title">Hotline : <span className="style-color"><span>+41 44938 07 15</span></span></h2>
+                <p>{footerData?.footer_desc}</p>
+                <h2 className="heading-title">Hotline : <span className="style-color"><span>{footerData?.footer_phone}</span></span></h2>
               </div>
             </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
                       <i className="jki jki-phone-handset-light"></i>
                       <div className="box-dtl">
                         <h4>Telefon</h4>
-                        <Link href="tel:+41449380715">+41 44938 07 15</Link>
+                        <Link href="tel:+41449380715">{footerData?.footer_phone}</Link>
                       </div>
                     </div>
 
@@ -68,7 +68,7 @@ const Footer = () => {
                       <i className="jki jki-email-light"></i>
                       <div className="box-dtl">
                         <h4>Email</h4>
-                        <Link href="mailto:info@smarthomeconsulting.ch">info@smarthomeconsulting.ch</Link>
+                        <Link href="mailto:info@smarthomeconsulting.ch">{footerData?.footer_email}</Link>
                       </div>
                     </div>
 
@@ -76,7 +76,7 @@ const Footer = () => {
                       <i className="jki jki-placeholder2-light"></i>
                       <div className="box-dtl">
                         <h4>Standort</h4>
-                        <Link href="#">Bachtelstrasse 68 CH-8342 Wernetshausen</Link>
+                        <Link href="#">{footerData?.footer_location}</Link>
                       </div>
                     </div>
                   </div>
@@ -84,7 +84,7 @@ const Footer = () => {
 
                 <div className="col-lg-4">
                   <div className="footer-links fl-1">
-                    <h6 className="s-17">Quicklinks</h6>
+                    <h6 className="s-17">{footerData?.footer_h1}</h6>
                     <ul className="foo-links clearfix">
                       <li>
                         <p><Link href="about">Über uns</Link></p>
@@ -109,7 +109,7 @@ const Footer = () => {
                 </div>
                 <div className="col-lg-4">
                   <div className="footer-links fl-2">
-                    <h6 className="s-17">Kundendienst</h6>
+                    <h6 className="s-17">{footerData?.footer_h2}</h6>
                     <ul className="foo-links clearfix">
                       <li>
                         <p><Link href="terms-condition">Nutzungsbedingungen</Link></p>
@@ -134,8 +134,8 @@ const Footer = () => {
                 </div>
                 <div className="col-lg-4">
                   <div className="footer-links fl-3">
-                    <h6 className="s-17 w-700">Abonniere den Newsletter</h6>
-                    <p>Jetzt abonnieren und nichts mehr verpassen. Befördere dich in das Jahr 2050 mit Trisfusa und holde dir die neusten Updates</p>
+                    <h6 className="s-17 w-700">{footerData?.footer_h3}</h6>
+                    <p>{footerData?.footer_h3_desc}</p>
                     <form className="newsletter-form">
                       <div className="input-group r-06">
                         <input type="email" className="form-control" placeholder="E-Mail-Adresse" required="" id="s-email" />
