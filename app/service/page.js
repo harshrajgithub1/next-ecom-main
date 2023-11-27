@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const page = () => {
+const Service = () => {
   return (
     <div>
       
@@ -356,4 +356,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Service

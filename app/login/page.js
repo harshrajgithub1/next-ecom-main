@@ -54,7 +54,8 @@ const Login = () => {
           expires_in: res.data.expires_in,
         };
         // setCookie("token", res.data.token, { path: "/" });
-        toast.success(res.data.message);
+        //toast.success(res.data.message);
+        toast.success("user successfully logged in");
         //window.location.href='/about';
         sessionStorage.setItem("token", JSON.stringify(obj));
         sessionStorage.setItem("user", JSON.stringify(res.data.user));

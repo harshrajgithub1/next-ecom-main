@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const Review = () => {
+const Transcript = () => {
   return (
     <div>
       
@@ -208,4 +208,4 @@ const Review = () => {
   )
 }
 
-export default Review
+export default Transcript

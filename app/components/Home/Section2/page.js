@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FcCheckmark } from "react-icons/fc";
 
-const page = () => {
+const Section2 = () => {
   const [selectedCategories, setSelectedCategories] = useState();
   
   let api_category = 'http://45.79.185.26/trifusa/public/api/category';
@@ -25,7 +25,7 @@ const page = () => {
       if (selectedCount <= 3) {
         return updatedCategories;
       } else {
-        toast.error("You can select upto only 3 categories");
+        toast.error("You need premium subscription");
         return prevItems;
       }
     });
@@ -50,7 +50,7 @@ const page = () => {
               isSelected: false, // Replace 'defaultValue' with the desired default value
             }));
             setSelectedCategories(res);
-              //console.log(headerData.home_page_image)
+              //console.log(headerData.home_Section2_image)
           }
       })
       .catch((error) => {
@@ -111,4 +111,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Section2

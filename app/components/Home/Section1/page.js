@@ -3,7 +3,7 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import Link from 'next/link';
 
-const page = () => {
+const Section1 = () => {
     const [headerData, setHeaderData] = useState();
     let api_header = 'http://45.79.185.26/trifusa/public/api/home/header/image';
 
@@ -188,4 +188,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Section1

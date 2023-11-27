@@ -2,7 +2,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 
-const page = () => {
+const section3 = () => {
 
 //   const [headerData, setHeaderData] = useState();
 
@@ -21,7 +21,7 @@ const page = () => {
 //           //console.log(responseJson);
 //           if (responseJson.success == "true") {
 //               setHeaderData(responseJson.header_image[0]);
-//               //console.log(headerData.home_page_image)
+//               //console.log(headerData.home_section3_image)
 //           }
 //       })
 //       .catch((error) => {
@@ -170,4 +170,4 @@ const page = () => {
   )
 }
 
-export default page
+export default section3

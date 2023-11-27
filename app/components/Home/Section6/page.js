@@ -1,6 +1,7 @@
+'use client'
 import React from 'react'
 
-const page = () => {
+const section6 = () => {
     return (
     
         <div>
@@ -84,4 +85,4 @@ const page = () => {
       );
 }
 
-export default page
+export default section6
