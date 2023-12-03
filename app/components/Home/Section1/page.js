@@ -2,13 +2,13 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import Link from 'next/link';
+import { apiUrl } from '@/app/constant/constant';
 
 const Section1 = () => {
     const [headerData, setHeaderData] = useState();
-    let api_header = 'http://45.79.185.26/trifusa/public/api/home/header/image';
 
     function getHeaderInfo(){
-        fetch( api_header, {
+        fetch( `${apiUrl}api/home/header/image`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -39,7 +39,7 @@ const Section1 = () => {
     <div>
         <section id="hero-1" className="bg--scroll hero-section">
           <img
-              src={`http://45.79.185.26/trifusa/public/storage/home_images/${headerData?.home_page_image}`}
+              src={`${apiUrl}storage/home_images/${headerData?.home_page_image}`}
                alt=""
                className="img-fluid banner-img"
         />

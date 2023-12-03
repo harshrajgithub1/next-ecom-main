@@ -1,11 +1,29 @@
 'use client'
+import React, { useEffect, useState } from 'react';
 import { useAuth } from '../AuthProvider/useAuth';
 import Link from 'next/link';
 
 const Header = () => {
   const { isLoggedIn, logout } = useAuth();
+  const [isScrolled, setIsScrolled] = useState(false);
   //console.log(isLoggedIn);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
 
+      if (scrollPosition > 80) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Attach the event listener
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); 
   const handleLogout = () =>{
     logout();
   }
@@ -23,7 +41,7 @@ const Header = () => {
             <span></span>
           </a>
         </div>
-        <div className="hidden sm:block text-black wsmainfull menu clearfix">
+        <div className={`hidden sm:block text-black wsmainfull menu clearfix ${isScrolled ? 'scroll' : ''}`}>
           <div className="wsmainwp">
             <div className="desktoplogo">
               <Link href="/" className="logo-black">
@@ -71,7 +89,6 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nl-simple">
-                  <p>{isLoggedIn}</p>
                 {!isLoggedIn ?
                 <Link
                 href="/login"
@@ -91,10 +108,10 @@ const Header = () => {
                 </li>
                 <li className="language">
                   <select name="lang" id="lang" className="form-control">
-                    <option value="en">En</option>
-                    <option value="de">De</option>
-                    <option value="it">It</option>
-                    <option value="fr">Fr</option>
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                    <option value="it">IT</option>
+                    <option value="fr">FR</option>
                   </select>
                 </li>
               </ul>

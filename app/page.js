@@ -36,7 +36,6 @@ import Section7 from './components/Home/Section7/page';
 const page = () => {
   return (
     <div>
-      <Header />
 
 <Section1 />
 <Section2 />

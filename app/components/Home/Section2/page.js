@@ -5,12 +5,11 @@ import { useState, useEffect } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FcCheckmark } from "react-icons/fc";
+import { apiUrl } from '@/app/constant/constant';
 
 const Section2 = () => {
   const [selectedCategories, setSelectedCategories] = useState();
   
-  let api_category = 'http://45.79.185.26/trifusa/public/api/category';
-
   const handleCategoryClick = (selectedCategoryId) => {
     console.log(selectedCategoryId);
     setSelectedCategories((prevItems) => {
@@ -33,7 +32,7 @@ const Section2 = () => {
   
 
   function getCategoriesInfo(){
-      fetch(api_category, {
+      fetch(`${apiUrl}api/category`, {
           method: 'POST',
           headers: {
               'Accept': 'application/json',
@@ -87,7 +86,7 @@ const Section2 = () => {
                   onClick={() => handleCategoryClick(category.id)}>
                   <div className="img-style">
                     <img
-                      src={`http://45.79.185.26/trifusa/public/storage/category/${category?.cat_image}`}
+                      src={`${apiUrl}storage/category/${category?.cat_image}`}
                       alt=""
                       className="img-fluid"
                     />
