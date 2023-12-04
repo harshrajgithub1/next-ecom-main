@@ -1,12 +1,14 @@
 "use client"
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { apiUrl } from '@/app/constant/constant';
 
 const section5 = () => {
-	const settings = {
+	const settings = {      //object created
 		dots: true,
 		infinite: true,
 		speed: 500,
@@ -17,6 +19,39 @@ const section5 = () => {
       	autoplaySpeed: 2000,
       	cssEase: "linear"
 	  };
+
+	  const htmlContent = '<p>This is <strong>HTML</strong> content.</p>';
+
+	  const [testimonialData, settestimonialData] = useState();
+
+    function gettestimonialInfo(){
+        fetch( `${apiUrl}api/home/client/testimonial`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+        // body: formBody
+        })
+        .then((response) => response.json())
+        .then((responseJson) => {
+            console.log(responseJson);
+            if (responseJson.success == "true") {
+                settestimonialData(responseJson.client_testimonial[0]);
+               
+            }
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    }
+    useEffect(() => {
+        gettestimonialInfo();
+
+    }, [])
+
+
+
   return (
     <section id="reviews-1" className="pt-100 shape--06 shape--gr-whitesmoke reviews-section vivek">
       <div className="container">
@@ -38,20 +73,26 @@ const section5 = () => {
 				<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
 						<div className="review-txt">
 						
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
-								numquam adipisci necessitatibus nam quas?
+							{/* <p>{testimonialData?.client_quote}
+							</p> */}
+
+							<p dangerouslySetInnerHTML={{ __html: testimonialData?.client_quote}} >
+							{testimonialData?.client_quote}
 							</p>
 							
 							<div className="author-data clearfix">
 							
 								<div className="review-avatar">
 						
-									<img src="/assets/img/review-author-1.jpg" alt="review-avatar" />
+									<img src=
+									 {`${apiUrl}storage/client_says/1700139593_99357.jpg`}
+									
+								 alt="review-avatar" />
 					
 								</div>
 								<div className="review-author">
-									<h6 className="s-18 w-700">Scott Boxer</h6>
-									<p className="p-sm">@scott_boxer</p>
+									<h6 className="s-18 w-700"> {testimonialData?.client_name}</h6>
+									<p className="p-sm">{testimonialData?.client_designation}</p>
 									
 								</div>
 							</div>
