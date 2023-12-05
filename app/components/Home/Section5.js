@@ -20,7 +20,14 @@ const section5 = () => {
       	cssEase: "linear"
 	  };
 
-	  const htmlContent = '<p>This is <strong>HTML</strong> content.</p>';
+	  const htmlContent =     `<div>
+	  <h3>
+		  GeekForGeeks
+	  </h3>
+	  <p>
+		  innerHTML in reactjs
+	  </p> 
+   </div>`;
 
 	  const [testimonialData, settestimonialData] = useState();
 
@@ -76,7 +83,7 @@ const section5 = () => {
 							{/* <p>{testimonialData?.client_quote}
 							</p> */}
 
-							<p dangerouslySetInnerHTML={{ __html: testimonialData?.client_quote}} >
+							<p dangerouslySetInnerHTML={{ __html: htmlContent.testimonialData?.client_quote}} >
 							{testimonialData?.client_quote}
 							</p>
 							
@@ -230,7 +237,7 @@ const section5 = () => {
   );
 };
            
-{/* <section id="reviews-1" className="pt-100 shape--06 shape--gr-whitesmoke reviews-section vivek">
+ <section id="reviews-1" className="pt-100 shape--06 shape--gr-whitesmoke reviews-section vivek">
 	<div className="container">
 	
 		<div className="row justify-content-center">
@@ -400,7 +407,7 @@ const section5 = () => {
 	</div>
 </section>
    
-  )
-} */}
+  
+ 
 
 export default section5

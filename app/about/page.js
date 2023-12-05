@@ -6,7 +6,7 @@ import React from 'react';
 const About = () => {
   return (
    <div>
-<section className="banner" 
+   <section className="banner" 
 // style={{ backgroundImage: 'url(assets/img/banner6.jpg)' }}
 
 style={{
