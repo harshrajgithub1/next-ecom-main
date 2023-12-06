@@ -47,8 +47,8 @@ const Section2 = () => {
             let res = responseJson.category.map((item) => ({
               ...item,
               isSelected: false, // Replace 'defaultValue' with the desired default value
-            }));
-            setSelectedCategories(res);
+              }));
+             setSelectedCategories(res);
               //console.log(headerData.home_Section2_image)
           }
       })
