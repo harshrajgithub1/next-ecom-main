@@ -190,7 +190,7 @@ const Suppliers = () => {
             </div>
         </div>
     </div>
-</section>
+ </section>
 
     </div>
   )

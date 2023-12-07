@@ -1,7 +1,28 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const HelpCenter = () => {
+
+    const [selectedOption, setSelectedOption] = useState();
+    const  handleOptionClick = (selectedOptionId) => {
+      console.log(selectedOptionId);
+      setSelectedCategories((prevItems) => {
+        const updatedOptions = prevItems.map((item) =>
+          item.id === selectedCategoryId ? { ...item, isSelected: !item.isSelected } : item
+        );
+
+        const selectedCount = updatedOptions.filter((item) => item.isSelected).length;
+
+        if (selectedCount <= 3) {
+          return updatedOptions;
+         } else {
+          toast.error("You need premium subscription");
+          return prevItems;
+        }
+    });
+  };
+
+
   return (
     <div>
       <section
