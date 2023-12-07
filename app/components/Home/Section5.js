@@ -12,12 +12,12 @@ const section5 = () => {
 	const settings = {      //object created
 		dots: true,
 		infinite: true,
-		speed: 500,
+		speed: 100,
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		autoplay: true,
-		speed: 2000,
-      	autoplaySpeed: 2000,
+		speed: 1000,
+      	autoplaySpeed: 1000,
       	cssEase: "linear"
 	  };
 
@@ -25,6 +25,7 @@ const section5 = () => {
    //const [htmlContent, setHtmlContent] = useState('<p>This is some <strong>HTML</strong> content.</p>');
 
 	  const [testimonialData, settestimonialData] = useState([]);
+	  
 
     function gettestimonialInfo(){
         fetch( `${apiUrl}api/home/client/testimonial`, {
@@ -38,13 +39,8 @@ const section5 = () => {
         .then((response) => response.json())
         .then((responseJson) => {
             console.log(responseJson);
-            if (responseJson.success == "true") {
-				let res = responseJson.testimonialData.map((item) => ({
-					...item,
-					isSelected: false, // Replace 'defaultValue' with the desired default value
-				  }));
-                settestimonialData(res);
-               
+            if (responseJson.success === "true") {
+                settestimonialData(responseJson.client_testimonial);
             }
         })
           .catch((error) => {
@@ -78,162 +74,29 @@ const section5 = () => {
           <div className="col">
             <Slider {...settings}>
               {/* Slide 1 */}
-              <div className="reviews-1-wrapper">
-                <div className="review-1 bg--white-100 block-shadow r-08">
-				<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
-						<div className="review-txt">
-						
-							{/* <p>{testimonialData?.client_quote}
-							</p> */}
-
-							{testimonialData && 
-								(
-                                    <p dangerouslySetInnerHTML={{ __html: testimonialData?.client_quote }} />
-								 )}
-							       <div className="author-data clearfix">
-							
-								     <div className="review-avatar">
-						
-									   <img src=
-									     {`${apiUrl}storage/client_says/${testimonialData?.client_image}`}
-									
-								           alt="review-avatar" />
-					 
-								  </div>
-								  <div className="review-author">
-									<h6 className="s-18 w-700"> {testimonialData?.client_name}</h6>
-									<p className="p-sm">{testimonialData?.client_designation}</p>
-								
-								  </div>
-								
-							</div>
-							
-						</div>
-					
-                </div>
-              </div>
+              
 			  
 
               {/* Slide 2 */}
-               <div className="review-1 bg--white-100 block-shadow r-08">
-						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
-						<div className="review-txt">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
-								numquam adipisci necessitatibus nam quas?
-							</p>
-							<div className="author-data clearfix">
-								<div className="review-avatar">
-									<img src="/assets/img/review-author-2.jpg" alt="review-avatar" />
-								</div>
-								<div className="review-author">
-									<h6 className="s-18 w-700">Joel Peterson</h6>
-									<p className="p-sm">Internet Surfer</p>
-								</div>
-							</div>
-						</div>
-					</div>
+			  {testimonialData &&
+              testimonialData.map((category) => (
 					<div className="review-1 bg--white-100 block-shadow r-08">
 						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
 						<div className="review-txt">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
-								numquam adipisci necessitatibus nam quas?
+							<p dangerouslySetInnerHTML={{ __html: category.client_quote }}>
 							</p>
 							<div className="author-data clearfix">
 								<div className="review-avatar">
-									<img src="/assets/img/review-author-3.jpg" alt="review-avatar" />
+									<img src={`${apiUrl}storage/client_says/${category?.client_image}`} alt="" />
 								</div>
 								<div className="review-author">
-									<h6 className="s-18 w-700">Marisol19</h6>
-									<p className="p-sm">@marisol19</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="review-1 bg--white-100 block-shadow r-08">
-						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
-						<div className="review-txt">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
-								numquam adipisci necessitatibus nam quas?
-							</p>
-							<div className="author-data clearfix">
-								<div className="review-avatar">
-									<img src="/assets/img/review-author-4.jpg" alt="review-avatar" />
-								</div>
-								<div className="review-author">
-									<h6 className="s-18 w-700">Leslie D.</h6>
-									<p className="p-sm">Web Developer</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="review-1 bg--white-100 block-shadow r-08">
-						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
-						<div className="review-txt">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
-								numquam adipisci necessitatibus nam quas?
-							</p>
-							<div className="author-data clearfix">
-								<div className="review-avatar">
-									<img src="/assets/img/review-author-5.jpg" alt="review-avatar" />
-								</div>
-								<div className="review-author">
-									<h6 className="s-18 w-700">Jennifer Harper</h6>
-									<p className="p-sm">App Developer</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="review-1 bg--white-100 block-shadow r-08">
-						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
-						<div className="review-txt">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
-								numquam adipisci necessitatibus nam quas?
-							</p>
-							<div className="author-data clearfix">
-								<div className="review-avatar">
-									<img src="/assets/img/review-author-6.jpg" alt="review-avatar" />
-								</div>
-								<div className="review-author">
-									<h6 className="s-18 w-700">Jonathan Barnes</h6>
-									<p className="p-sm">jQuery Programmer</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="review-1 bg--white-100 block-shadow r-08">
-						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
-						<div className="review-txt">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
-								numquam adipisci necessitatibus nam quas?
-							</p>
-							<div className="author-data clearfix">
-								<div className="review-avatar">
-									<img src="/assets/img/review-author-7.jpg" alt="review-avatar" />
-								</div>
-								<div className="review-author">
-									<h6 className="s-18 w-700">Mike Harris</h6>
-									<p className="p-sm">Graphic Designer</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="review-1 bg--white-100 block-shadow r-08">
-						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
-						<div className="review-txt">
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deserunt, reiciendis
-								numquam adipisci necessitatibus nam quas?
-							</p>
-							<div className="author-data clearfix">
-								<div className="review-avatar">
-									<img src="assets/img/review-author-8.jpg" alt="review-avatar" />
-								</div>
-								<div className="review-author">
-									<h6 className="s-18 w-700">Evelyn Martinez</h6>
+									<h6 className="s-18 w-700">{category.client_name}</h6>
 									<p className="p-sm">WordPress Consultant</p>
 								</div>
 							</div>
 						</div>
 					</div> 
+))}
 
               {/* Repeat for other slides */}
             </Slider>

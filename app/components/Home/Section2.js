@@ -21,12 +21,21 @@ const Section2 = () => {
       const selectedCount = updatedCategories.filter((item) => item.isSelected).length;
   
       // If the selected count exceeds 3, do not update the state
-      if (selectedCount <= 3) {
-        return updatedCategories;
-      } else {
+      // if (selectedCount <= 3) {
+      //   return updatedCategories;
+      // } else {
+      //   toast.error("You need premium subscription");
+      //   return prevItems;
+      // }
+
+      if (selectedCount == 2) {
+        toast.warning("You can select one more category");
+      } else if(selectedCount >3){
         toast.error("You need premium subscription");
         return prevItems;
       }
+      return updatedCategories;
+      
     });
   };
   
@@ -60,9 +69,9 @@ const Section2 = () => {
     getCategoriesInfo();
   }, []);
   
-  useEffect(() => {
-    console.log("After:", selectedCategories);
-  }, [selectedCategories]);
+  // useEffect(() => {
+  //   console.log("After:", selectedCategories);
+  // }, [selectedCategories]);
   
 
 //console.log(headerData?.img_para_1);
