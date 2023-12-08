@@ -1,14 +1,15 @@
 'use client'
 import Link from 'next/link';
 import { useState, useEffect } from "react";
+import { apiUrl } from '@/app/constant/constant';
 
 
 const Footer = () => {
   const [footerData, setFooterData] = useState();
-  let api_footer_last = 'http://45.79.185.26/trifusa/public/api/footer/section';
+
 
   function getFooterInfo(){
-      fetch( api_footer_last, {
+      fetch( `${apiUrl}api/footer/section`, {
           method: 'POST',
           headers: {
               'Accept': 'application/json',
@@ -44,7 +45,8 @@ const Footer = () => {
               <div className="footer-info">
                 <Link href="/">     
                   <img className="footer-logo" 
-                  src={`http://45.79.185.26/trifusa/public/storage/footer_images/${footerData?.footer_logo}`}
+                  src=
+                  {`${apiUrl}storage/footer_images/${footerData?.footer_logo}`}
                   alt="footer-logo" />
                 </Link>
                 <p>{footerData?.footer_desc}</p>

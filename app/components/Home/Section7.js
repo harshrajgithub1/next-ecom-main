@@ -2,14 +2,14 @@
 import React from 'react'
 import Link from 'next/link'; 
 import { useState, useEffect } from "react";
+import { apiUrl } from '@/app/constant/constant';
 
-const section7 = () => {
+const Section7 = () => {
 
   const [footerData, setFooterData] = useState();
-  let api_footer = 'http://45.79.185.26/trifusa/public/api/home/footer/image';
-
+ 
   function getFooterInfo(){
-      fetch(api_footer, {
+      fetch(`${apiUrl}api/home/footer/image`, {
           method: 'POST',
           headers: {
               'Accept': 'application/json',
@@ -31,21 +31,23 @@ const section7 = () => {
   }
   useEffect(() => {
       getFooterInfo();
-
+      console.log(`url ({${apiUrl}api/home/footer/image/${footerData?.home_page_image})`)
   }, [])
-
+console.log(`url ({${apiUrl}api/home/footer/image/${footerData?.home_page_image})`)
 //console.log(headerData?.img_para_1);
 
   return (
     <div>
        <section id="banner-3" className="pt-100 banner-section" 
        
-       style={{ backgroundImage: "url: `http://45.79.185.26/trifusa/public/storage/home_images/${footerData?.home_page_image}`)"}}>
+       style={{ 
+        backgroundImage: `url ({${apiUrl}api/home/footer/image/${footerData?.home_page_image})` }
+        }>
       
         <div className="container">
           <div className="banner-3-wrapper bg--03 bg--scroll r-16">
           {/* <img
-              src={`http://45.79.185.26/trifusa/public/storage/home_images/${headerData?.home_section7_image}`}
+              src={`http://45.79.185.26/trifusa/public/storage/home_images/${footerData?.home_page_image}`}
                alt=""
                className="img-fluid banner-img"
         /> */}
@@ -76,4 +78,4 @@ const section7 = () => {
   )
 }
 
-export default section7
+export default Section7

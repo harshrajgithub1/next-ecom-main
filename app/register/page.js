@@ -107,20 +107,14 @@ const Registration = () => {
                   <div className="col-md-6">
                     <div className="register-page-form">
                       <form name="signupform" method="post" onSubmit={handleSubmit(onSubmit)} className="row sign-up-form">
-                        {/* <div className="col-md-12">
-                          <Link href="#" className="btn btn-google ico-left">
-                            <img
-                              src="/assets/img/google.png"
-                              alt="google-icon"
-                            />{" "}
-                            Sign up with Google
-                          </Link>
-                        </div> */}
-                        {/* <div className="col-md-12 text-center">
-                          <div className="separator-line">
-                            Or, sign up with your email
-                          </div>
-                        </div> */}
+                      <div className="col-md-12">
+                          <p className="p-sm input-header">Login for</p>
+                          <select name="" id="" className="form-control login">
+                            <option value="">Handwerker</option>
+                            <option value="">Lieferanten</option>
+                            <option value="">Privat </option>
+                          </select>
+                        </div>
                         <div className="col-md-12">
                           <p className="p-sm input-header">Full name</p>
                           <input
@@ -141,16 +135,7 @@ const Registration = () => {
                             placeholder="example@example.com"
                           />
                         </div>
-                        {/* <div className="col-md-12">
-                          <p className="p-sm input-header">Phone Number</p>
-                          <input
-                          {...register("phone")}
-                          className="form-control email"
-                            type="number"
-                            name="phone"
-                            placeholder="XXXXXXXXXX"
-                          />
-                        </div> */}
+                        
                         <div className="col-md-12">
                           <p className="p-sm input-header">Password</p>
                           <div className="wrap-input">
