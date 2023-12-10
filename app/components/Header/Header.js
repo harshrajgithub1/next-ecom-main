@@ -2,8 +2,23 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../AuthProvider/useAuth';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'
+import { useTranslation } from "react-i18next";
+// import { useTranslation } from 'next-i18next';
 
 const Header = () => {
+  const { i18n } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+
+  const changeLanguage = (lang) => {
+    console.log(lang.target.value);
+    console.log(i18n.language);
+    i18n.changeLanguage(lang);
+    setCurrentLanguage(lang);
+  };
+
+  const pathname = usePathname();
+  console.log(pathname);
   const { isLoggedIn, logout } = useAuth();
   const [isScrolled, setIsScrolled] = useState(false);
   //console.log(isLoggedIn);
@@ -60,12 +75,12 @@ const Header = () => {
             <nav className="wsmenu clearfix">
               <ul className="wsmenu-list nav-theme">
                 <li className="nl-simple">
-                  <Link href="/" className="h-link active">
+                  <Link href="/" className={`h-link ${pathname === '/' ? 'active' : ''}`}>
                     Start
                   </Link>
                 </li>
                 <li className="nl-simple">
-                  <Link href="comparison" className="h-link ">
+                  <Link href="comparison" className={`h-link ${pathname === '/comparison' ? 'active' : ''}`}>
                     Vergleich
                   </Link>
                 </li>
@@ -79,12 +94,12 @@ const Header = () => {
                   </ul>
               </li> */}
                 <li className="nl-simple">
-                  <Link href="/about" className="h-link ">
+                  <Link href="/about" className={`h-link ${pathname === '/about' ? 'active' : ''}`}>
                     Über uns
                   </Link>
                 </li>
                 <li className="nl-simple">
-                  <Link href="/contact" className="h-link ">
+                  <Link href="/contact" className={`h-link ${pathname === '/contact' ? 'active' : ''}`}>
                     Kontakt
                   </Link>
                 </li>
@@ -107,7 +122,7 @@ const Header = () => {
                   
                 </li>
                 <li className="language">
-                  <select name="lang" id="lang" className="form-control">
+                  <select name="lang" id="lang" className="form-control" onChange={changeLanguage}>
                     <option value="en">EN</option>
                     <option value="de">DE</option>
                     <option value="it">IT</option>

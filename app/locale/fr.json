@@ -1,5 +1,11 @@
-{
-    "translations": {
-      "specificKey": "valeur traduit"
+// {
+//     "translations": {
+//       "specificKey": "valeur traduit"
+//     }
+//   }
+  {
+    "login": "ferr",
+      "translations": {
+        "specificKey": "übersetzter Wert"
+      }
     }
-  }

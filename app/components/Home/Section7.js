@@ -33,24 +33,22 @@ const Section7 = () => {
       getFooterInfo();
       console.log(`url ({${apiUrl}api/home/footer/image/${footerData?.home_page_image})`)
   }, [])
-console.log(`url ({${apiUrl}api/home/footer/image/${footerData?.home_page_image})`)
 //console.log(headerData?.img_para_1);
 
   return (
     <div>
-       <section id="banner-3" className="pt-100 banner-section" 
-       
-       style={{ 
-        backgroundImage: `url ({${apiUrl}api/home/footer/image/${footerData?.home_page_image})` }
-        }>
+       <section
+        id="banner-3"
+        className="pt-100 banner-section"
+        
+      >
       
         <div className="container">
-          <div className="banner-3-wrapper bg--03 bg--scroll r-16">
-          {/* <img
-              src={`http://45.79.185.26/trifusa/public/storage/home_images/${footerData?.home_page_image}`}
-               alt=""
-               className="img-fluid banner-img"
-        /> */}
+          <div className="banner-3-wrapper bg--03 bg--scroll r-16"
+          style={{
+            backgroundImage: `url(${apiUrl}storage/home_images/${footerData?.home_page_image})`,
+          }}>
+          
             <div className="banner-overlay">
               <div className="row">
                 <div className="col">

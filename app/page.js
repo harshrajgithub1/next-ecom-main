@@ -1,26 +1,3 @@
-// "use client";
-// import Link from "next/link";
-// import React from "react";
-// import { useTranslation } from 'next-i18next';
-
-
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-// import { Carousel } from 'react-responsive-carousel';
-
-
-// const page = () => {
-//   const {t} = useTranslation('common');
-
-//   return (
-    
-//   )
-// }
-
-// export default page;
-
-
-
-
 "use client"
 import React from 'react'
 import Header from '../app/components/Header/Header';

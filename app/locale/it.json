@@ -1,5 +1,12 @@
+// {
+//     "translations": {
+//       "specificKey": "valore tradotto"
+//     }
+//   }
+
 {
+  "login": "ITaaaa",
     "translations": {
-      "specificKey": "valore tradotto"
+      "specificKey": "übersetzter Wert"
     }
   }

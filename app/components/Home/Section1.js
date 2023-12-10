@@ -40,7 +40,7 @@ const Section1 = () => {
         <section id="hero-1" className="bg--scroll hero-section">
           <img
               src={`${apiUrl}storage/home_images/${headerData?.home_page_image}`}
-               alt=""
+               alt="header image"
                className="img-fluid banner-img"
         />
 

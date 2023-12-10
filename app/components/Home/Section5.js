@@ -16,8 +16,8 @@ const section5 = () => {
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		autoplay: true,
-		speed: 1000,
-      	autoplaySpeed: 1000,
+		speed: 10000,
+      	autoplaySpeed: 10000,
       	cssEase: "linear"
 	  };
 
@@ -38,7 +38,6 @@ const section5 = () => {
         })
         .then((response) => response.json())
         .then((responseJson) => {
-            console.log(responseJson);
             if (responseJson.success === "true") {
                 settestimonialData(responseJson.client_testimonial);
             }
@@ -79,8 +78,8 @@ const section5 = () => {
 
               {/* Slide 2 */}
 			  {testimonialData &&
-              testimonialData.map((category) => (
-					<div className="review-1 bg--white-100 block-shadow r-08">
+              testimonialData.map((category, index) => (
+					<div key={index} className="review-1 bg--white-100 block-shadow r-08">
 						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
 						<div className="review-txt">
 							<p dangerouslySetInnerHTML={{ __html: category.client_quote }}>
