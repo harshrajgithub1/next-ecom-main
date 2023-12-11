@@ -7,34 +7,38 @@ import { useState, useEffect } from "react";
 
 
 const PrivacyPolicy = () => {
+
    const [privacyData, setPrivacyData] = useState();
 
-   function getPrivacyInfo(){
-    fetch( `${apiUrl}api/footer/cutromerservices`, {
-      
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-    // body: formBody
-    })
-    .then((response) => response.json())
-    .then((responseJson) => {
-        console.log(responseJson);
-        if (responseJson.success == "true") {
-          setPrivacyData(responseJson.footer_section[0]);
-           
-        }
-    })
-    .catch((error) => {
-        console.error(error);
-    });
-}
-useEffect(() => {
-    getPrivacyInfo();
+   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${apiUrl}api/footer/cutromerservices`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            page_name: 'privacy&policy',
+          }),
+        });
 
-}, [])
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (data.success === 'true') {
+          setPrivacyData(data.footer_section);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
 
 
@@ -45,12 +49,8 @@ useEffect(() => {
          //style="background-image:url(assets/img/banner1.jpg)"
 
          style={{
-        backgroundImage: `url(/assets/img/banner1.jpg)`,
-        backgroundSize: 'cover', // You can adjust these styles as needed
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        height: '540px', // Set the width and height as needed
-      }}
+          backgroundImage: `url(${apiUrl}storage/otherpagesection/${privacyData?.page_img})`,
+        }}
       >
         <div className="container">
           <div className="row">
@@ -62,7 +62,7 @@ useEffect(() => {
                   <li>
                     <Link href="/">Start</Link>
                   </li>
-                  <li>Privacy Policy</li>
+                  <li>{privacyData?.title}</li>
                 </ul>
               </div>
             </div>
@@ -79,15 +79,15 @@ useEffect(() => {
             <div className="col-xl-10">
               <div className="inner-page-title">
                 <h2 className="s-52">
-                  Privacy and <span>Policy</span>
+                {privacyData?.title}
                 </h2>
                 <p className="p-lg">
-                  This policy is effective as of 11th November 2022
+                {privacyData?.meta_title}
                 </p>
               </div>
               <div className="txt-block legal-info">
-                <h4 className="s-30 w-700">
-                  <span>1.</span> Introduction
+                <h4 className="s-30 w-700" dangerouslySetInnerHTML={{ __html: privacyData?.page_description }}>
+               
                 </h4>
                 <p>
                   Sagittis congue augue egestas integer velna purus purus magna

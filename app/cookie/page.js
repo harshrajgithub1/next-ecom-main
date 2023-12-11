@@ -45,15 +45,7 @@ const Cookies = () => {
   return (
     <div>
         <section className="banner" 
-        // style={{ backgroundImage: 'url(/assets/img/banner1.jpg)' }}
-
-      //   style={{
-      //   backgroundImage: `url(/assets/img/banner1.jpg)`,
-      //   backgroundSize: 'cover', // You can adjust these styles as needed
-      //   backgroundRepeat: 'no-repeat',
-      //   width: '100%',
-      //   height: '540px', // Set the width and height as needed
-      // }}
+       
 
       style={{
           backgroundImage: `url(${apiUrl}storage/otherpagesection/${cookiesData?.page_img})`,

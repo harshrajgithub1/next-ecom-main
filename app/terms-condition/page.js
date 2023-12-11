@@ -372,7 +372,7 @@ const TermsAndConditions = () => {
         }
 
         const data = await response.json();
-
+        console.log(data);
         if (data.success === 'true') {
           setTermsData(data.footer_section);
         }
@@ -414,58 +414,10 @@ const TermsAndConditions = () => {
           <div className="row justify-content-center">
             <div className="col-xl-10">
             <div className="inner-page-title">
-              <h2 className="s-52" dangerouslySetInnerHTML={{ __html: termsData?.page_description }}></h2>
              </div>
               <div className="txt-block legal-info">
+              <div className="s-52" dangerouslySetInnerHTML={{ __html: termsData?.page_description || '' }}> </div>
                   
-                  <h5 className="s-24 w-700"><span>1.</span> Geltungsbereich</h5>
-                     <p>Diese Allgemeinen Geschäftsbedingungen regeln die Nutzung der Plattform Trisfusa.
-                      Durch die Nutzung der Plattform erklären Sie sich mit diesen Bedingungen 
-                      einverstanden.</p>
-
-                     <h5 className="s-24 w-700"><span>2.</span> Nutzungsbeschränkungen</h5>
-                     <p>Die Nutzung von Trisfusa ist nur gemäß dieser Bedingungen und geltendem Recht
-                      gestattet. Es ist Ihnen untersagt, Inhalte hochzuladen, die gegen geltendes
-                       Recht verstoßen oder die Rechte Dritter verletzen.</p>
-
-                     <h5 className="s-24 w-700"><span>3.</span> Registrierung und Benutzerkonto</h5>
-                     <p>Für bestimmte Funktionen der Plattform kann eine Registrierung erforderlich sein.
-                      Sie sind  verpflichtet, genaue und aktuelle Informationen bereitzustellen und Ihr 
-                      Passwort sicher zu halten.</p>
-
-                     <h5 className="s-24 w-700"><span>4.</span> Geistiges Eigentum</h5>
-                     <p>Alle Inhalte auf Trisfusa, einschließlich Texte, Grafiken, Logos und Software, 
-                     sind urheberrechtlich geschützt. Die Verwendung oder Vervielfältigung dieser 
-                    Inhalte ohne ausdrückliche Genehmigung ist untersagt.</p>
-
-                     <h5 className="s-24 w-700"><span>5.</span> Haftungsausschluss</h5>
-                     <p>Trisfusa übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit oder
-                      Aktualität der bereitgestellten Informationen. Die Nutzung der Plattform erfolgt
-                      auf eigene Gefahr.</p>
-
-                     <h5 className="s-24 w-700"><span>6.</span> Datenschutz</h5>
-                     <p>Wir respektieren Ihre Privatsphäre. Unsere Datenschutzrichtlinie beschreibt,
-                      wie wir personenbezogene Daten erfassen, verwenden und schützen.</p>
-
-                     <h5 className="s-24 w-700"><span>7.</span> Änderungen der Bedingungen</h5>
-                     <p>Trisfusa behält sich das Recht vor, diese Allgemeinen Geschäftsbedingungen 
-                     jederzeit zu ändern. Die aktualisierten Bedingungen treten in Kraft, sobald sie auf
-                      der Plattform veröffentlicht werden.</p>
-
-                     <h5 className="s-24 w-700"><span>8.</span> Beendigung der Nutzung</h5>
-                     <p>Trisfusa kann Ihren Zugang zur Plattform jederzeit aus beliebigem Grund
-                     einschränken oder beenden, insbesondere im Falle von Verstößen gegen diese
-                       Bedingungen.</p>
-
-                     <h5 className="s-24 w-700"><span>9.</span> Geltendes Recht und Gerichtsstand</h5>
-                     <p>Diese Allgemeinen Geschäftsbedingungen unterliegen den Gesetzen des 
-                    [Landes/Staates]. Bei Streitigkeiten ist das örtlich zuständige Gericht in [Ort]
-                      zuständig.</p>
-
-
-                     <p>Vielen Dank, dass Sie Trisfusa nutzen! Bei Fragen oder Bedenken stehen wir 
-                    Ihnen gerne zur Verfügung.</p>
-
                   </div>
                </div>
             </div>
