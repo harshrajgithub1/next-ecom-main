@@ -1,28 +1,72 @@
+"use client"
+
 import Link from 'next/link'
 import React from 'react'
+import { apiUrl } from '@/app/constant/constant';
+import { useState, useEffect } from "react";
+
+
 
 const Cookies = () => {
+
+  const [cookiesData, setCookiesData] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${apiUrl}api/footer/cutromerservices`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            page_name: 'cookie&policy',
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (data.success === 'true') {
+          setCookiesData(data.footer_section);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
   return (
     <div>
         <section className="banner" 
         // style={{ backgroundImage: 'url(/assets/img/banner1.jpg)' }}
 
-        style={{
-        backgroundImage: `url(/assets/img/banner1.jpg)`,
-        backgroundSize: 'cover', // You can adjust these styles as needed
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        height: '540px', // Set the width and height as needed
-      }}
+      //   style={{
+      //   backgroundImage: `url(/assets/img/banner1.jpg)`,
+      //   backgroundSize: 'cover', // You can adjust these styles as needed
+      //   backgroundRepeat: 'no-repeat',
+      //   width: '100%',
+      //   height: '540px', // Set the width and height as needed
+      // }}
+
+      style={{
+          backgroundImage: `url(${apiUrl}storage/otherpagesection/${cookiesData?.page_img})`,
+        }}
         >
       <div className="container">
         <div className="row">
           <div className="col-md-12">
             <div className="banner-caption">
-              <h3>Cookie Policy</h3>
+              <h3>{cookiesData?.title}</h3>
               <ul className="breadcrumb">
                 <li><Link href="/">Start</Link></li>
-                <li>Cookie Policy</li>
+                <li>{cookiesData?.title}</li>
               </ul>
             </div>
           </div>
@@ -36,8 +80,7 @@ const Cookies = () => {
           <div className="col-xl-10">
             <div className="inner-page-title">
               <h2 className="s-52">Cookie-Richtlinie <span>für Trisfusa</span></h2>
-              <p className="p-lg">Diese Cookie-Richtlinie beschreibt, wie Smarthomeconsulting (nachfolgend "wir", "uns" oder "unser") Cookies und ähnliche Technologien auf der Plattform Trisfusa verwendet.</p>
-            </div>
+              <p className="p-lg">{cookiesData?.page_heading}</p> </div>
             <div className="txt-block legal-info">
               <h4 className="s-30 w-700"><span>1.</span> Was sind Cookies?</h4>
               <p>1.Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie unsere Website besuchen. Sie dienen dazu, Ihre Erfahrung zu verbessern, indem sie Informationen über Ihre Präferenzen und Interaktionen speichern.</p>

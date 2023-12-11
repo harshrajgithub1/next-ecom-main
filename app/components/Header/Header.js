@@ -11,7 +11,7 @@ const Header = () => {
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
   const changeLanguage = (lang) => {
-    console.log(lang.target.value);
+    console.log(lang);
     console.log(i18n.language);
     i18n.changeLanguage(lang);
     setCurrentLanguage(lang);

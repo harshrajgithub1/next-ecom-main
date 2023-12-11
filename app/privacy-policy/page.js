@@ -1,7 +1,43 @@
+"use client"
+
 import Link from "next/link";
 import React from "react";
+import { apiUrl } from '@/app/constant/constant';
+import { useState, useEffect } from "react";
+
 
 const PrivacyPolicy = () => {
+   const [privacyData, setPrivacyData] = useState();
+
+   function getPrivacyInfo(){
+    fetch( `${apiUrl}api/footer/cutromerservices`, {
+      
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+    // body: formBody
+    })
+    .then((response) => response.json())
+    .then((responseJson) => {
+        console.log(responseJson);
+        if (responseJson.success == "true") {
+          setPrivacyData(responseJson.footer_section[0]);
+           
+        }
+    })
+    .catch((error) => {
+        console.error(error);
+    });
+}
+useEffect(() => {
+    getPrivacyInfo();
+
+}, [])
+
+
+
   return (
     <div>
       <section
@@ -20,7 +56,7 @@ const PrivacyPolicy = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>Privacy Policy</h3>
+                <h3>{privacyData?.title}</h3>
 
                 <ul className="breadcrumb">
                   <li>
