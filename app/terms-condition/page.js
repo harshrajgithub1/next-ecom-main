@@ -413,12 +413,13 @@ const TermsAndConditions = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-10">
+            
             <div className="inner-page-title">
-             </div>
-              <div className="txt-block legal-info">
-              <div className="s-52" dangerouslySetInnerHTML={{ __html: termsData?.page_description || '' }}> </div>
-                  
-                  </div>
+                     <h2 className="s-52"  dangerouslySetInnerHTML={{ __html: termsData?.page_description }}>
+
+                     </h2>
+                 </div>
+      
                </div>
             </div>
           </div>
