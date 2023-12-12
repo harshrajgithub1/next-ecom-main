@@ -9,6 +9,7 @@ import Section5 from './components/Home/Section5';
 import Section6 from './components/Home/Section6';
 import Section7 from './components/Home/Section7';
 
+import { appWithTranslation } from 'next-i18next';
 
 const page = () => {
   return (
@@ -27,4 +28,4 @@ const page = () => {
   )
 }
 
-export default page
+export default appWithTranslation(page)

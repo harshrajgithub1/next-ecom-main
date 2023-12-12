@@ -3,18 +3,17 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../AuthProvider/useAuth';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
-import { useTranslation } from "react-i18next";
-// import { useTranslation } from 'next-i18next';
+//import { useTranslation } from "react-i18next";
+//import i18next from 'i18next';
 
 const Header = () => {
-  const { i18n } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+  const [currentLanguage, setCurrentLanguage] = useState();
 
   const changeLanguage = (lang) => {
-    console.log(lang);
-    console.log(i18n.language);
-    i18n.changeLanguage(lang);
-    setCurrentLanguage(lang);
+    console.log(lang.target.value);
+    console.log('fr');
+    // i18n.changeLanguage(lang.target.value);
+    // setCurrentLanguage(lang.target.value);
   };
 
   const pathname = usePathname();

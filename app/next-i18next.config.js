@@ -1,9 +1,10 @@
+const path = require("path");
+
 module.exports = {
-    i18n: {
-        // all the locales supported in the application
-        locales: ['en', 'de', 'it', 'fr'],
-        // the default locale to be used when visiting
-        // a non-localized route (e.g. `/about`)
-        defaultLocale: 'en'
-    },
-}
+  i18n: {
+    locales: ["default", "en", "ar"],
+    defaultLocale: "default",
+    localeDetection: false,
+    localePath: path.resolve("./public/locales"),
+  },
+};
