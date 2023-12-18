@@ -31,7 +31,7 @@ const Section7 = () => {
   }
   useEffect(() => {
       getFooterInfo();
-      console.log(`url ({${apiUrl}api/home/footer/image/${footerData?.home_page_image})`)
+      //console.log(`url ({${apiUrl}api/home/footer/image/${footerData?.home_page_image})`)
   }, [])
 //console.log(headerData?.img_para_1);
 

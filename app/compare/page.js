@@ -1,0 +1,333 @@
+import React from "react";
+
+const Compare = () => {
+  return (
+    <div>
+      <section
+        className="banner"
+        style={{ backgroundImage: "url(assets/img/banner2.jpg)" }}
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="banner-caption">
+                <h3>Vergleich</h3>
+                <ul className="breadcrumb">
+                  <li>
+                    <a href="index.php">Start</a>
+                  </li>
+                  <li>Vergleich</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="comparemodal inner-page-hero" id="comparemodal">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <div className="about-2-title mb-60 text-center wow fadeInUp">
+                <span className="section-id">Vergleich</span>
+                <h2 className="s-52 mb-30">
+                  We Have <span>Many Services</span> Currently
+                </h2>
+                <p className="mb-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quaerat alias possimus vitae. Eveniet dicta voluptatem
+                  voluptatibus soluta vero enim iusto maxime cum corrupti odio
+                  nemo sed eaque velit, vitae similique!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="comparemodal-body">
+                <div className="table-wrapper table-responsive ratio_asos">
+                  <table className="table table-compare">
+                  
+                    <tbody>
+                      <tr className="table-product-details">
+                        <td>
+                          <p> Compare Selected Items vs others </p>
+                        </td>
+                        <td>
+                          <div class="product-box">
+                            <div class="product-image">
+                              <a class="w-100" href="javascript:void(0)">
+                                <img
+                                  src="assets/img/blog/post-1-img.jpg"
+                                  class="img-fluid bg-img"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+
+                            <div class="product-details">
+                              <div class="product-title">
+                                <a href="javascript:void(0)">
+                                  <h6 class="truncate">Lighting</h6>
+                                </a>
+                              </div>
+                              <span class="font-light">$89.99</span>{" "}
+                              <del class="theme-color">$100.00</del>
+                              <p class="content-color truncate-2">
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Molestias dolorum laboriosam
+                                ipsam eaque aliquam quaerat sapiente repellendus
+                                explicabo perferendis! Facere reprehenderit aut
+                                pariatur recusandae at voluptatibus officiis
+                                debitis eius minima.
+                              </p>
+                              <a class="theme-color" href="product.html">
+                                More Details...
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="product-box">
+                            <div class="product-image">
+                              <a class="w-100" href="javascript:void(0)">
+                                <img
+                                  src="assets/img/blog/post-2-img.jpg"
+                                  class="img-fluid bg-img"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+
+                            <div class="product-details">
+                              <div class="product-title">
+                                <a href="javascript:void(0)">
+                                  <h6 class="truncate">Emergency Light</h6>
+                                </a>
+                              </div>
+                              <span class="font-light">$100.99</span>{" "}
+                              <del class="theme-color">$150.00</del>
+                              <p class="content-color truncate-2">
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Illum sunt a totam tenetur ad
+                                eligendi nisi commodi repellendus architecto?
+                                Provident fugit magni ut natus voluptates
+                                mollitia sunt quisquam ex veritatis!
+                              </p>
+                              <a class="theme-color" href="product.html">
+                                More Details...
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div class="product-box">
+                            <div class="product-image">
+                              <a class="w-100" href="javascript:void(0)">
+                                <img
+                                  src="assets/img/blog/post-3-img.jpg"
+                                  class="img-fluid bg-img"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+
+                            <div class="product-details">
+                              <div class="product-title">
+                                <a href="javascript:void(0)">
+                                  <h6 class="truncate">Multimedia</h6>
+                                </a>
+                              </div>
+                              <span class="font-light">$100.99</span>{" "}
+                              <del class="theme-color">$150.00</del>
+                              <p class="content-color truncate-2">
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Illum sunt a totam tenetur ad
+                                eligendi nisi commodi repellendus architecto?
+                                Provident fugit magni ut natus voluptates
+                                mollitia sunt quisquam ex veritatis!
+                              </p>
+                              <a class="theme-color" href="product.html">
+                                More Details...
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div class="product-box">
+                            <div class="product-image">
+                              <a class="w-100" href="javascript:void(0)">
+                                <img
+                                  src="assets/img/blog/post-4-img.jpg"
+                                  class="img-fluid bg-img"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+
+                            <div class="product-details">
+                              <div class="product-title">
+                                <a href="javascript:void(0)">
+                                  <h6 class="truncate">Ventilation</h6>
+                                </a>
+                              </div>
+                              <span class="font-light">$100.99</span>{" "}
+                              <del class="theme-color">$150.00</del>
+                              <p class="content-color truncate-2">
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Illum sunt a totam tenetur ad
+                                eligendi nisi commodi repellendus architecto?
+                                Provident fugit magni ut natus voluptates
+                                mollitia sunt quisquam ex veritatis!
+                              </p>
+                              <a class="theme-color" href="product.html">
+                                More Details...
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody>
+                      <tr>
+                        <th>
+                          <i className="fa fa-trash" aria-hidden="true"></i>
+                        </th>
+                        <th>
+                          <i className="fa fa-trash" aria-hidden="true"></i>
+                        </th>
+                        <th>
+                          <i className="fa fa-trash" aria-hidden="true"></i>
+                        </th>
+                        <th>
+                          <i className="fa fa-trash" aria-hidden="true"></i>
+                        </th>
+                      </tr>
+                    </tbody>
+
+                    <tbody>
+                      <tr>
+                        <td>Price</td>
+                        <td>Affordable</td>
+                        <td>
+                          Expensive to adjust selections according to budget
+                        </td>
+                        <td>Mid-range</td>
+                        <td>Affordable</td>
+                      </tr>
+
+                      <tr>
+                        <td>PRODUCT CATEGORIES</td>
+                        <td>Lighting</td>
+                        <td>Ventilation</td>
+                        <td>Heating</td>
+                        <td>Air Conditioning</td>
+                      </tr>
+
+                      <tr>
+                        <td>Compatibility</td>
+                        <td>(All) iOS, Android, Windows</td>
+                        <td>(All) iOS, Android, Windows</td>
+                        <td>(All) iOS, Android, Windows</td>
+                        <td>(All) iOS, Android, Windows</td>
+                      </tr>
+
+                      <tr>
+                        <td>Connectivity</td>
+                        <td>
+                          Apple Home, Google Home, All, and Native Apps by
+                          manufacturers
+                        </td>
+                        <td>
+                          Apple Home, Google Home, All, and Native Apps by
+                          manufacturers
+                        </td>
+                        <td>
+                          Apple Home, Google Home, All, and Native Apps by
+                          manufacturers
+                        </td>
+                        <td>
+                          Apple Home, Google Home, All, and Native Apps by
+                          manufacturers
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Manufacturer</td>
+                        <td>PAGE INDUSTRIES LIMITED</td>
+                        <td>PAGE INDUSTRIES LIMITED</td>
+                        <td>Serenata Lifestyle Pvt. Ltd.</td>
+                        <td>Serenata Lifestyle Pvt. Ltd.</td>
+                      </tr>
+
+                      <tr>
+                        <td>Self-Programming:</td>
+                        <td>Parametrization by professional</td>
+                        <td>Programming</td>
+                        <td>Parametrization by professional</td>
+                        <td>Programming</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody>
+                      <tr>
+                        <td>Request for quotation</td>
+                        <td>
+                        {" "}
+                          <a
+                            href="javascript:void(0)"
+                            className="addtocart-btn"
+                          >
+                            <span>Request</span>
+                            <i className="arrow"></i>
+                          </a>
+                        </td>
+                        <td>
+                          {" "}
+                          <a
+                            href="javascript:void(0)"
+                            className="addtocart-btn"
+                          >
+                            <span>Request</span>
+                            <i className="arrow"></i>
+                          </a>
+                        </td>
+                        <td>
+                          {" "}
+                          <a
+                            href="javascript:void(0)"
+                            className="addtocart-btn"
+                          >
+                            <span>Request</span>
+                            <i className="arrow"></i>
+                          </a>
+                        </td>
+                        <td>
+                          <a
+                            href="javascript:void(0)"
+                            className="addtocart-btn"
+                          >
+                            <span>Request</span>
+                            <i className="arrow"></i>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Compare;
