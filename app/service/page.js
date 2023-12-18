@@ -1,7 +1,40 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+
+import { apiUrl } from '@/app/constant/constant';
+import React, { useState, useEffect } from "react";
 
 const Service = () => {
+
+    const [productData, setProductData] = useState();
+
+    function getProductInfo(){
+        fetch( `${apiUrl}api/products`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+        // body: formBody
+        })
+        .then((response) => response.json())
+        .then((responseJson) => {
+            console.log(responseJson);
+            if (responseJson.success == "true") {
+                setProductData(responseJson.category);
+                //console.log(headerData.home_page_image)
+            }
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    }
+    useEffect(() => {
+        getProductInfo();
+        
+    }, [])
+
+   
   return (
     <div>
       
@@ -39,7 +72,7 @@ const Service = () => {
             <div className="col-md-3 col-lg-2">
                 <div className="sidebar-header">
                     <h3>Filter</h3>
-                    <Link href="Javscript:void{0}">Collapse all</Link>
+                    <Link href="#">Collapse all</Link>
                 </div>
 
                 <div className="search">
@@ -50,7 +83,7 @@ const Service = () => {
                 </div>
 
                 <div className="sidebar">
-                    <h3>Categories <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link></h3>
+                    <h3>Categories <Link href="#"><i className="jki jki-chevron-down-light"></i></Link></h3>
 
                     <div className="sidebar-inpup">
                         <div className="form-group">
@@ -74,7 +107,7 @@ const Service = () => {
 
                 <div className="sidebar">
                     <h3>Price
-                        <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link>
+                        <Link href="#"><i className="jki jki-chevron-down-light"></i></Link>
                     </h3>
 
                     <div className="sidebar-inpup">
@@ -95,7 +128,7 @@ const Service = () => {
 
                 <div className="sidebar">
                     <h3>Manufacturer
-                        <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link>
+                        <Link href="#"><i className="jki jki-chevron-down-light"></i></Link>
                     </h3>
 
                     <div className="sidebar-inpup">
@@ -116,7 +149,7 @@ const Service = () => {
 
                 <div className="sidebar">
                     <h3>Compatibility
-                        <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link>
+                        <Link href="#"><i className="jki jki-chevron-down-light"></i></Link>
                     </h3>
 
                     <div className="sidebar-inpup">
@@ -141,7 +174,7 @@ const Service = () => {
 
                 <div className="sidebar">
                     <h3>Connectivity
-                        <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link>
+                        <Link href="#"><i className="jki jki-chevron-down-light"></i></Link>
                     </h3>
 
                     <div className="sidebar-inpup">
@@ -166,7 +199,7 @@ const Service = () => {
 
                 <div className="sidebar">
                     <h3>Handling
-                        <Link href="Javscript:void{0}"><i className="jki jki-chevron-down-light"></i></Link>
+                        <Link href="#"><i className="jki jki-chevron-down-light"></i></Link>
                     </h3>
 
                     <div className="sidebar-inpup">
@@ -210,7 +243,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -222,7 +255,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -234,7 +267,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -246,7 +279,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -258,7 +291,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -270,7 +303,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -282,7 +315,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -294,7 +327,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -306,7 +339,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -318,7 +351,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -330,7 +363,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
@@ -342,7 +375,7 @@ const Service = () => {
                             <div className="content-style">
                                 <h3>Horizon Villa</h3>
                                 <p>Smart Villa</p>
-                                <Link href="Javscript:void{0}">Compare</Link>
+                                <Link href="#">Compare</Link>
                             </div>
                         </div>
                     </div>
