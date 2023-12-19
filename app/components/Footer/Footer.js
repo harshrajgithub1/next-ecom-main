@@ -92,10 +92,10 @@ const Footer = () => {
                         <p><Link href="about">Über uns</Link></p>
                       </li>
                       <li>
-                        <p><Link href="comparison">Vergleich</Link></p>
+                        <p><Link href="product">Product</Link></p>
                       </li>
                       <li>
-                        <p><Link href="service">Produkte</Link></p>
+                        <p><Link href="service">Service</Link></p>
                       </li>
                       <li>
                         <p><Link href="suppliers">Lieferanten</Link></p>

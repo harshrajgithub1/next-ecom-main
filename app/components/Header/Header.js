@@ -79,8 +79,8 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nl-simple">
-                  <Link href="comparison" className={`h-link ${pathname === '/comparison' ? 'active' : ''}`}>
-                    Vergleich
+                  <Link href="product" className={`h-link ${pathname === '/product' ? 'active' : ''}`}>
+                    Product
                   </Link>
                 </li>
                 {/* <li><a href="services.php" class="h-link">Produkte <span class="wsarrow"></span></a>

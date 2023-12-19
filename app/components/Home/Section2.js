@@ -38,6 +38,15 @@ const Section2 = () => {
       
     });
   };
+  function filtercategorydata() {
+    const dataToSend = selectedCategories.filter(x=>x.isSelected == true);
+    let ids = [];
+    for(let i=0; i < dataToSend.length; i++){
+      ids.push(dataToSend[i].id);
+    } 
+    console.log(ids);
+    //how to send props to another page and also how to get props in another page
+  }
   
 
   function getCategoriesInfo(){
@@ -110,8 +119,9 @@ const Section2 = () => {
                 </div>
               </div>
               ))}
-              
             </div>
+            <button className='btn btn-success btn-full' onClick={filtercategorydata}>Click me!</button>
+
           </div>
         </div>
       </section>
