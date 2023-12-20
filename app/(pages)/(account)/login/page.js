@@ -1,6 +1,7 @@
 "use client";
 
-import withTranslation from '../with-transition';
+//import withTransition from '../../../with-transition';
+//import withTranslation from '../../../with-transition';
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";

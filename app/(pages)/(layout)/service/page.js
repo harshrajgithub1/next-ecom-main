@@ -6,35 +6,6 @@ import React, { useState, useEffect } from "react";
 
 const Service = () => {
 
-    const [productData, setProductData] = useState();
-
-    function getProductInfo(){
-        fetch( `${apiUrl}api/products`, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-        // body: formBody
-        })
-        .then((response) => response.json())
-        .then((responseJson) => {
-            console.log(responseJson);
-            if (responseJson.success == "true") {
-                setProductData(responseJson.category);
-                //console.log(headerData.home_page_image)
-            }
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-    }
-    useEffect(() => {
-        getProductInfo();
-        
-    }, [])
-
-   
   return (
     <div>
       
