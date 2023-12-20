@@ -7,6 +7,7 @@ import { apiUrl } from '@/app/constant/constant';
 const Product = () => {
 
     const [productData, setProductData] = useState([]);
+    
 
     function getAllProducts(){
         fetch( `${apiUrl}api/products`, {
@@ -56,6 +57,8 @@ const Product = () => {
     }
 
     useEffect(() => {
+        const ids = JSON.parse(localStorage.getItem("selectedCatIds"));
+
         if(4<5){
             getAllProducts();
 

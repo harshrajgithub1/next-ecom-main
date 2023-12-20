@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 
 const Compare = () => {
+  function requestQuotation() {}
   return (
     <div>
       <section
@@ -50,7 +52,16 @@ const Compare = () => {
               <div className="comparemodal-body">
                 <div className="table-wrapper table-responsive ratio_asos">
                   <table className="table table-compare">
-                  
+                    <thead>
+                    
+                      <tr>
+                        <th>Action</th>
+                        <th class="remove"><button className="btn-remove"><i class="jki jki-trash-solid"></i></button></th>
+                        <th class="remove"><button className="btn-remove"><i class="jki jki-trash-solid"></i></button></th>
+                        <th class="remove"><button className="btn-remove"><i class="jki jki-trash-solid"></i></button></th>
+                        <th class="remove"><button className="btn-remove"><i class="jki jki-trash-solid"></i></button></th>
+                      </tr>
+                    </thead>
                     <tbody>
                       <tr className="table-product-details">
                         <td>
@@ -59,6 +70,7 @@ const Compare = () => {
                         <td>
                           <div class="product-box">
                             <div class="product-image">
+                            <button className="btn-remove"><i class="jki jki-times-solid"></i></button>
                               <a class="w-100" href="javascript:void(0)">
                                 <img
                                   src="assets/img/blog/post-1-img.jpg"
@@ -69,6 +81,11 @@ const Compare = () => {
                             </div>
 
                             <div class="product-details">
+                              <button
+                                type="button"
+                                class="btn-close"
+                                aria-label="Close"
+                              ></button>
                               <div class="product-title">
                                 <a href="javascript:void(0)">
                                   <h6 class="truncate">Lighting</h6>
@@ -93,6 +110,7 @@ const Compare = () => {
                         <td>
                           <div class="product-box">
                             <div class="product-image">
+                            <button className="btn-remove"><i class="jki jki-times-solid"></i></button>
                               <a class="w-100" href="javascript:void(0)">
                                 <img
                                   src="assets/img/blog/post-2-img.jpg"
@@ -127,6 +145,7 @@ const Compare = () => {
                         <td>
                           <div class="product-box">
                             <div class="product-image">
+                            <button className="btn-remove"><i class="jki jki-times-solid"></i></button>
                               <a class="w-100" href="javascript:void(0)">
                                 <img
                                   src="assets/img/blog/post-3-img.jpg"
@@ -161,6 +180,7 @@ const Compare = () => {
                         <td>
                           <div class="product-box">
                             <div class="product-image">
+                            <button className="btn-remove"><i class="jki jki-times-solid"></i></button>
                               <a class="w-100" href="javascript:void(0)">
                                 <img
                                   src="assets/img/blog/post-4-img.jpg"
@@ -192,10 +212,11 @@ const Compare = () => {
                           </div>
                         </td>
                       </tr>
-                    </tbody>
+                   </tbody>
+                   <tbody>
 
-                    <tbody>
-                      <tr>
+                 
+                      {/* <tr>
                         <th>
                           <i className="fa fa-trash" aria-hidden="true"></i>
                         </th>
@@ -208,10 +229,8 @@ const Compare = () => {
                         <th>
                           <i className="fa fa-trash" aria-hidden="true"></i>
                         </th>
-                      </tr>
-                    </tbody>
-
-                    <tbody>
+                      </tr> */}
+                
                       <tr>
                         <td>Price</td>
                         <td>Affordable</td>
@@ -273,48 +292,94 @@ const Compare = () => {
                         <td>Parametrization by professional</td>
                         <td>Programming</td>
                       </tr>
-                    </tbody>
+               
 
-                    <tbody>
+                  
                       <tr>
                         <td>Request for quotation</td>
                         <td>
-                        {" "}
-                          <a
-                            href="javascript:void(0)"
-                            className="addtocart-btn"
-                          >
-                            <span>Request</span>
-                            <i className="arrow"></i>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Request
+                            </button>
                           </a>
                         </td>
                         <td>
-                          {" "}
-                          <a
-                            href="javascript:void(0)"
-                            className="addtocart-btn"
-                          >
-                            <span>Request</span>
-                            <i className="arrow"></i>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Request
+                            </button>
                           </a>
                         </td>
                         <td>
-                          {" "}
-                          <a
-                            href="javascript:void(0)"
-                            className="addtocart-btn"
-                          >
-                            <span>Request</span>
-                            <i className="arrow"></i>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Request
+                            </button>
                           </a>
                         </td>
                         <td>
-                          <a
-                            href="javascript:void(0)"
-                            className="addtocart-btn"
-                          >
-                            <span>Request</span>
-                            <i className="arrow"></i>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Request
+                            </button>
+                          </a>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+                        <td>Direct Buy from Manufacturer</td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Buy
+                            </button>
+                          </a>
+                        </td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Buy
+                            </button>
+                          </a>
+                        </td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Buy
+                            </button>
+                          </a>
+                        </td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Buy
+                            </button>
                           </a>
                         </td>
                       </tr>

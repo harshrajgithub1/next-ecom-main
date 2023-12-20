@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   const pathname = usePathname();
-  console.log(pathname);
+  //console.log(pathname);
   const { isLoggedIn, logout } = useAuth();
   const [isScrolled, setIsScrolled] = useState(false);
   //console.log(isLoggedIn);

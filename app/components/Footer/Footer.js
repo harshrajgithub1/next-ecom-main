@@ -19,7 +19,7 @@ const Footer = () => {
       })
       .then((response) => response.json())
       .then((responseJson) => {
-          console.log(responseJson);
+          //console.log(responseJson);
           if (responseJson.success == "true") {
             setFooterData(responseJson.footer_section[0]);
               //console.log(headerData.home_page_image)

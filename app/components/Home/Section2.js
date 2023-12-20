@@ -7,26 +7,33 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FcCheckmark } from "react-icons/fc";
 import { apiUrl } from '@/app/constant/constant';
 
+import Link from 'next/link';
 const Section2 = () => {
   const [selectedCategories, setSelectedCategories] = useState();
-  
-  const handleCategoryClick = (selectedCategoryId) => {
-    console.log(selectedCategoryId);
+  const [selectedAllCategories, setSelectedAllCategories] = useState([]);
+
+  const handleCategoryClick = (selectedCategoryId) => { 
+    setSelectedAllCategories((c) => ({ ...c, cat:selectedCategoryId }));
     setSelectedCategories((prevItems) => {
+      
       const updatedCategories = prevItems.map((item) =>
         item.id === selectedCategoryId ? { ...item, isSelected: !item.isSelected } : item
+      
       );
-  
+      
       // Check the number of selected categories
-      const selectedCount = updatedCategories.filter((item) => item.isSelected).length;
-  
-      // If the selected count exceeds 3, do not update the state
-      // if (selectedCount <= 3) {
-      //   return updatedCategories;
-      // } else {
-      //   toast.error("You need premium subscription");
-      //   return prevItems;
-      // }
+      const selectedCat = updatedCategories.filter((item) => item.isSelected);
+
+      //get selected id only
+      const selectedCatIds = selectedCat.map((item) => item.id);
+      localStorage.setItem("selectedCatIds", JSON.stringify(selectedCatIds));
+      setSelectedAllCategories(selectedCatIds);
+      console.log(selectedCatIds)
+      //get length
+      const selectedCount=selectedCat.length;
+      
+
+      localStorage.setItem("selectedCatIds", JSON.stringify(selectedCatIds));
 
       if (selectedCount == 2) {
         toast.warning("You can select one more category");
@@ -34,11 +41,14 @@ const Section2 = () => {
         toast.error("You need premium subscription");
         return prevItems;
       }
+
+
       return updatedCategories;
       
     });
+    
   };
-  function filtercategorydata() {
+  function handleClick() {
     const dataToSend = selectedCategories.filter(x=>x.isSelected == true);
     let ids = [];
     for(let i=0; i < dataToSend.length; i++){
@@ -47,7 +57,7 @@ const Section2 = () => {
     console.log(ids);
     //how to send props to another page and also how to get props in another page
   }
-  
+  console.log(handleClick);
 
   function getCategoriesInfo(){
       fetch(`${apiUrl}api/category`, {
@@ -60,7 +70,7 @@ const Section2 = () => {
       })
       .then((response) => response.json())
       .then((responseJson) => {
-          console.log(responseJson);
+          //console.log(responseJson);
           if (responseJson.success == "true") {
             let res = responseJson.category.map((item) => ({
               ...item,
@@ -74,6 +84,8 @@ const Section2 = () => {
           console.error(error);
       });
   }
+
+ 
   useEffect(() => {
     getCategoriesInfo();
   }, []);
@@ -82,8 +94,8 @@ const Section2 = () => {
   //   console.log("After:", selectedCategories);
   // }, [selectedCategories]);
   
-
-//console.log(headerData?.img_para_1);
+ 
+//console.log(updatedCategories);
 
 
   return (
@@ -120,8 +132,8 @@ const Section2 = () => {
               </div>
               ))}
             </div>
-            <button className='btn btn-success btn-full' onClick={filtercategorydata}>Click me!</button>
-
+            <button className='btn btn-success btn-full' onClick={handleClick}>Click me!</button>
+           
           </div>
         </div>
       </section>

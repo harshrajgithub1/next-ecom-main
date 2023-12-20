@@ -19,7 +19,7 @@ const Section7 = () => {
       })
       .then((response) => response.json())
       .then((responseJson) => {
-          console.log(responseJson);
+          //console.log(responseJson);
           if (responseJson.success == "true") {
               setFooterData(responseJson.header_image[0]);
               //console.log(headerData.home_section7_image)

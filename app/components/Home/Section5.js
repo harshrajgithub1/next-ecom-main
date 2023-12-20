@@ -52,7 +52,7 @@ const section5 = () => {
     }, []);
 
 	useEffect(() => {
-		console.log("After:", testimonialData);
+		//console.log("After:", testimonialData);
 	  }, [testimonialData]);
 
 

@@ -18,7 +18,7 @@ const Section1 = () => {
         })
         .then((response) => response.json())
         .then((responseJson) => {
-            console.log(responseJson);
+            //console.log(responseJson);
             if (responseJson.success == "true") {
                 setHeaderData(responseJson.header_image[0]);
                 //console.log(headerData.home_page_image)
