@@ -18,7 +18,7 @@ const Profile = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>Electrician Dashboard</h3>
+                <h3>Electrician Profile</h3>
                 <ul className="breadcrumb">
                   <li><Link href="/">Start</Link></li>
                   <li>Electrician Dashboard</li>

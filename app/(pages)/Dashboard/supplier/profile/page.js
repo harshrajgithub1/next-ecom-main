@@ -18,10 +18,10 @@ const Profile = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>Supplier Dashboard</h3>
+                <h3>Supplier Profile</h3>
                 <ul className="breadcrumb">
                   <li><Link href="/">Start</Link></li>
-                  <li>Supplier Dashboard</li>
+                  <li>Supplier Profile</li>
                 </ul>
               </div>
             </div>
