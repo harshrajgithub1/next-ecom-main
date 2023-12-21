@@ -70,7 +70,7 @@ else if (selectedCount >= 3) {
         <div className="container">
           <div className="fbox-wrapper text-center">
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-              {selectedCategories.map((category) => (
+               {selectedCategories.map((category) => (
                 <div className="col" key={category.id}>
                   <div className={`fbox-6 fb-1 wow fadeInUp ${category.isSelected ? 'active' : ''}`} 
                     onClick={() => handleCategoryClick(category.id)}>

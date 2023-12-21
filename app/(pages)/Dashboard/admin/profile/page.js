@@ -18,10 +18,10 @@ const Profile = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>Supplier Dashboard</h3>
+                <h3>Admin Profile</h3>
                 <ul className="breadcrumb">
                   <li><Link href="/">Start</Link></li>
-                  <li>Supplier Dashboard</li>
+                  <li>Admin Profile</li>
                 </ul>
               </div>
             </div>
@@ -51,10 +51,10 @@ const Profile = () => {
               </div>
               <ul className="dashboard_menu">
                 <li><a href="my profile">My Profile</a></li>
-                <li><a className="active" href="notification">NOTIFICATION</a></li>
+                {/* <li><a className="active" href="notification">NOTIFICATION</a></li>
                 <li><a className="" href="add products">ADD PRODUCTS</a></li>
                 <li><a className="" href="csv">CSV</a></li>
-                <li><a className="" href="subscription">SUBSCRIPTION</a></li>
+                <li><a className="" href="subscription">SUBSCRIPTION</a></li> */}
                 <li><a className="" href="logout">Logout</a></li>
               </ul>
             </div>

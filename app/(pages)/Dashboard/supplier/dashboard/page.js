@@ -265,7 +265,7 @@ const supplierDashboard = () => {
                             </table>
                         </div>
                     </div>
-                    
+{/*                     
                       <div className="row mt-5">
                         <div className="col-12">
                             <div id="pagination">
@@ -280,27 +280,9 @@ const supplierDashboard = () => {
                                 </nav>
                             </div>
                         </div>
-                      </div>
+                      </div> */}
 
-<>
-                     <div class="dashboard_profile">
-                      <h5>Profile information</h5>
-                      <a href="/my-account/profile">edit</a>
-                      <ul>
-                        <li>
-                          <span>ID:</span> 31
-                        </li>
-                          <li><span>Name:</span> harsh raj</li>
-                          <li><span>Phone:</span> </li>
-                          <li><span>Email:</span> harsh@abc.com</li>
-                          <li><span>Gender:</span> Male</li>
-                          <li><span>Adress:</span> </li>
-                          <li><span>City:</span> </li>
-                          <li><span>State:</span> </li>
-                         
-                      </ul>
-                     </div>
-                  </>   
+
                 </div>
                 
             </div>

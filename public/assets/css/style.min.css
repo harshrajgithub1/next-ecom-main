@@ -14288,3 +14288,6 @@ button.btn-remove {
 .product-box:hover button.btn-remove {
   display: flex;
 }
+.black{
+  color:#000
+}

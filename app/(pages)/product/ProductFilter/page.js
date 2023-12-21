@@ -7,7 +7,31 @@ import { apiUrl } from '@/app/constant/constant';
 const ProductFilter = () => {
 
     const [productFilterData, setProductFilterData] = useState([]);
-    
+
+
+    const [selectedCategories, setSelectedCategories] = useState([]);
+    const [selectedCount, setSelectedCount] = useState(0);
+  
+    const handleCategoryClick = (selectedCategoryId) => {
+      const updatedCategories = selectedCategories.map((item) =>
+        item.id === selectedCategoryId ? { ...item, isSelected: !item.isSelected } : item
+      );
+  
+      const selectedCat = updatedCategories.filter((item) => item.isSelected);
+      const selectedCatIds = selectedCat.map((item) => item.id);
+      localStorage.setItem("selectedCatIds", JSON.stringify(selectedCatIds));
+      setSelectedCount(selectedCat.length);
+  console.log(selectedCount);
+  if (selectedCount === 2) {
+    toast.warning("You can select one more category");
+  } 
+  else if (selectedCount >= 3) {
+    toast.error("You need a premium subscription");
+    return;
+  }
+  
+      setSelectedCategories(updatedCategories);
+    };
 
     function getProductFilter(){
         const ids = JSON.parse(localStorage.getItem('selectedCatIds'))
@@ -26,8 +50,10 @@ const ProductFilter = () => {
         .then((responseJson) => {
             console.log(responseJson);
             if (responseJson.success === "true") {
-                setProductFilterData(responseJson.data);
+                const flatArray = responseJson.data.flat();
+                setProductFilterData(flatArray);
                 //console.log(headerData.home_page_image)
+                console.log(flatArray); 
             }
         })
         .catch((error) => {
@@ -35,6 +61,7 @@ const ProductFilter = () => {
         });
         
     }
+    console.log(productFilterData)
     useEffect(() => {
         getProductFilter();
 
@@ -228,10 +255,10 @@ const ProductFilter = () => {
                 <div className="col-md-9 col-lg-10">
                     <div className="row justify-content-center">
                         <div className="col-md-8">
-                            <div className="about-2-title mb-60 text-center wow fadeInUp">
+                            <div className="about-2-title mb-20 text-center wow fadeInUp" >
                                 <span className="section-id">Vergleich</span>
                                 <h2 className="s-52 mb-30">We Have <span>Many Service</span> Currentrly</h2>
-                                <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                                <p className="mb-0 black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
                                     alias possimus
                                     vitae. Eveniet dicta voluptatem voluptatibus soluta vero enim iusto maxime cum
                                     corrupti odio
@@ -246,13 +273,13 @@ const ProductFilter = () => {
                       {productFilterData.length && productFilterData.map((data) => (
                          <div className="col-md-3" key={`${data.id}`}>
                             <div className="vergleich wow fadeInUp">
-                                {/* <div className="img-style">
+                                <div className="img-style">
                                     <img src={`${apiUrl}storage/product/${data?.pro_image}`} alt="" className="img-fluid"/>
-                                 </div> */}
+                                 </div>
                                   <div className="content-style">
                                     <h3>{data?.pro_name}</h3>
                                     <p>{data?.pro_details}</p>
-                                    <Link href="#">Compare</Link>
+                                    {/* <Link href="#">Compare</Link> */}
                                   </div>
                             </div>
                          </div>

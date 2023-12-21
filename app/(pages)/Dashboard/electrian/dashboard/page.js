@@ -57,7 +57,7 @@ const electrianDashboard = () => {
                     <li><a className="" href="add products">ADD PRODUCTS</a></li>
                     <li><a className="" href="csv">CSV</a></li>
                     <li><a className="" href="subscription">SUBSCRIPTION</a></li>
-                    <li><a className="" href="logout">Logout</a></li>
+                    <li><a className="" href="submit">Submit Quotes</a></li>
                 </ul>
             </div>
             <div className="col-xl-9 col-lg-8">
