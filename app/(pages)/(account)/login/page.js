@@ -23,6 +23,7 @@ const Login = () => {
   const validationSchema = Yup.object().shape({
     email: Yup.string().required("Email is required").email("Email is invalid"),
     password: Yup.string().required("Password is required"),
+    role: Yup.string().required("Role is required")
   });
   
   
@@ -35,7 +36,7 @@ const Login = () => {
     setShowPassword(!showPassword);
   };
 
-  const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
+  const { register, trigger, handleSubmit, formState: { errors } } = useForm(formOptions);
 
   //const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -60,12 +61,13 @@ const Login = () => {
         //window.location.href='/about';
         sessionStorage.setItem("token", JSON.stringify(obj));
         sessionStorage.setItem("user", JSON.stringify(res.data.user));
+        sessionStorage.setItem("role", JSON.stringify(formData.role));
         router.push("/about");
 
       }
          
       else{
-        toast.error("An error occurred");
+        toast.error(res.data.message);
         //alert('Invalid Credentials');
       }
     } catch (error) {
@@ -77,7 +79,11 @@ const Login = () => {
    
   };
     
-  
+  const changeRole = async (value) => {
+    console.log(value);
+    // do something with my select value onChange
+    await trigger(['role']) // Trigger validation on select
+  };
 
 
   return (
@@ -167,10 +173,11 @@ const Login = () => {
                         </div>
                         <div className="col-md-12">
                           <p className="p-sm input-header">Login for</p>
-                          <select name="" id="" className="form-control login">
-                            <option value="">Handwerker</option>
-                            <option value="">Lieferanten</option>
-                            <option value="">Privat </option>
+                          <select {...register("role")}
+          onChange={(e) => changeRole(e.target.value)} name="role" id="role" className="form-control login">
+                            <option value="Handwerker">Handwerker</option>
+            <option value="Lieferanten">Lieferanten</option>
+            <option value="Privat">Privat</option>
                           </select>
                         </div>
                         <div className="col-md-12">

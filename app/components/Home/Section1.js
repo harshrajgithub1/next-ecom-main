@@ -3,10 +3,12 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import Link from 'next/link';
 import { apiUrl } from '@/app/constant/constant';
+import { useTranslation } from 'react-i18next';
 
 const Section1 = () => {
     const [headerData, setHeaderData] = useState();
-
+    const { t } = useTranslation();
+    
     function getHeaderInfo(){
         fetch( `${apiUrl}api/home/header/image`, {
             method: 'POST',
@@ -55,6 +57,7 @@ const Section1 = () => {
                 <p className="p-xl">
                   {headerData?.img_para_1}
                 </p>
+                
                 <Link
                   href="#banner-3"
                   className="btn r-04 btn--theme hover--tra-white"
@@ -172,9 +175,10 @@ const Section1 = () => {
               <div className="section-title mb-70">
                 <h2 className="s-50">
               
-                {headerData?.below_image_text}
+                {t(headerData?.below_image_text)}
               
                 </h2>
+                <h1>{t('greeting')}</h1>
                 {/* <p className="s-21 color--grey">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p> */}

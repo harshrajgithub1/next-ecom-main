@@ -3,15 +3,16 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../AuthProvider/useAuth';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
-//import { useTranslation } from "react-i18next";
-//import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
-  const [currentLanguage, setCurrentLanguage] = useState();
-
+  const [currentLanguage, setCurrentLanguage] = useState("en");
+  const { i18n } = useTranslation();
   const changeLanguage = (lang) => {
     console.log(lang.target.value);
-    console.log('fr');
+    i18n.changeLanguage(lang.target.value);
+    setCurrentLanguage(lang.target.value);
+    localStorage.setItem("language", lang.target.value);
     // i18n.changeLanguage(lang.target.value);
     // setCurrentLanguage(lang.target.value);
   };
@@ -42,6 +43,13 @@ const Header = () => {
     logout();
   }
 
+  useEffect(() => {
+    const lng = localStorage.getItem("language");
+    if (!!lng) {
+      i18n.changeLanguage(lng);
+      setCurrentLanguage(lng);
+    }
+  }, [i18n]);
 
 
   return (
@@ -75,7 +83,7 @@ const Header = () => {
               <ul className="wsmenu-list nav-theme">
                 <li className="nl-simple">
                   <Link href="/" className={`h-link ${pathname === '/' ? 'active' : ''}`}>
-                    Start
+                  Start
                   </Link>
                 </li>
                 <li className="nl-simple">
@@ -121,7 +129,8 @@ const Header = () => {
                   
                 </li>
                 <li className="language">
-                  <select name="lang" id="lang" className="form-control" onChange={changeLanguage}>
+                
+                  <select name="lang" id="lang" className="form-control" onChange={changeLanguage} value={currentLanguage}>
                     <option value="en">EN</option>
                     <option value="de">DE</option>
                     <option value="it">IT</option>

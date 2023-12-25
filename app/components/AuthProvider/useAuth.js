@@ -53,7 +53,8 @@ export const useAuth = () => {
   const logout = () => {
     // Clear the authentication token from cookies
     sessionStorage.removeItem("token");
-
+    sessionStorage.removeItem("role");
+    sessionStorage.removeItem("user");
     // Update the isLoggedIn state to reflect that the user is logged out
     setIsLoggedIn(false);
   };

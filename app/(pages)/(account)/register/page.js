@@ -7,6 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import axios from 'axios';
 import { useState, useEffect } from "react";
+// import { redirect } from 'next/navigation';
 //import { useSession } from "next-auth/react";
 
 import { toast } from 'react-toastify';
@@ -41,22 +42,12 @@ const Registration = () => {
       const res = await axios.post('http://45.79.185.26/trifusa/public/api/register', formData);
       console.log(res.data); // Assuming res.data contains the response data you want to log.
       // Handle the response data here.
-      if (isSuccess) {
-        var msg = res.data.message;
-        //toast.success(msg);
-        var message = res.data.success;
-        if(message==true){
-          //toast.success(msg);
-        }
-        alert("successfully register");
+      if (res.data.success) {
+        toast.success(res.data.message);
+        //redirect('/login');
         window.location.href='/login';
-        if(message==false){
-          toast.error(msg);
-        }
-        
-        //window.location.href='/login';
       } else {
-        toast.error('Registration failed');
+        toast.error(res.data.message);
       }
     } catch (error) {
       console.error('Error occurred:', error);
