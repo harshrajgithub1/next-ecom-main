@@ -31,6 +31,33 @@ const Header = () => {
       } else {
         setIsScrolled(false);
       }
+      // if (window.innerWidth > 768) {
+      //   new WOW().init();
+      // }
+    
+    
+      /*----------------------------------------------------*/
+      /*	Mobile Menu Toggle
+      /*----------------------------------------------------*/
+    
+      if ($(window).outerWidth() < 992) {
+        $('.wsmenu-list li.nl-simple, .wsmegamenu li, .sub-menu li').on('click', function () {
+          $('body').removeClass("wsactive");
+          $('.sub-menu').slideUp('slow');
+          $('.wsmegamenu').slideUp('slow');
+          $('.wsmenu-click').removeClass("ws-activearrow");
+          $('.wsmenu-click02 > i').removeClass("wsmenu-rotate");
+        });
+      }
+    
+      if ($(window).outerWidth() < 992) {
+        $('.wsanimated-arrow').on('click', function () {
+          $('.sub-menu').slideUp('slow');
+          $('.wsmegamenu').slideUp('slow');
+          $('.wsmenu-click').removeClass("ws-activearrow");
+          $('.wsmenu-click02 > i').removeClass("wsmenu-rotate");
+        });
+      }
     };
 
     // Attach the event listener

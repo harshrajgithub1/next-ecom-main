@@ -178,7 +178,6 @@ const Section1 = () => {
                 {t(headerData?.below_image_text)}
               
                 </h2>
-                <h1>{t('greeting')}</h1>
                 {/* <p className="s-21 color--grey">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p> */}

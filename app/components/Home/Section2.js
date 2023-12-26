@@ -20,11 +20,11 @@ const Section2 = () => {
     const selectedCatIds = selectedCat.map((item) => item.id);
     localStorage.setItem("selectedCatIds", JSON.stringify(selectedCatIds));
     setSelectedCount(selectedCat.length);
-console.log(selectedCount);
-if (selectedCount === 2) {
+console.log(selectedCat.length);
+if (selectedCat.length === 2) {
   toast.warning("You can select one more category");
 } 
-else if (selectedCount >= 3) {
+else if (selectedCat.length > 3) {
   toast.error("You need a premium subscription");
   return;
 }
