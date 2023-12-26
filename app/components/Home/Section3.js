@@ -2,38 +2,38 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 
+import { apiUrl } from '@/app/constant/constant';
+
 const section3 = () => {
 
-//   const [headerData, setHeaderData] = useState();
+  const [middleData, setMiddleData] = useState();
+ 
+  function getMiddleInfo(){
+      fetch( `${apiUrl}api/home/section`, {
+          method: 'POST',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/x-www-form-urlencoded'
+          },
+      // body: formBody
+      })
+      .then((response) => response.json())
+      .then((responseJson) => {
+          //console.log(responseJson);
+          if (responseJson.success == "true") {
+            setMiddleData(responseJson.home_section[0]);
+              //console.log(headerData.home_page_image)
+          }
+      })
+      .catch((error) => {
+          console.error(error);
+      });
+  }
+  useEffect(() => {
+    getMiddleInfo();
 
+  }, [])
 
-//   function getHeaderInfo(){
-//       fetch('http://45.79.185.26/trifusa/public/api/home/header/image', {
-//           method: 'POST',
-//           headers: {
-//               'Accept': 'application/json',
-//               'Content-Type': 'application/x-www-form-urlencoded'
-//           },
-//       // body: formBody
-//       })
-//       .then((response) => response.json())
-//       .then((responseJson) => {
-//           //console.log(responseJson);
-//           if (responseJson.success == "true") {
-//               setHeaderData(responseJson.header_image[0]);
-//               //console.log(headerData.home_section3_image)
-//           }
-//       })
-//       .catch((error) => {
-//           console.error(error);
-//       });
-//   }
-//   useEffect(() => {
-//       getHeaderInfo();
-
-//   }, [])
-
-// console.log(headerData);
 
   return (
     <div>
@@ -46,43 +46,20 @@ const section3 = () => {
           <div className="row d-flex align-items-center">
             <div className="col-md-6">
               <div className="img-block left-column wow fadeInRight">
-                <img
-                  className="img-fluid"
-                  src="/assets/img/img-10.png"
-                  alt="content-image"
-                />
+              <img
+              src={`${apiUrl}storage/home_sections/${middleData?.home_section1_image}`}
+               alt="header image"
+               className="img-fluid banner-img"
+        />
+
               </div>
             </div>
             <div className="col-md-6">
               <div className="txt-block right-column wow fadeInLeft">
-                <span className="section-id">Lorem, ipsum dolor</span>
                 <div className="section-title text-start">
-                  <h2 className="s-50">
-                    Lösungen <span>für ein</span> optimiertes finden
-                  </h2>
                 </div>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
-                  culpa alias nulla incidunt animi ullam optio quasi quos
-                  delectus hic! Quidem illo eligendi facilis ex repellat vero
-                  consequuntur nulla mollitia.
-                </p>
-                <h5 className="s-24">Lorem ipsum dolor sit amet</h5>
-                <ul className="simple-list">
-                  <li className="list-item">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Reprehenderit ducimus modi voluptatum repellendus
-                      perferendis temporibus.
-                    </p>
-                  </li>
-                  <li className="list-item">
-                    <p className="mb-0">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Eius nam eaque mollitia. Exercitationem, veritatis minima.
-                    </p>
-                  </li>
-                </ul>
+                <p dangerouslySetInnerHTML={{ __html: middleData?.home_section1_description }}>
+							</p>
               </div>
             </div>
           </div>
@@ -94,6 +71,7 @@ const section3 = () => {
         <div className="container">
           <div className="row d-flex align-items-center">
             <div className="col-md-6 order-last order-md-2">
+            
               <div className="txt-block left-column wow fadeInRight">
                 <div className="cbox-2 process-step">
                   <div className="ico-wrap">
@@ -102,7 +80,7 @@ const section3 = () => {
                   </div>
                   <div className="cbox-2-txt">
                     <h5 className="s-22 w-700">
-                      Umfassende Vergleichsmöglichkeiten
+                      Harsh Vergleichsmöglichkeiten
                     </h5>
                     <p>
                       Trisfusa bietet eine breite Palette von Smarthome-Geräten
@@ -154,11 +132,11 @@ const section3 = () => {
             </div>
             <div className="col-md-6 order-first order-md-2">
               <div className="img-block wow fadeInLeft">
-                <img
-                  className="img-fluid"
-                  src="/assets/img/tablet-01.png"
-                  alt="content-image"
-                />
+              <img
+              src={`${apiUrl}storage/home_sections/${middleData?.home_section1_image}`}
+               alt="header image"
+               className="img-fluid banner-img"
+        />
               </div>
             </div>
           </div>

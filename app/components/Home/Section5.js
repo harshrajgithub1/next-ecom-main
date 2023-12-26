@@ -72,11 +72,7 @@ const section5 = () => {
         <div className="row">
           <div className="col">
             <Slider {...settings}>
-              {/* Slide 1 */}
-              
-			  
-
-              {/* Slide 2 */}
+            
 			  {testimonialData &&
               testimonialData.map((category, index) => (
 					<div key={index} className="review-1 bg--white-100 block-shadow r-08">

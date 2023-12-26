@@ -50,7 +50,7 @@ const Profile = () => {
                 
               </div>
               <ul className="dashboard_menu">
-                <li><a href="my profile">My Profile</a></li>
+                <li><Link href="/Dashboard/supplier/profile">My Profile</Link></li>
                 <li><a className="active" href="notification">NOTIFICATION</a></li>
                 <li><a className="" href="add products">ADD PRODUCTS</a></li>
                 <li><a className="" href="csv">CSV</a></li>

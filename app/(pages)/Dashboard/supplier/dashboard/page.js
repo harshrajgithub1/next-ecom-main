@@ -74,7 +74,6 @@ const supplierDashboard = () => {
                                         <th className="industrie">Industrial Area</th>
                                         <th className="rented">Rented-Houses/Apart..</th>
                                         <th className="enquires">Customer Enquires</th>
-                                        {/* <th className="edit">Adjust quotes</th> */}
                                         <th className="status">Quote Status</th>
                                         <th className="location">Customer Location</th>
                                         <th className="submit">Submit within 48hrs</th>
@@ -259,30 +258,12 @@ const supplierDashboard = () => {
                                             <p>Customer Address within 50 KM....</p>
                                         </td>
                                         <td className="submit"><button type="button" className="btn btn-success succ" >Success</button></td>
-                                        <td className="view"><button type="button" className="btn btn-info">Info</button></td>
+                                        <td className="view"><Link href="/information" className="btn btn-info">Info</Link></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-{/*                     
-                      <div className="row mt-5">
-                        <div className="col-12">
-                            <div id="pagination">
-                                <nav aria-label="...">
-                                    <ul className="pagination justify-content-center">
-                                        <li className="page-item"><a className="page-link" href="className"><i className="jki jki-arrow-left-light"></i></a></li>
-                                        <li className="page-item"><a className="page-link active" href="className">01</a></li>
-                                        <li className="page-item"><a className="page-link" href="className">02</a></li>
-                                        <li className="page-item"><a className="page-link" href="className">03</a></li>
-                                        <li className="page-item"><a className="page-link" href="className"><i className="jki jki-arrow-right-light"></i></a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                      </div> */}
-
-
                 </div>
                 
             </div>

@@ -23,10 +23,10 @@ const electrianDashboard = () => {
         <div className="row">
             <div className="col-md-12">
                 <div className="banner-caption">
-                    <h3>Electrian Dashboard</h3>
+                    <h3>Craftsman/Planner Dashboard</h3>
                     <ul className="breadcrumb">
                             <li><Link href="/">Start</Link></li>
-                            <li>Electrian Dashboard</li>
+                            <li>Craftsman/Planner Dashboard</li>
                         </ul>
                 </div>
             </div>
