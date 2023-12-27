@@ -35,7 +35,7 @@ const Compare = () => {
                 <h2 className="s-52 mb-30">
                   We Have <span>Many Services</span> Currently
                 </h2>
-                <p className="mb-0">
+                <p className="mb-0 text-body">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quaerat alias possimus vitae. Eveniet dicta voluptatem
                   voluptatibus soluta vero enim iusto maxime cum corrupti odio
@@ -46,6 +46,7 @@ const Compare = () => {
           </div>
         </div>
 
+        {/* new section implementation  */}
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -53,13 +54,380 @@ const Compare = () => {
                 <div className="table-wrapper table-responsive ratio_asos">
                   <table className="table table-compare">
                     <thead>
-                    
+                      <tr>
+                        <th>PRODUCTS</th>
+                        <th>DETAILS</th>
+                        <th>PRICE</th>
+                        <th>PRODUCT CATEGORIES</th>
+                        <th>COMPATIBILITY</th>
+                        <th>CONNECTIVITY</th>
+                        <th>MANUFACTURER</th>
+                        <th>SELF-PROGRAMMING</th>
+                        <th>REQUEST FOR QUOTATION</th>
+                        <th>DIRECT BUY FROM MANUFACTURER</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="table-product-details">
+                        <td>
+                          <div class="product-box">
+                            <div class="product-image">
+                              <button className="btn-remove">
+                                <i class="jki jki-times-solid"></i>
+                              </button>
+                              <a class="w-100" href="#">
+                                <img
+                                  src="assets/img/blog/post-1-img.jpg"
+                                  class="img-fluid bg-img"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+
+                            <div class="product-details">
+                              <button
+                                type="button"
+                                class="btn-close"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="product-title">
+                            <a href="#">
+                              <h6 class="truncate">Lighting</h6>
+                            </a>
+                          </div>
+                          <p class="content-color truncate-2">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Molestias dolorum laboriosam ipsam eaque
+                            aliquam quaerat sapiente repellendus explicabo
+                            perferendis! Facere reprehenderit aut pariatur
+                            recusandae at voluptatibus officiis debitis eius
+                            minima.
+                          </p>
+                          <a class="theme-color" href="product.html">
+                            More Details...
+                          </a>
+                        </td>
+                        <td>
+                          <span class="font-light">$100.99</span>{" "}
+                          <del class="theme-color">$150.00</del>
+                        </td>
+                        <td>Lighting</td>
+                        <td>(All) iOS, Android, Windows</td>
+                        <td>
+                          Apple Home, Google Home, All, and Native Apps by
+                          manufacturers
+                        </td>
+                        <td>PAGE INDUSTRIES LIMITED</td>
+                        <td>Parametrization by professional</td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Request
+                            </button>
+                          </a>
+                        </td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Buy
+                            </button>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr className="table-product-details">
+                        <td>
+                          <div class="product-box">
+                            <div class="product-image">
+                              <button className="btn-remove">
+                                <i class="jki jki-times-solid"></i>
+                              </button>
+                              <a class="w-100" href="#">
+                                <img
+                                   src="assets/img/blog/post-2-img.jpg"
+                                  class="img-fluid bg-img"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+
+                            <div class="product-details">
+                              <button
+                                type="button"
+                                class="btn-close"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                          </div>
+                        </td>
+                        
+                        <td>
+                          <div class="product-title">
+
+                          <div class="product-details">
+                              <div class="product-title">
+                                <a href="#">
+                                  <h6 class="truncate">Emergency Light</h6>
+                                </a>
+                              </div>
+                              <span class="font-light">$100.99</span>{" "}
+                              <del class="theme-color">$150.00</del>
+                              <p class="content-color truncate-2">
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Illum sunt a totam tenetur ad
+                                eligendi nisi commodi repellendus architecto?
+                                Provident fugit magni ut natus voluptates
+                                mollitia sunt quisquam ex veritatis!
+                              </p>
+                              <a class="theme-color" href="product.html">
+                                More Details...
+                              </a>
+
+                            </div>
+                            </div>
+                        </td>
+
+
+                        <td>
+                          <span class="font-light">$100.99</span>{" "}
+                          <del class="theme-color">$150.00</del>
+                        </td>
+                        <td>Emergency Lighting</td>
+                        <td>(All) iOS, Android, Windows</td>
+                        <td>
+                          Apple Home, Google Home, All, and Native Apps by
+                          manufacturers
+                        </td>
+                        <td>PAGE INDUSTRIES LIMITED</td>
+                        <td>Parametrization by professional</td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Request
+                            </button>
+                          </a>
+                        </td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Buy
+                            </button>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr className="table-product-details">
+                        <td>
+                          <div class="product-box">
+                            <div class="product-image">
+                              <button className="btn-remove">
+                                <i class="jki jki-times-solid"></i>
+                              </button>
+                              <a class="w-100" href="#">
+                              <img
+                                  src="assets/img/blog/post-3-img.jpg"
+                                  class="img-fluid bg-img"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+
+                            <div class="product-details">
+                              <button
+                                type="button"
+                                class="btn-close"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                          </div>
+                        </td>
+                       
+                        <td>
+                        <div class="product-title">
+                                <a href="#">
+                                  <h6 class="truncate">Multimedia</h6>
+                                </a>
+                              </div>
+                              <span class="font-light">$100.99</span>{" "}
+                              <del class="theme-color">$150.00</del>
+                              <p class="content-color truncate-2">
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Illum sunt a totam tenetur ad
+                                eligendi nisi commodi repellendus architecto?
+                                Provident fugit magni ut natus voluptates
+                                mollitia sunt quisquam ex veritatis!
+                              </p>
+                              <a class="theme-color" href="product.html">
+                                More Details...
+                              </a>
+                        </td>
+
+                        <td>
+                          <span class="font-light">$100.99</span>{" "}
+                          <del class="theme-color">$150.00</del>
+                        </td>
+                        <td>Multimedia</td>
+                        <td>(All) iOS, Android, Windows</td>
+                        <td>
+                          Apple Home, Google Home, All, and Native Apps by
+                          manufacturers
+                        </td>
+                        <td>PAGE INDUSTRIES LIMITED</td>
+                        <td>Parametrization by professional</td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Request
+                            </button>
+                          </a>
+                        </td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Buy
+                            </button>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr className="table-product-details">
+                        <td>
+                          <div class="product-box">
+                            <div class="product-image">
+                              <button className="btn-remove">
+                                <i class="jki jki-times-solid"></i>
+                              </button>
+                              <a class="w-100" href="#">
+                              <img
+                                  src="assets/img/blog/post-4-img.jpg"
+                                  class="img-fluid bg-img"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+
+                            <div class="product-details">
+                              <button
+                                type="button"
+                                class="btn-close"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                          </div>
+                        </td>
+                       
+                        <td>
+                          
+                          <div class="product-title">
+                                <a href="javascript:void(0)">
+                                  <h6 class="truncate">Ventilation</h6>
+                                </a>
+                              </div>
+                              <span class="font-light">$100.99</span>{" "}
+                              <del class="theme-color">$150.00</del>
+                              <p class="content-color truncate-2">
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Illum sunt a totam tenetur ad
+                                eligendi nisi commodi repellendus architecto?
+                                Provident fugit magni ut natus voluptates
+                                mollitia sunt quisquam ex veritatis!
+                              </p>
+                              <a class="theme-color" href="product.html">
+                                More Details...
+                              </a>
+                        </td>
+
+                        <td>
+                          <span class="font-light">$100.99</span>{" "}
+                          <del class="theme-color">$150.00</del>
+                        </td>
+                        <td>Ventilation</td>
+                        <td>(All) iOS, Android, Windows</td>
+                        <td>
+                          Apple Home, Google Home, All, and Native Apps by
+                          manufacturers
+                        </td>
+                        <td>PAGE INDUSTRIES LIMITED</td>
+                        <td>Parametrization by professional</td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Request
+                            </button>
+                          </a>
+                        </td>
+                        <td>
+                          <a>
+                            <button
+                              className="btn btn-success btn-full"
+                              onClick={requestQuotation}
+                            >
+                              Buy
+                            </button>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* new section implementation ends here */}
+
+
+        {/* <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="comparemodal-body">
+                <div className="table-wrapper table-responsive ratio_asos">
+                  <table className="table table-compare">
+                    <thead>
                       <tr>
                         <th>Action</th>
-                        <th class="remove"><button className="btn-remove"><i class="jki jki-trash-solid"></i></button></th>
-                        <th class="remove"><button className="btn-remove"><i class="jki jki-trash-solid"></i></button></th>
-                        <th class="remove"><button className="btn-remove"><i class="jki jki-trash-solid"></i></button></th>
-                        <th class="remove"><button className="btn-remove"><i class="jki jki-trash-solid"></i></button></th>
+                        <th class="remove">
+                          <button className="btn-remove">
+                            <i class="jki jki-trash-solid"></i>
+                          </button>
+                        </th>
+                        <th class="remove">
+                          <button className="btn-remove">
+                            <i class="jki jki-trash-solid"></i>
+                          </button>
+                        </th>
+                        <th class="remove">
+                          <button className="btn-remove">
+                            <i class="jki jki-trash-solid"></i>
+                          </button>
+                        </th>
+                        <th class="remove">
+                          <button className="btn-remove">
+                            <i class="jki jki-trash-solid"></i>
+                          </button>
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -70,7 +438,9 @@ const Compare = () => {
                         <td>
                           <div class="product-box">
                             <div class="product-image">
-                            <button className="btn-remove"><i class="jki jki-times-solid"></i></button>
+                              <button className="btn-remove">
+                                <i class="jki jki-times-solid"></i>
+                              </button>
                               <a class="w-100" href="javascript:void(0)">
                                 <img
                                   src="assets/img/blog/post-1-img.jpg"
@@ -110,7 +480,9 @@ const Compare = () => {
                         <td>
                           <div class="product-box">
                             <div class="product-image">
-                            <button className="btn-remove"><i class="jki jki-times-solid"></i></button>
+                              <button className="btn-remove">
+                                <i class="jki jki-times-solid"></i>
+                              </button>
                               <a class="w-100" href="javascript:void(0)">
                                 <img
                                   src="assets/img/blog/post-2-img.jpg"
@@ -145,7 +517,9 @@ const Compare = () => {
                         <td>
                           <div class="product-box">
                             <div class="product-image">
-                            <button className="btn-remove"><i class="jki jki-times-solid"></i></button>
+                              <button className="btn-remove">
+                                <i class="jki jki-times-solid"></i>
+                              </button>
                               <a class="w-100" href="javascript:void(0)">
                                 <img
                                   src="assets/img/blog/post-3-img.jpg"
@@ -180,7 +554,9 @@ const Compare = () => {
                         <td>
                           <div class="product-box">
                             <div class="product-image">
-                            <button className="btn-remove"><i class="jki jki-times-solid"></i></button>
+                              <button className="btn-remove">
+                                <i class="jki jki-times-solid"></i>
+                              </button>
                               <a class="w-100" href="javascript:void(0)">
                                 <img
                                   src="assets/img/blog/post-4-img.jpg"
@@ -212,25 +588,23 @@ const Compare = () => {
                           </div>
                         </td>
                       </tr>
-                   </tbody>
-                   <tbody>
+                    </tbody>
+                    <tbody>
+                      <tr>
+                        <th>
+                          <i className="fa fa-trash" aria-hidden="true"></i>
+                        </th>
+                        <th>
+                          <i className="fa fa-trash" aria-hidden="true"></i>
+                        </th>
+                        <th>
+                          <i className="fa fa-trash" aria-hidden="true"></i>
+                        </th>
+                        <th>
+                          <i className="fa fa-trash" aria-hidden="true"></i>
+                        </th>
+                      </tr>
 
-                 
-                      {/* <tr>
-                        <th>
-                          <i className="fa fa-trash" aria-hidden="true"></i>
-                        </th>
-                        <th>
-                          <i className="fa fa-trash" aria-hidden="true"></i>
-                        </th>
-                        <th>
-                          <i className="fa fa-trash" aria-hidden="true"></i>
-                        </th>
-                        <th>
-                          <i className="fa fa-trash" aria-hidden="true"></i>
-                        </th>
-                      </tr> */}
-                
                       <tr>
                         <td>Price</td>
                         <td>Affordable</td>
@@ -292,9 +666,7 @@ const Compare = () => {
                         <td>Parametrization by professional</td>
                         <td>Programming</td>
                       </tr>
-               
 
-                  
                       <tr>
                         <td>Request for quotation</td>
                         <td>
@@ -338,7 +710,6 @@ const Compare = () => {
                           </a>
                         </td>
                       </tr>
-
 
                       <tr>
                         <td>Direct Buy from Manufacturer</td>
@@ -389,7 +760,7 @@ const Compare = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   );

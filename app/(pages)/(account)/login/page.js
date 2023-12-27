@@ -23,7 +23,7 @@ const Login = () => {
   const validationSchema = Yup.object().shape({
     email: Yup.string().required("Email is required").email("Email is invalid"),
     password: Yup.string().required("Password is required"),
-    role: Yup.string().required("Role is required")
+    user_type: Yup.string().required("Role is required")
   });
   
   
@@ -44,7 +44,7 @@ const Login = () => {
     event.preventDefault();
     // Backend API Call operation is handled here.
     try {
-      const res = await axios.post(`http://45.79.185.26/trifusa/public/api/login?email=${formData.email}&password=${formData.password}`);
+      const res = await axios.post(`http://45.79.185.26/trifusa/public/api/login?email=${formData.email}&password=${formData.password}&user_type=${formData.user_type}`);
       console.log(res.data); // Assuming res.data contains the response data you want to log.
       console.log(res.data.user); // Assuming res.data contains the response data you want to log.
       
@@ -61,7 +61,7 @@ const Login = () => {
         //window.location.href='/about';
         sessionStorage.setItem("token", JSON.stringify(obj));
         sessionStorage.setItem("user", JSON.stringify(res.data.user));
-        sessionStorage.setItem("role", JSON.stringify(formData.role));
+        sessionStorage.setItem("role", JSON.stringify(formData.user_type));
         router.push("/about");
 
       }
@@ -137,7 +137,7 @@ const Login = () => {
                       />
                       <h2 className="s-42 w-700">Welcome</h2>
                       <h2 className="s-42 w-700">back to Trisfusa</h2>
-                      <p className="p-md mt-25">
+                      <p className="p-md mt-25 ">
                         Integer congue sagittis and velna augue egestas magna
                         suscipit purus aliquam
                       </p>
@@ -230,7 +230,7 @@ const Login = () => {
                           </button>
                         </div>
                         <div className="col-md-12">
-                          <p className="create-account text-center">
+                          <p className="create-account text-body text-center">
                             Don't have an account?{" "}
                             <Link href="/register" className="color--theme">
                               Sign up

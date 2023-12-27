@@ -2,6 +2,19 @@
 import Link from 'next/link';
 import { apiUrl } from '@/app/constant/constant';
 import React, { useEffect, useState } from 'react';
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
+
+const validationSchema = Yup.object().shape({
+  question_type: Yup.string().required("Question type is required").question_type("Question type is invalid"),
+  user_name: Yup.string().required("Your Name is required").min(8) .max(18),  
+  user_email: Yup.string().required("Email is required").user_email("Email is invalid"),
+  user_question:Yup.string().required("Your questions are required"),
+  
+});
+
+const formOptions = { resolver: yupResolver(validationSchema) };
+
 
 
 const Contact = () => {
@@ -22,12 +35,13 @@ const Contact = () => {
           //console.log(responseJson);
           if (responseJson.success == "true") {
             setContactData(responseJson.message[0]);
-              console.log(message);
+              
           }
       })
       .catch((error) => {
           console.error(error);
       });
+      console.log(message);
   }
   useEffect(() => {
     getContactInfo();

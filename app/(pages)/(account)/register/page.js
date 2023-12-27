@@ -24,7 +24,7 @@ const validationSchema = Yup.object().shape({
   address:Yup.string().required("address is required"),
   pincode:Yup.string().required("pincode is required"),
   contact_no: Yup.string().matches(/^[0-9]{10}$/, 'Phone number must be 10 digits').required("Phone is required"),
-  user_type:Yup.string().required("Login for is required"),
+  user_type:Yup.string().required("User Role is required"),
 });
 
 const formOptions = { resolver: yupResolver(validationSchema) };
@@ -202,10 +202,10 @@ const Registration = () => {
                           <div className="col-md-6">
                             <p className="p-sm input-header">{t('Zip Code')}</p>
                             <input
-                            {...register("zip code")}
+                            {...register("pincode")}
                             className="form-control name"
                             type="number"
-                            name="zip code"
+                            name="pincode"
                             placeholder="56***"
                             />
                           </div>
@@ -225,7 +225,7 @@ const Registration = () => {
                           <div className="col-md-12">
                             <p className="p-sm input-header">{t('Contact')}</p>
                             <input
-                            {...register("contact")}
+                            {...register("contact_no")}
                             className="form-control name"
                             type="number"
                             name="contact_no"
@@ -236,7 +236,7 @@ const Registration = () => {
                         </div>
                         <div className="col-md-12">
                           <div className="form-data">
-                            <span>
+                            <span className="text-body"> 
                             {t('By clicking “Create Account”, you agree to our')}
                               <Link href="terms-condition">{t('Terms')}</Link> {t('and that you have read our')}
                               <Link href="privacy-policy"> {t('Privacy Policy')}</Link>
@@ -253,7 +253,7 @@ const Registration = () => {
                           </button>
                         </div>
                         <div className="col-md-12">
-                          <p className="create-account text-center">
+                          <p className="create-account text-body text-center">
                           {t('Already have an account?')}{" "}
                             <Link href="login" className="color--theme">
                             {t('Log in')}
