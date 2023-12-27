@@ -3,7 +3,30 @@
 {
     "greeting": "Hallo",
     "welcome": "Willkommen in meiner App",
-    "Choose three free categories for your comparison": "Wählen Sie drei kostenlose Kategorien für Ihren Vergleich auf Deutsch"
+    "Choose three free categories for your comparison": "Wählen Sie drei kostenlose Kategorien für Ihren Vergleich auf Deutsch",
+    "full name":"vollständiger Name",
+    "Email address":"E-Mail-Adresse",
+    "Password":"Passwort",
+    "Country":"Land",
+    "State":"Zustand",
+    "City":"Stadt",
+    "Address":"Adresse",
+    "Zip Code":"PLZ",
+    "Contact":"Kontakt",
+    "Start":"Start",
+    "Product":"Produkt",
+    "About Us":"Über uns",
+    "Registration":"Anmeldung",
+    "Register":"Registrieren",
+    "Terms":"Bedingungen",
+    "Privacy Policy":"Datenschutzrichtlinie",
+    "Create Account":"Benutzerkonto erstellen",
+    "By clicking “Create Account”, you agree to our":"Indem Sie auf „Konto erstellen“ klicken, stimmen Sie unserem zu",
+    "and that you have read our":"und dass Sie unsere gelesen haben",
+    "Already have an account?":"Sie haben bereits ein Konto?",
+    "Log in":"Anmeldung"
+
+
 
   }
   

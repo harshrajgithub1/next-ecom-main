@@ -3,6 +3,28 @@
 {
     "greeting": "Hello",
     "welcome": "Welcome to my app",
-    "Choose three free categories for your comparison": "Choose three free categories for your comparison in english"
+    "Choose three free categories for your comparison": "Choose three free categories for your comparison in english",
+    "full name": "Full Name",
+    "Email address":"Email address",
+    "Password":"Password",
+    "Country":"Country",
+    "State":"State",
+    "City":"City",
+    "Address":"Address",
+    "Zip Code":"Zip Code",
+    "Contact":"Contact",
+    "Start":"Start",
+    "Product":"Product",
+    "About Us":"About Us",
+    "Registration":"Registration",
+    "Register":"Register",
+    "Terms":"Terms",
+    "Privacy Policy":"Privacy Policy",
+    "Create Account":"Create Account",
+    "By clicking “Create Account”, you agree to our":"By clicking “Create Account”, you agree to our",
+    "and that you have read our":"and that you have read our",
+    "Already have an account?":"Already have an account?",
+    "Log in":"Log in"
+    
   }
   

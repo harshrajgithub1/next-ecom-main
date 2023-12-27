@@ -1,8 +1,39 @@
+'use client'
 import Link from 'next/link';
-import React from "react";
+import { apiUrl } from '@/app/constant/constant';
+import React, { useEffect, useState } from 'react';
 
 
 const Contact = () => {
+  const [contactData, setContactData] = useState();
+  
+  
+  function getContactInfo(){
+      fetch( `${apiUrl}api/contactus`, {
+          method: 'POST',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/x-www-form-urlencoded'
+          },
+      // body: formBody
+      })
+      .then((response) => response.json())
+      .then((responseJson) => {
+          //console.log(responseJson);
+          if (responseJson.success == "true") {
+            setContactData(responseJson.message[0]);
+              console.log(message);
+          }
+      })
+      .catch((error) => {
+          console.error(error);
+      });
+  }
+  useEffect(() => {
+    getContactInfo();
+
+  }, [])
+
   return (
     <div>
       <section
@@ -65,15 +96,17 @@ const Contact = () => {
                       Choose a topic, so we know who to send your request to:{" "}
                     </span>
                     <select
+                    id="question_type"
+                    name="question_type"
                       className="form-select subject"
                       aria-label="Default select example"
                     >
-                      <option selected>This question is about...</option>
-                      <option>Registering/Authorising</option>
-                      <option>Using Application</option>
-                      <option>Troubleshooting</option>
-                      <option>Backup/Restore</option>
-                      <option>Other</option>
+                      <option selected value="">This question is about...</option>
+                      <option value="Registering/Authorising">Registering/Authorising</option>
+                      <option value="Using Application">Using Application</option>
+                      <option value="Troubleshooting">Troubleshooting</option>
+                      <option value="Backup/Restore">Backup/Restore</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
                   <div className="col-md-12">

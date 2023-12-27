@@ -81,8 +81,9 @@ const Login = () => {
     
   const changeRole = async (value) => {
     console.log(value);
+    
     // do something with my select value onChange
-    await trigger(['role']) // Trigger validation on select
+    await trigger(['user_type']) // Trigger validation on select
   };
 
 
@@ -173,11 +174,11 @@ const Login = () => {
                         </div>
                         <div className="col-md-12">
                           <p className="p-sm input-header">Login for</p>
-                          <select {...register("role")}
-          onChange={(e) => changeRole(e.target.value)} name="role" id="role" className="form-control login">
-                            <option value="Handwerker">Handwerker</option>
-            <option value="Lieferanten">Lieferanten</option>
-            <option value="Privat">Privat</option>
+                          <select {...register("user_type")}
+          onChange={(e) => changeRole(e.target.value)} name="user_type" id="user_type" className="form-control login">
+                            <option value="3">Handwerker</option>
+            <option value="2">Lieferanten</option>
+            <option value="4">Privat</option>
                           </select>
                         </div>
                         <div className="col-md-12">

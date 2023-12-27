@@ -58,8 +58,8 @@ const section3 = () => {
               <div className="txt-block right-column wow fadeInLeft">
                 <div className="section-title text-start">
                 </div>
-                <span dangerouslySetInnerHTML={{ __html: middleData?.home_section1_description }}>
-							</span>
+                <div dangerouslySetInnerHTML={{ __html: middleData?.home_section1_description }}>
+							</div>
               </div>
             </div>
           </div>
@@ -70,8 +70,7 @@ const section3 = () => {
       <section id="lik-2" className="pt-100 ct-04 content-section division">
         <div className="container">
           <div className="row d-flex align-items-center">
-          <span dangerouslySetInnerHTML={{ __html: middleData?.home_section2_description }}>
-            </span>
+          <div className='col-md-6 order-last order-md-2' dangerouslySetInnerHTML={{ __html: middleData?.home_section2_description }}></div>
           
             <div className="col-md-6 order-first order-md-2">
               <div className="img-block wow fadeInLeft">

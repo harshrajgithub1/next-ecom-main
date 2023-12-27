@@ -9,6 +9,7 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 // import { redirect } from 'next/navigation';
 //import { useSession } from "next-auth/react";
+import { useTranslation } from 'react-i18next';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,7 +18,13 @@ const validationSchema = Yup.object().shape({
   email: Yup.string().required("Email is required").email("Email is invalid"),
   password: Yup.string().required("Password is required").min(8) .max(18),  
   name: Yup.string().matches(/^[a-zA-Z ]+$/, 'Name must contain only letters and spaces').required("Name is required"),
-  //phone: Yup.string().matches(/^[0-9]{10}$/, 'Phone number must be 10 digits').required("Phone is required")
+  country:Yup.string().required("Country is required"),
+  state:Yup.string().required("state is required"),
+  city:Yup.string().required("city is required"),
+  address:Yup.string().required("address is required"),
+  pincode:Yup.string().required("pincode is required"),
+  contact_no: Yup.string().matches(/^[0-9]{10}$/, 'Phone number must be 10 digits').required("Phone is required"),
+  user_type:Yup.string().required("Login for is required"),
 });
 
 const formOptions = { resolver: yupResolver(validationSchema) };
@@ -25,15 +32,17 @@ const formOptions = { resolver: yupResolver(validationSchema) };
 
 // http://165.232.130.162/spanisch_lernen/public/api/signup
 const Registration = () => {
+  const { t } = useTranslation();
 
+  
   const [showPassword, setShowPassword] = useState(false);
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
 
-  const { register, handleSubmit, formState: { errors } } = useForm(formOptions);
+  const { register,trigger, handleSubmit, formState: { errors } } = useForm(formOptions);
 
-  const onSubmit = async (formData, event) => {
+  const onSubmit1 = async (formData, event) => {
 
     event.preventDefault();
     console.log(formData);
@@ -56,6 +65,13 @@ const Registration = () => {
     }
     // Backend API Call operation is handled here.
   };
+    
+  const changeRole = async (value) => {
+    console.log(value);
+    
+    // do something with my select value onChange
+    await trigger(['user_type']) // Trigger validation on select
+  };
 
   return (
     <div>
@@ -75,13 +91,13 @@ const Registration = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>Register</h3>
+                <h3>{t('Register')}</h3>
 
                 <ul className="breadcrumb">
                   <li>
-                    <Link href="/">Start</Link>
+                    <Link href="/">{t('Start')}</Link>
                   </li>
-                  <li>Register</li>
+                  <li>{t('Register')}</li>
                 </ul>
               </div>
             </div>
@@ -97,17 +113,25 @@ const Registration = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="register-page-form">
-                      <form name="signupform" method="post" onSubmit={handleSubmit(onSubmit)} className="row sign-up-form">
+                      <form name="signupform" method="post" onSubmit={handleSubmit(onSubmit1)} className="row sign-up-form">
                       <div className="col-md-12">
                           <p className="p-sm input-header">Login for</p>
-                          <select name="" id="" className="form-control login">
-                            <option value="">Handwerker</option>
-                            <option value="">Lieferanten</option>
-                            <option value="">Privat </option>
+                          <select {...register("user_type")}
+          onChange={(e) => changeRole(e.target.value)} name="user_type" id="user_type" className="form-control login">
+                            <option value="3">Handwerker</option>
+            <option value="2">Lieferanten</option>
+            <option value="4">Privat</option>
                           </select>
+                       
+                          {/* <select name="user_type" id="" className="form-control login">
+                            <option value="3">Handwerker</option>
+                            <option value="2">Lieferanten</option>
+                            <option value="4">Privat </option>
+                          </select> */}
                         </div>
+                       
                         <div className="col-md-12">
-                          <p className="p-sm input-header">Full name</p>
+                          <p className="p-sm input-header">{t('full name')}</p>
                           <input
                           {...register("name")}
                           className="form-control name"
@@ -117,7 +141,7 @@ const Registration = () => {
                           />
                         </div>
                         <div className="col-md-12">
-                          <p className="p-sm input-header">Email address</p>
+                          <p className="p-sm input-header">{t('Email address')}</p>
                           <input
                           {...register("email")}
                           className="form-control email"
@@ -128,7 +152,7 @@ const Registration = () => {
                         </div>
                         
                         <div className="col-md-12">
-                          <p className="p-sm input-header">Password</p>
+                          <p className="p-sm input-header">{t('Password')}</p>
                           <div className="wrap-input">
                             <span className="btn-show-pass ico-20">
                               <span className="flaticon-visibility eye-pass" onClick={handleTogglePassword} style={{cursor:'pointer'}}></span>
@@ -141,31 +165,98 @@ const Registration = () => {
                               placeholder="min 8 characters"
                             />
                           </div>
+
+                          <div className="row">
+                          <div className="col-md-6">
+                            <p className="p-sm input-header">{t('Country')}</p>
+                            <input
+                            {...register("country")}
+                            className="form-control name"
+                            type="text"
+                            name="country"
+                            placeholder="Germany"
+                            />
+                          </div>
+
+                          <div className="col-md-6">
+                            <p className="p-sm input-header">{t('State')}</p>
+                            <input
+                            {...register("state")}
+                            className="form-control name"
+                            type="text"
+                            name="state"
+                            placeholder="Hessen"
+                            />
+                          </div>
+                          <div className="col-md-6">
+                            <p className="p-sm input-header">{t('City')}</p>
+                            <input
+                            {...register("city")}
+                            className="form-control name"
+                            type="text"
+                            name="city"
+                            placeholder="Wiesbaden"
+                            />
+                          </div>
+                          
+                          <div className="col-md-6">
+                            <p className="p-sm input-header">{t('Zip Code')}</p>
+                            <input
+                            {...register("zip code")}
+                            className="form-control name"
+                            type="number"
+                            name="zip code"
+                            placeholder="56***"
+                            />
+                          </div>
+                          </div>
+
+                          <div className="col-md-12">
+                            <p className="p-sm input-header">{t('Address')}</p>
+                            <input
+                            {...register("address")}
+                            className="form-control name"
+                            type="text"
+                            name="address"
+                            placeholder="Address"
+                            />
+                          </div>
+
+                          <div className="col-md-12">
+                            <p className="p-sm input-header">{t('Contact')}</p>
+                            <input
+                            {...register("contact")}
+                            className="form-control name"
+                            type="number"
+                            name="contact_no"
+                            placeholder="99999*****"
+                            />
+                          </div>
+
                         </div>
                         <div className="col-md-12">
                           <div className="form-data">
                             <span>
-                              By clicking “Create Account”, you agree to our
-                              <Link href="terms-condition">Terms</Link> and that
-                              you have read our
-                              <Link href="privacy-policy"> Privacy Policy</Link>
+                            {t('By clicking “Create Account”, you agree to our')}
+                              <Link href="terms-condition">{t('Terms')}</Link> {t('and that you have read our')}
+                              <Link href="privacy-policy"> {t('Privacy Policy')}</Link>
                             </span>
                           </div>
                         </div>
 
                         <div className="col-md-12">
-                          <button
+                          <button  onClick={handleSubmit(onSubmit1)}
                             type="submit"
                             className="btn btn--theme hover--theme submit"
                           >
-                            Create Account
+                           {t('Create Account')}
                           </button>
                         </div>
                         <div className="col-md-12">
                           <p className="create-account text-center">
-                            Already have an account?{" "}
+                          {t('Already have an account?')}{" "}
                             <Link href="login" className="color--theme">
-                              Log in
+                            {t('Log in')}
                             </Link>
                           </p>
                         </div>

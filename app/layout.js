@@ -16,6 +16,8 @@ import './globals.css'
 import ToastContainerWrapper from './components/Common/ToastContainerWrapper'
 import enTranslation from './Languages/en.json';
 import deTranslation from './Languages/de.json';
+import itTranslation from './Languages/it.json';
+import frTranslation from './Languages/fr.json';
 // import '../public/assets/js/custom.js';
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -26,6 +28,12 @@ i18n
       },
       de: {
         translation: deTranslation,
+      },
+      fr: {
+        translation: frTranslation,
+      },
+      it: {
+        translation: itTranslation,
       },
     },
     lng: 'en', // default language

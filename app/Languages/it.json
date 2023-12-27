@@ -1,0 +1,30 @@
+
+
+{
+    "greeting": "Ciao",
+    "welcome": "Benvenuto nella mia app",
+    "Choose three free categories for your comparison": "Scegli tre categorie gratuite per il tuo confronto in inglese",
+    "full name": "Nome e cognome",
+    "Email address":"Indirizzo e-mail",
+    "Password":"Parola d'ordine",
+    "Country":"Paese",
+    "State":"Stato",
+    "City":"Città",
+    "Address":"Indirizzo",
+    "Zip Code":"Cap",
+    "Contact":"Contatto",
+    "Start":"Inizio",
+    "Product":"Prodotto",
+    "About Us":"Chi siamo",
+    "Registration":"Registrazione",
+    "Register":"Registrati",
+    "Terms":"Termini",
+    "Privacy Policy":"politica sulla riservatezza",
+    "Create Account":"Creare un account",
+    "By clicking “Create Account”, you agree to our":"Facendo clic su 'Crea account', accetti i nostri",
+    "and that you have read our":"e che hai letto il nostro",
+    "Already have an account?":"Hai già un account?",
+    "Log in":"login"
+    
+  }
+  
