@@ -16,7 +16,7 @@ const Compare = () => {
                 <h3>Vergleich</h3>
                 <ul className="breadcrumb">
                   <li>
-                    <a href="index.php">Start</a>
+                    <a href="/">Start</a>
                   </li>
                   <li>Vergleich</li>
                 </ul>
@@ -63,7 +63,7 @@ const Compare = () => {
                         <th>CONNECTIVITY</th>
                         <th>MANUFACTURER</th>
                         <th>SELF-PROGRAMMING</th>
-                        <th>REQUEST FOR QUOTATION</th>
+                        <th>Request Quote</th>
                         <th>DIRECT BUY FROM MANUFACTURER</th>
                       </tr>
                     </thead>
@@ -115,7 +115,8 @@ const Compare = () => {
                           <span class="font-light">$100.99</span>{" "}
                           <del class="theme-color">$150.00</del>
                         </td>
-                        <td>Lighting</td>
+                        <td> <p>Lighting_Indoor/Outdoor_LED-Bulb_LED-light 300W</p> 
+                        </td>
                         <td>(All) iOS, Android, Windows</td>
                         <td>
                           Apple Home, Google Home, All, and Native Apps by
@@ -124,13 +125,8 @@ const Compare = () => {
                         <td>PAGE INDUSTRIES LIMITED</td>
                         <td>Parametrization by professional</td>
                         <td>
-                          <a>
-                            <button
-                              className="btn btn-success btn-full"
-                              onClick={requestQuotation}
-                            >
-                              Request
-                            </button>
+                        <a>
+                          <input type="checkbox" id="choose" name="choose" value="Product"/>
                           </a>
                         </td>
                         <td>
@@ -201,7 +197,7 @@ const Compare = () => {
                           <span class="font-light">$100.99</span>{" "}
                           <del class="theme-color">$150.00</del>
                         </td>
-                        <td>Emergency Lighting</td>
+                        <td><p>Emergency Light_Out-door_LED-Bulb_LED-light 1000W</p> </td>
                         <td>(All) iOS, Android, Windows</td>
                         <td>
                           Apple Home, Google Home, All, and Native Apps by
@@ -210,13 +206,8 @@ const Compare = () => {
                         <td>PAGE INDUSTRIES LIMITED</td>
                         <td>Parametrization by professional</td>
                         <td>
-                          <a>
-                            <button
-                              className="btn btn-success btn-full"
-                              onClick={requestQuotation}
-                            >
-                              Request
-                            </button>
+                        <a>
+                          <input type="checkbox" id="choose" name="choose" value="Product"/>
                           </a>
                         </td>
                         <td>
@@ -280,7 +271,7 @@ const Compare = () => {
                           <span class="font-light">$100.99</span>{" "}
                           <del class="theme-color">$150.00</del>
                         </td>
-                        <td>Multimedia</td>
+                        <td><p>Multimedia_Videos_Podcast_Celebraties-Podcast</p></td>
                         <td>(All) iOS, Android, Windows</td>
                         <td>
                           Apple Home, Google Home, All, and Native Apps by
@@ -289,13 +280,8 @@ const Compare = () => {
                         <td>PAGE INDUSTRIES LIMITED</td>
                         <td>Parametrization by professional</td>
                         <td>
-                          <a>
-                            <button
-                              className="btn btn-success btn-full"
-                              onClick={requestQuotation}
-                            >
-                              Request
-                            </button>
+                        <a>
+                          <input type="checkbox" id="choose" name="choose" value="Product"/>
                           </a>
                         </td>
                         <td>
@@ -360,7 +346,7 @@ const Compare = () => {
                           <span class="font-light">$100.99</span>{" "}
                           <del class="theme-color">$150.00</del>
                         </td>
-                        <td>Ventilation</td>
+                        <td><p>Ventilation_Natural Ventilation_Building_Rooms,Kitchen,Washrooms</p></td>
                         <td>(All) iOS, Android, Windows</td>
                         <td>
                           Apple Home, Google Home, All, and Native Apps by
@@ -370,12 +356,7 @@ const Compare = () => {
                         <td>Parametrization by professional</td>
                         <td>
                           <a>
-                            <button
-                              className="btn btn-success btn-full"
-                              onClick={requestQuotation}
-                            >
-                              Request
-                            </button>
+                          <input type="checkbox" id="choose" name="choose" value="Product"/>
                           </a>
                         </td>
                         <td>
@@ -391,6 +372,18 @@ const Compare = () => {
                       </tr>
                     </tbody>
                   </table>
+
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button className="btn btn-success" id="comp-req-btn" onClick={requestQuotation}>Request Quote</button></td>
+                    <td></td>
+                  </tr>
+              
                 </div>
               </div>
             </div>

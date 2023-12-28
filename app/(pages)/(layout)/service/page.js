@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 
-import { apiUrl } from '@/app/constant/constant';
+
 import React, { useState, useEffect } from "react";
 
 const Service = () => {

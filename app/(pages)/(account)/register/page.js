@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 // import { redirect } from 'next/navigation';
 //import { useSession } from "next-auth/react";
 import { useTranslation } from 'react-i18next';
-
+import { apiUrl } from '@/app/constant/constant';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -41,14 +41,14 @@ const Registration = () => {
   };
 
   const { register,trigger, handleSubmit, formState: { errors } } = useForm(formOptions);
-
+  
   const onSubmit1 = async (formData, event) => {
-
+    
     event.preventDefault();
     console.log(formData);
     const isSuccess = true;
     try {
-      const res = await axios.post('http://45.79.185.26/trifusa/public/api/register', formData);
+      const res = await axios.post( `${apiUrl}api/register`, formData);
       console.log(res.data); // Assuming res.data contains the response data you want to log.
       // Handle the response data here.
       if (res.data.success) {
@@ -123,11 +123,7 @@ const Registration = () => {
             <option value="4">Privat</option>
                           </select>
                        
-                          {/* <select name="user_type" id="" className="form-control login">
-                            <option value="3">Handwerker</option>
-                            <option value="2">Lieferanten</option>
-                            <option value="4">Privat </option>
-                          </select> */}
+                        
                         </div>
                        
                         <div className="col-md-12">

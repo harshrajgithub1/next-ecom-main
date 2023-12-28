@@ -215,7 +215,7 @@ const Login = () => {
                         <div className="col-md-12">
                           <div className="reset-password-link">
                             <p className="p-sm">
-                              <Link href="/reset-password" className="color--theme">
+                              <Link href="/forgot-password" className="color--theme">
                                 Forgot your password?
                               </Link>
                             </p>

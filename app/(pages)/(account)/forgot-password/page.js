@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const ResetPassword = () => {
+const ForgotPassword = () => {
   return (
     <div>
       <section
@@ -20,13 +20,13 @@ const ResetPassword = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>Reset Password</h3>
+                <h3>Forgot Password</h3>
 
                 <ul className="breadcrumb">
                   <li>
                     <Link href="/">Start</Link>
                   </li>
-                  <li>Reset Password</li>
+                  <li>Forgot Password</li>
                 </ul>
               </div>
             </div>
@@ -75,13 +75,13 @@ const ResetPassword = () => {
                       type="submit"
                       className="btn btn--theme hover--theme submit"
                     >
-                      Reset My Password
+                      Forgot My Password
                     </button>
                   </div>
                   <div className="col-md-12">
                     <div className="form-data text-center">
                       <span>
-                        <Link href="login">Never mind I remembered!</Link>
+                        <Link href="/login">Never mind I remembered!</Link>
                       </span>
                     </div>
                   </div>
@@ -98,4 +98,4 @@ const ResetPassword = () => {
   );
 };
 
-export default ResetPassword;
+export default ForgotPassword;

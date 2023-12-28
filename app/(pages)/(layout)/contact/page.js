@@ -4,11 +4,19 @@ import { apiUrl } from '@/app/constant/constant';
 import React, { useEffect, useState } from 'react';
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import { useForm } from "react-hook-form";
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+
 
 const validationSchema = Yup.object().shape({
-  question_type: Yup.string().required("Question type is required").question_type("Question type is invalid"),
+  question_type: Yup.string().required("Question type is required"),
   user_name: Yup.string().required("Your Name is required").min(8) .max(18),  
-  user_email: Yup.string().required("Email is required").user_email("Email is invalid"),
+  user_email: Yup.string().required("Email is required"),
   user_question:Yup.string().required("Your questions are required"),
   
 });
@@ -18,35 +26,52 @@ const formOptions = { resolver: yupResolver(validationSchema) };
 
 
 const Contact = () => {
-  const [contactData, setContactData] = useState();
+
+  const [contactDetails, setContactDetails] = useState(false);
   
+  const { register,trigger,reset, handleSubmit, formState: { errors } } = useForm(formOptions);
+
   
-  function getContactInfo(){
-      fetch( `${apiUrl}api/contactus`, {
-          method: 'POST',
-          headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/x-www-form-urlencoded'
-          },
-      // body: formBody
-      })
-      .then((response) => response.json())
-      .then((responseJson) => {
-          //console.log(responseJson);
-          if (responseJson.success == "true") {
-            setContactData(responseJson.message[0]);
-              
-          }
-      })
-      .catch((error) => {
-          console.error(error);
-      });
-      console.log(message);
-  }
+  const onSubmit1 = async (formData, event) => {
+    
+    event.preventDefault();
+    //console.log(formData);
+    const isSuccess = true;
+    try {
+      const res = await axios.post( `${apiUrl}api/contactus`, formData);
+      //console.log(res.data); // Assuming res.data contains the response data you want to log.
+      //console.log(res);
+      // Handle the response data here.
+      if (res.data.success) {
+        toast.success(res.data.message);
+        reset();
+       
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (error) {
+      console.error('Error occurred:', error);
+      toast.error('An error occurred');
+      // Handle the error here.
+    }
+    // Backend API Call operation is handled here.
+     };
+
+     const changeRole = async (value) => {
+      //console.log(value);
+      
+      // do something with my select value onChange
+      await trigger(['question_type']) // Trigger validation on select
+    };
+  
+
+  
   useEffect(() => {
-    getContactInfo();
+    
 
   }, [])
+
+ 
 
   return (
     <div>
@@ -103,19 +128,23 @@ const Contact = () => {
           <div className="row justify-content-center">
             <div className="col-md-6">
               <div className="form-holder">
-                <form name="contactform" className="row contact-form">
+                <form name="contactform"  method="post" onSubmit={handleSubmit(onSubmit1)} className="row contact-form">
+
+            
                   <div className="col-md-12 input-subject">
                     <p className="p-lg">This question is about: </p>
                     <span>
                       Choose a topic, so we know who to send your request to:{" "}
                     </span>
-                    <select
+                    <select  {...register("question_type")}
+                     onChange={(e) => changeRole(e.target.value)} 
                     id="question_type"
                     name="question_type"
                       className="form-select subject"
                       aria-label="Default select example"
+                      defaultValue=""
                     >
-                      <option selected value="">This question is about...</option>
+                      <option value="">This question is about...</option>
                       <option value="Registering/Authorising">Registering/Authorising</option>
                       <option value="Using Application">Using Application</option>
                       <option value="Troubleshooting">Troubleshooting</option>
@@ -123,28 +152,31 @@ const Contact = () => {
                       <option value="Other">Other</option>
                     </select>
                   </div>
+                 
                   <div className="col-md-12">
-                    <p className="p-lg">Your Name: </p>
-                    <span>Please enter your real name: </span>
-                    <input
-                      type="text"
-                      name="name"
-                      className="form-control name"
-                      placeholder="Your Name*"
-                    />
-                  </div>
+                          <p className="p-sm input-header">Your name:</p>
+                          <input
+                          {...register("user_name")}
+                          className="form-control name"
+                            type="text"
+                            name="user_name"
+                            placeholder="John Doe"
+                          />
+                        </div>
+                 
+
                   <div className="col-md-12">
-                    <p className="p-lg">Your Email Address: </p>
-                    <span>
-                      Please carefully check your email address for accuracy
-                    </span>
-                    <input
-                      type="text"
-                      name="email"
-                      className="form-control email"
-                      placeholder="Email Address*"
-                    />
-                  </div>
+                          <p className="p-sm input-header">Your Email Address:</p>
+                          <input
+                          {...register("user_email")}
+                          className="form-control email"
+                            type="email"
+                            name="user_email"
+                            placeholder="example@example.com"
+                          />
+                        </div>
+
+                       
                   <div className="col-md-12">
                     <p className="p-lg">Explain your question in details: </p>
                     <span>
@@ -152,14 +184,17 @@ const Contact = () => {
                       Be VERY precise!
                     </span>
                     <textarea
+                      {...register("user_question")}
                       className="form-control message"
-                      name="message"
+                      name="user_question"
                       rows="6"
                       placeholder="I have a problem with..."
                     ></textarea>
                   </div>
+
+
                   <div className="col-md-12 mt-15 form-btn text-right">
-                    <button
+                    <button  onClick={handleSubmit(onSubmit1)}
                       type="submit"
                       className="btn btn--theme hover--theme submit"
                     >
@@ -190,7 +225,7 @@ const Contact = () => {
                   <span>Address and Contact information</span>
                   <ul>
                     <li>
-                      <Link href="javascript:;">
+                      <Link href="#">
                         <span className="flaticon-map"></span> Bachtelstrasse 68
                         CH-8342 Wernetshausen
                       </Link>

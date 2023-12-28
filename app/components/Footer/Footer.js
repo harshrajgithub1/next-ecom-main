@@ -2,12 +2,12 @@
 import Link from 'next/link';
 import { useState, useEffect } from "react";
 import { apiUrl } from '@/app/constant/constant';
-
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const [footerData, setFooterData] = useState();
 
-
+  const { t } = useTranslation();
   function getFooterInfo(){
       fetch( `${apiUrl}api/footer/section`, {
           method: 'POST',
@@ -50,7 +50,7 @@ const Footer = () => {
                   alt="footer-logo" />
                 </Link>
                 <p>{footerData?.footer_desc}</p>
-                <h2 className="heading-title">Hotline : <span className="style-color"><span>{footerData?.footer_phone}</span></span></h2>
+                <h2 className="heading-title"> {t('Hotline')} : <span className="style-color"><span>{footerData?.footer_phone}</span></span></h2>
               </div>
             </div>
 
@@ -61,7 +61,7 @@ const Footer = () => {
                     <div className="box">
                       <i className="jki jki-phone-handset-light"></i>
                       <div className="box-dtl">
-                        <h4>Telefon</h4>
+                        <h4>{t('Telephone')}</h4>
                         <Link href="tel:+41449380715">{footerData?.footer_phone}</Link>
                       </div>
                     </div>
@@ -69,7 +69,7 @@ const Footer = () => {
                     <div className="box">
                       <i className="jki jki-email-light"></i>
                       <div className="box-dtl">
-                        <h4>Email</h4>
+                        <h4>{t('Email')}</h4>
                         <Link href="mailto:info@smarthomeconsulting.ch">{footerData?.footer_email}</Link>
                       </div>
                     </div>
@@ -77,7 +77,7 @@ const Footer = () => {
                     <div className="box">
                       <i className="jki jki-placeholder2-light"></i>
                       <div className="box-dtl">
-                        <h4>Standort</h4>
+                        <h4>{t('Location')}</h4>
                         <Link href="#">{footerData?.footer_location}</Link>
                       </div>
                     </div>
@@ -89,22 +89,22 @@ const Footer = () => {
                     <h6 className="s-17">{footerData?.footer_h1}</h6>
                     <ul className="foo-links clearfix">
                       <li>
-                        <p><Link href="about">Über uns</Link></p>
+                        <p><Link href="about">{t('About Us')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="product">Product</Link></p>
+                        <p><Link href="product">{t('Product')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="service">Service</Link></p>
+                        <p><Link href="service">{t('Service')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="suppliers">Lieferanten</Link></p>
+                        <p><Link href="suppliers">{t('Suppliers')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="handyman">Handwerker</Link></p>
+                        <p><Link href="handyman">{t('Handyman')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="transcript">Zeugnis</Link></p>
+                        <p><Link href="transcript">{t('Transcript')}</Link></p>
                       </li>
                     </ul>
                   </div>
@@ -114,22 +114,22 @@ const Footer = () => {
                     <h6 className="s-17">{footerData?.footer_h2}</h6>
                     <ul className="foo-links clearfix">
                       <li>
-                        <p><Link href="terms-condition">Nutzungsbedingungen</Link></p>
+                        <p><Link href="terms-condition">{t('Terms of Use')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="cookie">Cookie-Richtlinie</Link></p>
+                        <p><Link href="cookie">{t('Cookie Policy')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="privacy-policy">Datenschutz und Richtlinien</Link></p>
+                        <p><Link href="privacy-policy">{t('Privacy Policy')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="help-center">Hilfezentrum</Link></p>
+                        <p><Link href="help-center">{t('Help Center')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="faqs">FAQ's</Link></p>
+                        <p><Link href="faqs">{t('Faq')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="contact">Kontaktiere uns</Link></p>
+                        <p><Link href="contact">{t('Contact')}</Link></p>
                       </li>
                     </ul>
                   </div>

@@ -20,3 +20,7 @@ body {
   color: rgb(var(--foreground-rgb));
   
 }
+
+#comp-req-btn{
+  margin-left: 2120px;
+}
