@@ -1,3 +1,5 @@
+
+
 "use client"
 import React from 'react'
 import { useState, useEffect } from "react";
@@ -36,7 +38,7 @@ const section3 = () => {
 
 
   return (
-    <div>
+    <>
       
       <section
         id="lnk-1"
@@ -49,14 +51,14 @@ const section3 = () => {
               <img
               src={`${apiUrl}storage/home_sections/${middleData?.home_section1_image}`}
                alt="header image"
-               className="img-fluid banner-img"
+               className="img-fluid w-100"
         />
-
               </div>
             </div>
             <div className="col-md-6">
               <div className="txt-block right-column wow fadeInLeft">
                 <div className="section-title text-start">
+                
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: middleData?.home_section1_description }}>
 							</div>
@@ -86,7 +88,7 @@ const section3 = () => {
       </section>
 
 
-    </div>
+    </>
   )
 }
 

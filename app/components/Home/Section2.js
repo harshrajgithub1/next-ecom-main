@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -65,7 +67,7 @@ else if (selectedCat.length > 3) {
   }, [selectedCount]);
 
   return (
-    <div>
+    <>
       <section id="features-6" className="pt-100 pb-50 features-section division">
         <div className="container">
           <div className="fbox-wrapper text-center">
@@ -98,7 +100,7 @@ else if (selectedCat.length > 3) {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

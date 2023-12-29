@@ -1,27 +1,70 @@
+
+
+"use client"
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { apiUrl } from '@/app/constant/constant';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ForgotPassword = () => {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(null);
+
+  const handleInputChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleForgotPassword = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch(`${apiUrl}api/forgotpassword?email=${email}`, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+      });
+
+      const responseJson = await response.json();
+      
+
+      if (response.ok) {
+        setMessage({ type: 'success', text: responseJson.message });
+        toast.success(responseJson.message);
+      } else {
+        setMessage({ type: 'error', text: responseJson.message });
+        toast.error(responseJson.message);
+      }
+
+    } catch (error) {
+      console.error(error);
+      setMessage({ type: 'error', text: 'An error occurred. Please try again later.' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       <section
         className="banner"
-        // style="background-image:url(assets/img/banner1.jpg)"
-
         style={{
-        backgroundImage: `url(/assets/img/banner1.jpg)`,
-        backgroundSize: 'cover', // You can adjust these styles as needed
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        height: '540px', // Set the width and height as needed
-      }}
+          backgroundImage: `url(/assets/img/banner1.jpg)`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          width: '100%',
+          height: '540px',
+        }}
       >
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
                 <h3>Forgot Password</h3>
-
                 <ul className="breadcrumb">
                   <li>
                     <Link href="/">Start</Link>
@@ -52,6 +95,7 @@ const ForgotPassword = () => {
                 <form
                   name="resetpasswordform"
                   className="row reset-password-form r-10"
+                  onSubmit={handleForgotPassword}
                 >
                   <div className="col-md-12">
                     <div className="reset-form-title">
@@ -68,6 +112,8 @@ const ForgotPassword = () => {
                       type="email"
                       name="email"
                       placeholder="example@example.com"
+                      value={email}
+                      onChange={handleInputChange}
                     />
                   </div>
                   <div className="col-md-12">
@@ -75,7 +121,7 @@ const ForgotPassword = () => {
                       type="submit"
                       className="btn btn--theme hover--theme submit"
                     >
-                      Forgot My Password
+                      {loading ? 'Loading...' : 'Forgot My Password'}
                     </button>
                   </div>
                   <div className="col-md-12">
@@ -86,7 +132,11 @@ const ForgotPassword = () => {
                     </div>
                   </div>
                   <div className="col-lg-12 reset-form-msg">
-                    <span className="loading"></span>
+                    {message && (
+                      <div className={message.type === 'success' ? 'success-message' : 'error-message'}>
+                        {message.text}
+                      </div>
+                    )}
                   </div>
                 </form>
               </div>
