@@ -20,11 +20,8 @@ const page = () => {
 
 <Section5 />
 <Section6 />
-<Section7 />
-
-       
+<Section7 />  
     </div>
   )
 }
-
 export default page
