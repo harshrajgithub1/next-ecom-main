@@ -1,5 +1,4 @@
-import React from 'react';
-import useBreadcrumbs from 'use-react-router-breadcrumbs';
+import Link from 'next/link';
 
 export default function breadcrumb() {
   return (
@@ -11,7 +10,7 @@ export default function breadcrumb() {
               <div className="banner-caption">
                 <h3>About us</h3>
                 <ul className="breadcrumb">
-                  <li><a href="index.php">Start</a></li>
+                  <li><Link href="index.php">Start</Link></li>
                   <li>About us</li>
                 </ul>
               </div>

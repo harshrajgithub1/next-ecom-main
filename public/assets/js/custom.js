@@ -50,7 +50,9 @@ $(document).ready(function () {
 	"use strict";
 
 
-	new WOW().init();
+	if (window.innerWidth > 768) {
+		new WOW().init();
+	}
 
 
 	/*----------------------------------------------------*/
