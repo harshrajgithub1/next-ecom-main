@@ -10,6 +10,7 @@ import axios from 'axios';
 import { useRouter } from "next/navigation";
 import { CookiesProvider, useCookies } from "react-cookie";
 import { useTranslation } from 'react-i18next';
+import { useAuth } from "@/app/components/AuthProvider/useAuth";
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,7 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const { t } = useTranslation();
-
+  const { setLoggedInStatus } = useAuth();
   const [cookies, setCookie] = useCookies(["token"]);
 
   const router = useRouter();
@@ -63,6 +64,7 @@ const Login = () => {
         sessionStorage.setItem("token", JSON.stringify(obj));
         sessionStorage.setItem("user", JSON.stringify(res.data.user));
         sessionStorage.setItem("role", JSON.stringify(formData.user_type));
+        setLoggedInStatus(true);
         router.push("/about");
 
       }

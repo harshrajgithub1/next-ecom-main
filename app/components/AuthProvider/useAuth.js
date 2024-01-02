@@ -47,7 +47,7 @@ export const useAuth = () => {
     } else {
       setIsLoggedIn(false);
     }
-    setIsLoading(false); 
+    //setIsLoading(false); 
   }, []); // Removed 'session' from dependency array as it is not directly used in the effect
 
   const logout = () => {
@@ -58,7 +58,12 @@ export const useAuth = () => {
     // Update the isLoggedIn state to reflect that the user is logged out
     setIsLoggedIn(false);
   };
-  return { isLoggedIn, logout };
+
+  const setLoggedInStatus = (status) => {
+    setIsLoggedIn(status);
+  };
+
+  return { isLoggedIn, logout, setLoggedInStatus };
 };
 
 
