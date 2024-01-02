@@ -1,9 +1,10 @@
-// 'use client';
+'use client';
 import Link from 'next/link';
 import React from 'react';
-
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   return (
    <div>
    <section className="banner" 
@@ -19,10 +20,10 @@ const About = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="banner-caption">
-              <h3>About us</h3>
+              <h3>{t('About Us')} </h3>
               <ul className="breadcrumb">
-                <li><Link href="/">Start</Link></li>
-                <li>About us</li>
+                <li><Link href="/">{t('Start')} </Link></li>
+                <li>{t('About Us')} </li>
               </ul>
             </div>
           </div>

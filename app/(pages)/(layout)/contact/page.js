@@ -9,7 +9,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -26,6 +26,7 @@ const formOptions = { resolver: yupResolver(validationSchema) };
 
 
 const Contact = () => {
+  const { t } = useTranslation();
 
   const [contactDetails, setContactDetails] = useState(false);
   
@@ -91,11 +92,11 @@ const Contact = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>Contact us</h3>
+                <h3>{t('Contact')} </h3>
                 <ul className="breadcrumb">
                   <li>
-                    <Link href="/">Start</Link></li>
-                  <li>Contact us</li>
+                    <Link href="/">{t('Start')} </Link></li>
+                  <li>{t('Contact')} </li>
                 </ul>
               </div>
             </div>
@@ -111,17 +112,17 @@ const Contact = () => {
           <div className="row justify-content-center">
             <div className="col-md-10 col-lg-9">
               <div className="section-title text-center mb-80">
-                <h2 className="s-52 w-700">
+                {/* <h2 className="s-52 w-700">
                   Fragen? <span>Lass uns reden</span>
-                </h2>
-                <p className="p-lg">
+                </h2> */}
+                {/* <p className="p-lg">
                   Haben Sie Fragen oder benötigen weitere Informationen? Zögern
                   Sie nicht, uns zu kontaktieren! Unser Team steht Ihnen gerne
                   zur Verfügung. Sie können uns per E-Mail unter
                   [E-Mail-Adresse] erreichen oder das Kontaktformular auf
                   unserer Website nutzen. Wir freuen uns darauf, von Ihnen zu
                   hören!
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
@@ -132,9 +133,9 @@ const Contact = () => {
 
             
                   <div className="col-md-12 input-subject">
-                    <p className="p-lg">This question is about: </p>
+                    <p className="p-lg">{t('This question is about')}: </p>
                     <span>
-                      Choose a topic, so we know who to send your request to:{" "}
+                    {t('Choose a topic, so we know who to send your request to')}:{" "}
                     </span>
                     <select  {...register("question_type")}
                      onChange={(e) => changeRole(e.target.value)} 
@@ -144,17 +145,17 @@ const Contact = () => {
                       aria-label="Default select example"
                       defaultValue=""
                     >
-                      <option value="">This question is about...</option>
-                      <option value="Registering/Authorising">Registering/Authorising</option>
-                      <option value="Using Application">Using Application</option>
-                      <option value="Troubleshooting">Troubleshooting</option>
-                      <option value="Backup/Restore">Backup/Restore</option>
-                      <option value="Other">Other</option>
+                      <option value="">{t('This question is about')}...</option>
+                      <option value="Registering/Authorising">{t('Registering')}/{t('Authorising')}</option>
+                      <option value="Using Application">{t('Using Application')}</option>
+                      <option value="Troubleshooting">{t('Troubleshooting')}</option>
+                      <option value="Backup/Restore">{t('Backup')}/{t('Restore')}</option>
+                      <option value="Other">{t('Other')}</option>
                     </select>
                   </div>
                  
                   <div className="col-md-12">
-                          <p className="p-sm input-header">Your name:</p>
+                          <p className="p-sm input-header">{t('Your name')}:</p>
                           <input
                           {...register("user_name")}
                           className="form-control name"
@@ -166,7 +167,7 @@ const Contact = () => {
                  
 
                   <div className="col-md-12">
-                          <p className="p-sm input-header">Your Email Address:</p>
+                          <p className="p-sm input-header">{t('Your Email Address')}:</p>
                           <input
                           {...register("user_email")}
                           className="form-control email"
@@ -178,10 +179,9 @@ const Contact = () => {
 
                        
                   <div className="col-md-12">
-                    <p className="p-lg">Explain your question in details: </p>
+                    <p className="p-lg">{t('Explain your question in details')}: </p>
                     <span>
-                      Your OS version, Trisfusa version & build, steps you did.
-                      Be VERY precise!
+                    {t('Your OS version, Trisfusa version & build, steps you did. Be VERY precise!')}
                     </span>
                     <textarea
                       {...register("user_question")}
@@ -198,17 +198,13 @@ const Contact = () => {
                       type="submit"
                       className="btn btn--theme hover--theme submit"
                     >
-                      Submit Request
+                     {t('Submit Request')}
                     </button>
                   </div>
                   <div className="contact-form-notice">
                     <p className="p-sm">
-                      We are committed to your privacy. Trisfusa uses the
-                      information you provide us to contact you about our
-                      relevant content, products, and services. You may
-                      unsubscribe from these communications at any time. For
-                      more information, check out our{" "}
-                      <Link href="privacy-policy">Privacy Policy</Link>.
+                    {t('We are committed to your privacy. Trisfusa uses the information you provide us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time. For more information, check out our')}{" "}
+                      <Link href="privacy-policy">{t('Privacy Policy')}</Link>.
                     </p>
                   </div>
                   <div className="col-lg-12 contact-form-msg">
@@ -221,8 +217,8 @@ const Contact = () => {
             <div className="col-md-6">
               <div className="form-holder">
                 <div className="contact-form contact-details">
-                  <p className="p-lg">GET IN TOUCH</p>
-                  <span>Address and Contact information</span>
+                  <p className="p-lg">{t('GET IN TOUCH')}</p>
+                  <span>{t('Address and Contact information')}</span>
                   <ul>
                     <li>
                       <Link href="#">

@@ -350,8 +350,11 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { apiUrl } from '@/app/constant/constant';
+import { useTranslation } from 'react-i18next';
 
 const TermsAndConditions = () => {
+  const { t } = useTranslation();
+
   const [termsData, setTermsData] = useState([]);
 
   useEffect(() => {
@@ -399,7 +402,7 @@ const TermsAndConditions = () => {
                 <h3>{termsData?.title}</h3>
                 <ul className="breadcrumb">
                   <li>
-                    <Link href="/">Start</Link>
+                    <Link href="/">{t('Start')}</Link>
                   </li>
                   <li>{termsData?.title}</li>
                 </ul>

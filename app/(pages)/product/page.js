@@ -3,8 +3,10 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from "react";
 import { apiUrl } from '@/app/constant/constant';
+import { useTranslation } from 'react-i18next';
 
 const Product = () => {
+    const { t } = useTranslation();
 
     const [productData, setProductData] = useState([]);
     let selectedids = [];
@@ -89,11 +91,11 @@ const Product = () => {
             <div className="row">
                 <div className="col-md-12">
                     <div className="banner-caption">
-                        <h3>Product</h3>
+                        <h3>{t('Product')}</h3>
     
                         <ul className="breadcrumb">
-                            <li><Link href="/">Start</Link></li>
-                            <li>Product</li>
+                            <li><Link href="/">{t('Start')}</Link></li>
+                            <li>{t('Product')}</li>
                         </ul>
                     </div>
                 </div>

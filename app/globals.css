@@ -24,3 +24,13 @@ body {
 #comp-req-btn{
   margin-left: 2120px;
 }
+
+.cbox-2.process-step p{
+ color: #000;
+}
+
+
+.rbox-1-img {
+  justify-content: center;
+  display: flex;
+}

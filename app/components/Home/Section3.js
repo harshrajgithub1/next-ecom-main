@@ -79,7 +79,7 @@ const section3 = () => {
               <img 
               src={`${apiUrl}storage/home_sections/${middleData?.home_section2_image}`}
                alt="header image"
-               className="img-fluid"
+               className="img-fluid w-100"
         />
               </div>
             </div>

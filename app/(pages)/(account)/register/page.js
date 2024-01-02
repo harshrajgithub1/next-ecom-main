@@ -118,9 +118,9 @@ const Registration = () => {
                           <p className="p-sm input-header">Login for</p>
                           <select {...register("user_type")}
           onChange={(e) => changeRole(e.target.value)} name="user_type" id="user_type" className="form-control login">
-                            <option value="3">Handwerker</option>
-            <option value="2">Lieferanten</option>
-            <option value="4">Privat</option>
+                            <option value="3">{t('Handyman')}</option>
+            <option value="2">{t('Suppliers')}</option>
+            <option value="4">{t('Private')}</option>
                           </select>
                        
                         

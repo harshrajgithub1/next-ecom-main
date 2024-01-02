@@ -1,7 +1,5 @@
 "use client";
 
-//import withTransition from '../../../with-transition';
-//import withTranslation from '../../../with-transition';
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -11,12 +9,15 @@ import { signIn, signOut } from "next-auth/react";
 import axios from 'axios';
 import { useRouter } from "next/navigation";
 import { CookiesProvider, useCookies } from "react-cookie";
+import { useTranslation } from 'react-i18next';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
+  const { t } = useTranslation();
+
   const [cookies, setCookie] = useCookies(["token"]);
 
   const router = useRouter();
@@ -106,13 +107,13 @@ const Login = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>Login</h3>
+                <h3>{t('Log in')} </h3>
 
                 <ul className="breadcrumb">
                   <li>
-                    <Link href="/">Start</Link>
+                    <Link href="/">{t('Start')}</Link>
                   </li>
-                  <li>Login</li>
+                  <li>{t('Log in')}</li>
                 </ul>
               </div>
             </div>
@@ -161,7 +162,7 @@ const Login = () => {
                                      alt="google-icon"
                                    />
                                    {" "}
-                                    Sign in with Google
+                                   {t('Sign in with Google')}
                                 </Link>
                             
                                </div>
@@ -169,11 +170,11 @@ const Login = () => {
                           </div>
                         <div className="col-md-12 text-center">
                           <div className="separator-line">
-                            Or, sign in with your email
+                          {t("Or, sign in with your email")}
                           </div>
                         </div>
                         <div className="col-md-12">
-                          <p className="p-sm input-header">Login for</p>
+                          <p className="p-sm input-header">{t('Login for')}</p>
                           <select {...register("user_type")}
           onChange={(e) => changeRole(e.target.value)} name="user_type" id="user_type" className="form-control login">
                             <option value="3">Handwerker</option>
@@ -182,7 +183,7 @@ const Login = () => {
                           </select>
                         </div>
                         <div className="col-md-12">
-                          <p className="p-sm input-header">Email address</p>
+                          <p className="p-sm input-header">{t('Email address')}</p>
                           <input
                           {...register("email")}
                             className="form-control email"
@@ -195,7 +196,7 @@ const Login = () => {
             </div>
                         </div>
                         <div className="col-md-12">
-                          <p className="p-sm input-header">Password</p>
+                          <p className="p-sm input-header">{t('Password')}</p>
                           <div className="wrap-input">
                             <span className="btn-show-pass ico-20">
                               <span className="flaticon-visibility eye-pass" onClick={handleTogglePassword} style={{ cursor: 'pointer' }}></span>
@@ -216,7 +217,7 @@ const Login = () => {
                           <div className="reset-password-link">
                             <p className="p-sm">
                               <Link href="/forgot-password" className="color--theme">
-                                Forgot your password?
+                              {t('Password')}?
                               </Link>
                             </p>
                           </div>
@@ -226,14 +227,14 @@ const Login = () => {
                             type="submit"
                             className="btn btn--theme hover--theme submit"
                           >
-                            Log In
+                          {t('Log in')}
                           </button>
                         </div>
                         <div className="col-md-12">
                           <p className="create-account text-body text-center">
-                            Don't have an account?{" "}
+                          {t("Don't have an account")}?{" "}
                             <Link href="/register" className="color--theme">
-                              Sign up
+                            {t('Sign up')}
                             </Link>
                           </p>
                         </div>

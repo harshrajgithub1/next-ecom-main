@@ -157,9 +157,9 @@ const Footer = () => {
             <div className="col-md-12">
               <div className="inline-menu">
                 <ul>
-                  <li><Link href="/data-protection">data protection</Link></li>
-                  <li><Link href="/legal-notice">legal notice</Link></li>
-                  <li><Link href="/impressum">impressum</Link></li>
+                  <li><Link href="/data-protection">{t('data protection')}</Link></li>
+                  <li><Link href="/legal-notice">{t('Legal Notice')}</Link></li>
+                  <li><Link href="/impressum">{t('Imprint')}</Link></li>
                   <li><Link href="/dsgvo">DSGVO</Link></li>
                 </ul>
               </div>

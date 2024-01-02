@@ -4,9 +4,11 @@
 import Link from 'next/link'
 import { apiUrl } from '@/app/constant/constant';
 import React,{ useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
 
 const PrivacyPolicy = () => {
+  const { t } = useTranslation();
 
    const [privacyData, setPrivacyData] = useState(null);
 
@@ -60,7 +62,7 @@ const PrivacyPolicy = () => {
 
                 <ul className="breadcrumb">
                   <li>
-                    <Link href="/">Start</Link>
+                    <Link href="/">{t('Start')}</Link>
                   </li>
                   <li>{privacyData?.title}</li>
                 </ul>

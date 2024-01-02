@@ -3,8 +3,11 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from "react";
 import { apiUrl } from '@/app/constant/constant';
+import { useTranslation } from 'react-i18next';
+
 
 const ProductFilter = () => {
+    const { t } = useTranslation();
 
     const [productFilterData, setProductFilterData] = useState([]);
 
@@ -87,11 +90,11 @@ const ProductFilter = () => {
             <div className="row">
                 <div className="col-md-12">
                     <div className="banner-caption">
-                        <h3>Product with filter</h3>
+                        <h3>{t('Product with filter')}</h3>
     
                         <ul className="breadcrumb">
-                            <li><Link href="/">Start</Link></li>
-                            <li>Product</li>
+                            <li><Link href="/">{t('Start')}</Link></li>
+                            <li>{t('Product')}</li>
                         </ul>
                     </div>
                 </div>

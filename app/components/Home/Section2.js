@@ -8,8 +8,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FcCheckmark } from "react-icons/fc";
 import { apiUrl } from '@/app/constant/constant';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 const Section2 = () => {
+  const { t } = useTranslation();
+
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedCount, setSelectedCount] = useState(0);
 
@@ -94,8 +97,8 @@ else if (selectedCat.length > 3) {
               ))}
             </div>
             {selectedCount > 0 ?
-              <Link href="/product/ProductFilter" state={{ selectedCategories }} className="btn btn-success">View Products</Link> :
-              <Link href="/product" state={{ selectedCategories }} className="btn btn-success">View All Products</Link>
+              <Link href="/product/ProductFilter" state={{ selectedCategories }} className="btn btn-success"> {t('View Product')}</Link> :
+              <Link href="/product" state={{ selectedCategories }} className="btn btn-success">{t('View All Products')}</Link>
             }
           </div>
         </div>

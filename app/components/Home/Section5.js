@@ -1,3 +1,9 @@
+
+
+
+
+
+
 "use client"
 
 import React, { useState, useEffect } from 'react';
@@ -12,14 +18,30 @@ const section5 = () => {
 	const settings = {      //object created
 		dots: true,
 		infinite: true,
-		speed: 100,
+		speed: 1000,
 		slidesToShow: 3,
 		slidesToScroll: 3,
-		autoplay: true,
+		autoplay: false,
 		speed: 10000,
-      	autoplaySpeed: 10000,
-      	cssEase: "linear"
+      	cssEase: "linear",
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 520,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
 	  };
+    
 
 	  
    //const [htmlContent, setHtmlContent] = useState('<p>This is some <strong>HTML</strong> content.</p>');
@@ -58,7 +80,7 @@ const section5 = () => {
 
 
   return (
-    <section id="reviews-1" className="pt-100 shape--06 shape--gr-whitesmoke reviews-section vivek">
+    <section id="reviews-1" className="pt-100 shape--gr-whitesmoke reviews-section">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-10 col-lg-9">
@@ -68,35 +90,37 @@ const section5 = () => {
             </div>
           </div>
         </div>
-
-        <div className="row">
-          <div className="col">
-            <Slider {...settings}>
-            
-			  {testimonialData &&
-              testimonialData.map((category, index) => (
-					<div key={index} className="review-1 bg--white-100 block-shadow r-08">
-						<div className="review-ico ico-65"><span className="flaticon-quote"></span></div>
-						<div className="review-txt">
-							<p dangerouslySetInnerHTML={{ __html: category.client_quote }}>
-							</p>
-							<div className="author-data clearfix">
-								<div className="review-avatar">
-									<img src={`${apiUrl}storage/client_says/${category?.client_image}`} alt="" />
-								</div>
-								<div className="review-author">
-									<h6 className="s-18 w-700">{category.client_name}</h6>
-									<p className="p-sm">{category.client_designation}</p>
-								</div>
-							</div>
-						</div>
-					 </div> 
-          ))}
-
-              {/* Repeat for other slides */}
-            </Slider>
-          </div>
-        </div>
+        <div className="row">        
+      <div className="col">    
+      <Slider {...settings}>
+          {testimonialData &&
+            testimonialData.map((category, index) => (  
+              <div>
+              <div key={index} className="review-1 bg--white-100 block-shadow r-08">
+                <div className="review-ico ico-65">
+                  <span className="flaticon-quote"></span>
+                </div>
+                <div className="review-txt">
+                  <p dangerouslySetInnerHTML={{ __html: category.client_quote }}></p>
+                  <div className="author-data clearfix">
+                    <div className="review-avatar">
+                      <img src={`${apiUrl}storage/client_says/${category?.client_image}`} alt="" />
+                    </div>
+                    <div className="review-author">
+                      <h6 className="s-18 w-700">{category.client_name}</h6>
+                      <p className="p-sm">{category.client_designation}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>  
+                ))}
+               
+              </Slider>
+         
+      </div>
+       
+    </div>
       </div>
     </section>
   );
