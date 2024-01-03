@@ -34,3 +34,6 @@ body {
   justify-content: center;
   display: flex;
 }
+p{
+  color: #000;
+}

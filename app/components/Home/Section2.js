@@ -9,12 +9,14 @@ import { FcCheckmark } from "react-icons/fc";
 import { apiUrl } from '@/app/constant/constant';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/navigation';
 
 const Section2 = () => {
   const { t } = useTranslation();
 
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedCount, setSelectedCount] = useState(0);
+  const router = useRouter();
 
   const handleCategoryClick = (selectedCategoryId) => {
     const updatedCategories = selectedCategories.map((item) =>
@@ -35,6 +37,22 @@ else if (selectedCat.length > 3) {
 }
 
     setSelectedCategories(updatedCategories);
+  };
+
+ 
+  const handleSubscriptionClick = () => {
+    
+    const token = sessionStorage.getItem('token');
+  
+    if (token !== null) {
+      
+      router.push('/subscription');
+     
+    } else {
+     
+      router.push('/login');
+    
+    }
   };
 
   const getCategoriesInfo = async () => {
@@ -100,6 +118,7 @@ else if (selectedCat.length > 3) {
               <Link href="/product/ProductFilter" state={{ selectedCategories }} className="btn btn-success"> {t('View Product')}</Link> :
               <Link href="/product" state={{ selectedCategories }} className="btn btn-success">{t('View All Products')}</Link>
             }
+            <button className="btn btn-success" onClick={handleSubscriptionClick}>{t('Subscription')}</button>
           </div>
         </div>
       </section>

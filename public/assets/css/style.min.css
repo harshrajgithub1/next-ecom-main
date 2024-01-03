@@ -1637,6 +1637,9 @@ a.tra-link span {
   -ms-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
 }
+.contact-form.contact-details ul li  a {
+  color: #6c757d !important;
+}
 
 .tra-link.ico-20 [class*="flaticon-"]:before,
 .tra-link.ico-20 [class*="flaticon-"]:after {
@@ -11329,6 +11332,8 @@ img.footer-logo-dark {
 #signup .register-page-wrapper {
   background: url(../img/login-wrapper.jpg);
   background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #login .register-page-wrapper:after,
@@ -11530,6 +11535,7 @@ img.footer-logo-dark {
   font-size: 0.9rem;
   font-weight: 500;
   margin: 25px 0px 30px;
+  color: #1d222f !important;
 }
 
 .separator-line::before,
@@ -11632,6 +11638,8 @@ select.form-control.login {
   font-size: 0.95rem;
   background-color: #fff;
   border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
 }
 
 .btn-google img {
@@ -13762,6 +13770,7 @@ form.newsletter-form .input-group .btn {
   position: relative;
   z-index: 1;
   margin-bottom: 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
 .vergleich:hover .img-style {
@@ -13777,12 +13786,14 @@ form.newsletter-form .input-group .btn {
 .vergleich:hover .content-style {}
 
 .vergleich .img-style img {
+  min-height: 275px;
+  max-height: 275px;
   width: 100%;
 }
 
 .vergleich .content-style {
   background-color: #fff;
-  width: 86%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   padding: 20px;
@@ -13802,12 +13813,16 @@ form.newsletter-form .input-group .btn {
   margin-top: 8px;
   border-radius: 4px;
   border: 1px solid var(--teal);
+  padding: 5px 15px;
+  display: block;
+  width: 100%;
 }
 
 .vergleich .content-style a:hover {
   background: var(--red);
   border-color: #fff;
   color: #fff !important;
+  background: var(--teal);
 }
 
 .vergleich .content-style:hover {
@@ -14010,11 +14025,6 @@ form.newsletter-form .input-group .btn {
   bottom: -75%;
   display: block;
 }
-
-.liferent-box:hover a {
-  /* bottom: 20px; */
-}
-
 
 .sidebar {
   padding: 15px;
@@ -14294,3 +14304,4 @@ button.btn-remove {
 .black{
   color:#000
 }
+

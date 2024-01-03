@@ -109,23 +109,7 @@ const Contact = () => {
         className="pb-50 inner-page-hero contacts-section division"
       >
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-10 col-lg-9">
-              <div className="section-title text-center mb-80">
-                {/* <h2 className="s-52 w-700">
-                  Fragen? <span>Lass uns reden</span>
-                </h2> */}
-                {/* <p className="p-lg">
-                  Haben Sie Fragen oder benötigen weitere Informationen? Zögern
-                  Sie nicht, uns zu kontaktieren! Unser Team steht Ihnen gerne
-                  zur Verfügung. Sie können uns per E-Mail unter
-                  [E-Mail-Adresse] erreichen oder das Kontaktformular auf
-                  unserer Website nutzen. Wir freuen uns darauf, von Ihnen zu
-                  hören!
-                </p> */}
-              </div>
-            </div>
-          </div>
+         
           <div className="row justify-content-center">
             <div className="col-md-6">
               <div className="form-holder">
@@ -275,3 +259,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

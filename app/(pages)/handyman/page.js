@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Electrician = () => {
+const Handyman = () => {
   return (
     <div>
       <section
@@ -495,4 +495,4 @@ const Electrician = () => {
   );
 };
 
-export default Electrician;
+export default Handyman;

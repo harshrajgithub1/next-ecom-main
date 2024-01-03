@@ -155,7 +155,7 @@ const Login = () => {
                     <div className="register-page-form">
                       <form name="signinform" method="post" onSubmit={handleSubmit(onSubmit1)} className="row sign-in-form">
                        
-                          <div>
+                          
                             <button onClick={()=>signIn("google")}>
                               <div className="col-md-12">
                                <Link href="#" className="btn btn-google ico-left">
@@ -169,7 +169,7 @@ const Login = () => {
                             
                                </div>
                             </button>
-                          </div>
+                        
                         <div className="col-md-12 text-center">
                           <div className="separator-line">
                           {t("Or, sign in with your email")}
@@ -179,9 +179,9 @@ const Login = () => {
                           <p className="p-sm input-header">{t('Login for')}</p>
                           <select {...register("user_type")}
           onChange={(e) => changeRole(e.target.value)} name="user_type" id="user_type" className="form-control login">
-                            <option value="3">Handwerker</option>
-            <option value="2">Lieferanten</option>
-            <option value="4">Privat</option>
+                            <option value="3">{t('Handyman')}</option>
+            <option value="2">{t('Suppliers')}</option>
+            <option value="4">{t('Private')}</option>
                           </select>
                         </div>
                         <div className="col-md-12">

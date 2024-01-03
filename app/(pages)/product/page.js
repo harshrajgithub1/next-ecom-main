@@ -1,12 +1,11 @@
 
+
 "use client"
 import Link from 'next/link'
 import React, { useState, useEffect } from "react";
 import { apiUrl } from '@/app/constant/constant';
-import { useTranslation } from 'react-i18next';
 
 const Product = () => {
-    const { t } = useTranslation();
 
     const [productData, setProductData] = useState([]);
     let selectedids = [];
@@ -73,9 +72,7 @@ const Product = () => {
 
 
     return (
-        <div>
-          
-    
+        <>       
           <section className="banner" 
         //   style="background-image:url(assets/img/banner3.jpg)"
     
@@ -91,11 +88,11 @@ const Product = () => {
             <div className="row">
                 <div className="col-md-12">
                     <div className="banner-caption">
-                        <h3>{t('Product')}</h3>
+                        <h3>Product</h3>
     
                         <ul className="breadcrumb">
-                            <li><Link href="/">{t('Start')}</Link></li>
-                            <li>{t('Product')}</li>
+                            <li><Link href="/">Start</Link></li>
+                            <li>Product</li>
                         </ul>
                     </div>
                 </div>
@@ -106,7 +103,7 @@ const Product = () => {
     <section className="service py-100">
         <div className="container-fluid">
             <div className="row">
-                <div className="col-md-3 col-lg-2">
+                <div className="col-md-4 col-lg-3 col-xl-2">
                     <div className="sidebar-header">
                         <h3>Filter</h3>
                         <Link href="#">Collapse all</Link>
@@ -120,8 +117,7 @@ const Product = () => {
                     </div>
     
                     <div className="sidebar">
-                        <h3>Categories <Link href="#"><i className="jki jki-chevron-down-light"></i></Link></h3>
-    
+                        <h3>Categories <Link href="#"><i className="jki jki-chevron-down-light"></i></Link></h3>    
                         <div className="sidebar-inpup">
                             <div className="form-group">
                                 <input type="checkbox" id="a1"/>
@@ -256,10 +252,10 @@ const Product = () => {
                     </div>
                 </div>
     
-                <div className="col-md-9 col-lg-10">
+                <div className="col-md-8 col-lg-9 col-xl-10 mt-5 mt-md-0">
                     <div className="row justify-content-center">
                         <div className="col-md-8">
-                            <div className="about-2-title mb-60 text-center wow fadeInUp">
+                            <div className="about-2-title mb-20 text-center wow fadeInUp">
                                 <span className="section-id">Vergleich</span>
                                 <h2 className="s-52 mb-30">We Have <span>Many Service</span> Currentrly</h2>
                                 <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
@@ -271,11 +267,10 @@ const Product = () => {
                         </div>
                     </div>
     
-
-                    
+                        
                     <div className="row">
                       {productData.length && productData.map((category) => (
-                         <div className="col-md-3" key={`${category.id}`}>
+                         <div className="col-xl-3 col-lg-4 col-md-6" key={`${category.id}`}>
                             <div className="vergleich wow fadeInUp">
                                 <div className="img-style">
                                     <img src={`${apiUrl}storage/product/${category?.pro_image}`} alt="" className="img-fluid"/>
@@ -295,7 +290,7 @@ const Product = () => {
         </div>
     </section>
     
-        </div>
+        </>
       )
 }
 

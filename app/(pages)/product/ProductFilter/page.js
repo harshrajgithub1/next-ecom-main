@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React, { useState, useEffect } from "react";
 import { apiUrl } from '@/app/constant/constant';
 import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/navigation';
 
 
 const ProductFilter = () => {
@@ -35,6 +36,14 @@ const ProductFilter = () => {
   
       setSelectedCategories(updatedCategories);
     };
+
+    const router = useRouter();
+
+    const handleCompareClick = () => {
+    
+        router.push('/compare');
+      };
+
 
     function getProductFilter(){
         const ids = JSON.parse(localStorage.getItem('selectedCatIds'))
@@ -287,6 +296,8 @@ const ProductFilter = () => {
                             </div>
                          </div>
                         ))} 
+
+                        <button className="btn btn-success" onClick={handleCompareClick}>Compare</button>
                     </div>
                  
                 </div>
