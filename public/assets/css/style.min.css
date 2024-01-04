@@ -12327,7 +12327,9 @@ body.theme--dark {
   color: #fff;
 }
 
-.theme--dark .navbar-light .wsmenu-list>li>a.h-link:hover,
+.theme--dark .navbar-light .wsmenu-list>li>a.h-link:hover{
+  color: #dc3539 !important;
+}
 .theme--dark .navbar-light .wsmenu>.wsmenu-list>li>a:hover,
 .theme--dark .navbar-dark.inner-page-header .wsmenu>.wsmenu-list>li>a:hover,
 .theme--dark .navbar-dark.light-hero-header .wsmenu>.wsmenu-list>li>a:hover {

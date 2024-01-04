@@ -16,32 +16,35 @@ const Section2 = () => {
 
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedCount, setSelectedCount] = useState(0);
-  const router = useRouter();
+  //state variables are declared using useState hook
 
-  const handleCategoryClick = (selectedCategoryId) => {
+  const router = useRouter();  //router Initialization
+
+  const handleCategoryClick = (selectedCategoryId) => { 
     const updatedCategories = selectedCategories.map((item) =>
       item.id === selectedCategoryId ? { ...item, isSelected: !item.isSelected } : item
     );
+   //event handler for category click, it updates the state based selected category
 
     const selectedCat = updatedCategories.filter((item) => item.isSelected);
     const selectedCatIds = selectedCat.map((item) => item.id);
     localStorage.setItem("selectedCatIds", JSON.stringify(selectedCatIds));
     setSelectedCount(selectedCat.length);
-console.log(selectedCat.length);
-if (selectedCat.length === 2) {
-  toast.warning("You can select one more category");
-} 
-else if (selectedCat.length > 3) {
-  toast.error("You need a premium subscription");
-  return;
-}
+    //console.log(selectedCat.length);
+    if (selectedCat.length === 2) {
+      toast.warning("You can select one more category");
+    } 
+    else if (selectedCat.length > 3) {
+    toast.error("You need a premium subscription");
+    return;
+   }
 
     setSelectedCategories(updatedCategories);
   };
 
  
   const handleSubscriptionClick = () => {
-    
+    //event handler for subscription click,
     const token = sessionStorage.getItem('token');
   
     if (token !== null) {

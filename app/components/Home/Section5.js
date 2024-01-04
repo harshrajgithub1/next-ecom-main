@@ -1,9 +1,4 @@
 
-
-
-
-
-
 "use client"
 
 import React, { useState, useEffect } from 'react';
@@ -95,7 +90,7 @@ const section5 = () => {
       <Slider {...settings}>
           {testimonialData &&
             testimonialData.map((category, index) => (  
-              <div>
+            
               <div key={index} className="review-1 bg--white-100 block-shadow r-08">
                 <div className="review-ico ico-65">
                   <span className="flaticon-quote"></span>
@@ -113,8 +108,8 @@ const section5 = () => {
                   </div>
                 </div>
               </div>
-              </div>  
-                ))}
+               
+            ))}
                
               </Slider>
          

@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 const Section1 = () => {
     const [headerData, setHeaderData] = useState();
+    
     const { t } = useTranslation();
     
     function getHeaderInfo(){

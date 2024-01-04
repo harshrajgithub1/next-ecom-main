@@ -412,15 +412,15 @@ const TermsAndConditions = () => {
         </div>
       </section>
 
-      <section id="terms-page" className="gr--whitesmoke pb-80 inner-page-hero division">
+      <section id="terms-page" className="gr--whitesmoke inner-page-hero division">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-10">
             
-            <div className="inner-page-title">
-                     <h2 className="s-52"  dangerouslySetInnerHTML={{ __html: termsData?.page_description }}>
+            <div className="inner-page-title text-left">
+                     <h5 className="s-52"  dangerouslySetInnerHTML={{ __html: termsData?.page_description }}>
 
-                     </h2>
+                     </h5>
                  </div>
       
                </div>

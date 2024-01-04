@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 import { CookiesProvider, useCookies } from "react-cookie";
 import { useTranslation } from 'react-i18next';
 import { useAuth } from "@/app/components/AuthProvider/useAuth";
-
+import { apiUrl } from '@/app/constant/constant';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -46,7 +46,7 @@ const Login = () => {
     event.preventDefault();
     // Backend API Call operation is handled here.
     try {
-      const res = await axios.post(`http://45.79.185.26/trifusa/public/api/login?email=${formData.email}&password=${formData.password}&user_type=${formData.user_type}`);
+      const res = await axios.post(`${apiUrl}api/login?email=${formData.email}&password=${formData.password}&user_type=${formData.user_type}`);
       console.log(res.data); // Assuming res.data contains the response data you want to log.
       console.log(res.data.user); // Assuming res.data contains the response data you want to log.
       

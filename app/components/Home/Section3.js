@@ -31,6 +31,7 @@ const section3 = () => {
           console.error(error);
       });
   }
+
   useEffect(() => {
     getMiddleInfo();
 

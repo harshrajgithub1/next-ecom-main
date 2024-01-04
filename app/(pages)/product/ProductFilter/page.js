@@ -6,46 +6,50 @@ import { apiUrl } from '@/app/constant/constant';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/navigation';
 
-
 const ProductFilter = () => {
     const { t } = useTranslation();
 
     const [productFilterData, setProductFilterData] = useState([]);
-
-
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedCount, setSelectedCount] = useState(0);
+    
+    //state variables are declared using useState hook
   
-    const handleCategoryClick = (selectedCategoryId) => {
+    
+      const handleCategoryClick = (selectedCategoryId) => {
       const updatedCategories = selectedCategories.map((item) =>
         item.id === selectedCategoryId ? { ...item, isSelected: !item.isSelected } : item
       );
-  
+     //event handler for category click, it updates the state based selected category
+
       const selectedCat = updatedCategories.filter((item) => item.isSelected);
       const selectedCatIds = selectedCat.map((item) => item.id);
       localStorage.setItem("selectedCatIds", JSON.stringify(selectedCatIds));
       setSelectedCount(selectedCat.length);
-  console.log(selectedCount);
-  if (selectedCount === 2) {
-    toast.warning("You can select one more category");
-  } 
-  else if (selectedCount >= 3) {
-    toast.error("You need a premium subscription");
-    return;
-  }
+      console.log(selectedCount);
+     
+      
+      if (selectedCount === 2) {
+      toast.warning("You can select one more category");
+     } 
+      else if (selectedCount >= 3) {
+      toast.error("You need a premium subscription");
+      return;
+     } 
   
       setSelectedCategories(updatedCategories);
     };
 
     const router = useRouter();
-
+    //router Initialization
     const handleCompareClick = () => {
-    
+    //when compare button click it navigate to compare component
         router.push('/compare');
       };
 
 
     function getProductFilter(){
+        //to fetch product filter data based on the selected category IDs.
         const ids = JSON.parse(localStorage.getItem('selectedCatIds'))
         const obj={"category_ids":ids};
         fetch( `${apiUrl}api/product/categorywise`, {
@@ -60,12 +64,11 @@ const ProductFilter = () => {
         })
         .then((response) => response.json())
         .then((responseJson) => {
-            console.log(responseJson);
+            //console.log(responseJson);
             if (responseJson.success === "true") {
                 const flatArray = responseJson.data.flat();
                 setProductFilterData(flatArray);
-                //console.log(headerData.home_page_image)
-                console.log(flatArray); 
+               
             }
         })
         .catch((error) => {
@@ -73,20 +76,19 @@ const ProductFilter = () => {
         });
         
     }
-    console.log(productFilterData)
+    //console.log(productFilterData);
+
     useEffect(() => {
+        //Hook to Fetch Data on Component Mount
         getProductFilter();
 
     }, [])
+    //here dependency array []is empty which indicates it should run only once
 
     
     return (
         <div>
-          
-    
           <section className="banner" 
-        //   style="background-image:url(assets/img/banner3.jpg)"
-    
           style={{
             backgroundImage: `url(/assets/img/banner3.jpg)`,
             backgroundSize: 'cover', // You can adjust these styles as needed
@@ -279,10 +281,12 @@ const ProductFilter = () => {
                         </div>
                     </div>
     
-
-                    
                     <div className="row">
-                      {productFilterData.length && productFilterData.map((data) => (
+                        {productFilterData.length && productFilterData.map((data) => (
+                        //Rendering Product Filter Data
+                        //Product filter data is mapped to JSX elements for rendering.
+                        //The map function is used to iterate over the productFilterData array.
+                          
                          <div className="col-md-3" key={`${data.id}`}>
                             <div className="vergleich wow fadeInUp">
                                 <div className="img-style">
