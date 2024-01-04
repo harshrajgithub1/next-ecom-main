@@ -38,6 +38,8 @@ p{
   color: #000;
 }
 
-.wsmenu > .wsmenu-list{
-  height: 100vh;
+@media screen and (max-width: 992px) {
+  .wsmenu > .wsmenu-list{
+    height: 100vh;
+  }
 }

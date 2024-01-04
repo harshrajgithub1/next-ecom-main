@@ -227,6 +227,10 @@ const Header = () => {
       i18n.changeLanguage(lng);
       setCurrentLanguage(lng);
     }
+    else{
+      localStorage.setItem('language', 'de');
+      setCurrentLanguage('de');
+    }
   }, [i18n]);
 
   const [isWsActive, setIsWsActive] = useState(false);

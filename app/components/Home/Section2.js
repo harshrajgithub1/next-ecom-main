@@ -46,15 +46,10 @@ const Section2 = () => {
   const handleSubscriptionClick = () => {
     //event handler for subscription click,
     const token = sessionStorage.getItem('token');
-  
     if (token !== null) {
-      
       router.push('/subscription');
-     
     } else {
-     
       router.push('/login');
-    
     }
   };
 
@@ -121,6 +116,7 @@ const Section2 = () => {
               <Link href="/product/ProductFilter" state={{ selectedCategories }} className="btn btn-success"> {t('View Product')}</Link> :
               <Link href="/product" state={{ selectedCategories }} className="btn btn-success">{t('View All Products')}</Link>
             }
+            <hr/>
             <button className="btn btn-success" onClick={handleSubscriptionClick}>{t('Subscription')}</button>
           </div>
         </div>

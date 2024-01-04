@@ -36,7 +36,7 @@ i18n
         translation: itTranslation,
       },
     },
-    lng: 'en', // default language
+    lng: 'de', // default language
     interpolation: {
       escapeValue: false, // react already safes from xss
     },
