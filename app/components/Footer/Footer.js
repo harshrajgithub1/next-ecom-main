@@ -89,22 +89,22 @@ const Footer = () => {
                     <h6 className="s-17">{footerData?.footer_h1}</h6>
                     <ul className="foo-links clearfix">
                       <li>
-                        <p><Link href="about">{t('About Us')}</Link></p>
+                        <p><Link href="/about">{t('About Us')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="product">{t('Product')}</Link></p>
+                        <p><Link href="/product">{t('Product')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="service">{t('Service')}</Link></p>
+                        <p><Link href="/service">{t('Service')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="suppliers">{t('Suppliers')}</Link></p>
+                        <p><Link href="/suppliers">{t('Suppliers')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="handyman">{t('Handyman')}</Link></p>
+                        <p><Link href="/handyman">{t('Handyman')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="transcript">{t('Transcript')}</Link></p>
+                        <p><Link href="/transcript">{t('Transcript')}</Link></p>
                       </li>
                     </ul>
                   </div>
@@ -114,22 +114,22 @@ const Footer = () => {
                     <h6 className="s-17">{footerData?.footer_h2}</h6>
                     <ul className="foo-links clearfix">
                       <li>
-                        <p><Link href="terms-condition">{t('Terms of Use')}</Link></p>
+                        <p><Link href="/terms-condition">{t('Terms of Use')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="cookie">{t('Cookie Policy')}</Link></p>
+                        <p><Link href="/cookie">{t('Cookie Policy')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="privacy-policy">{t('Privacy Policy')}</Link></p>
+                        <p><Link href="/privacy-policy">{t('Privacy Policy')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="help-center">{t('Help Center')}</Link></p>
+                        <p><Link href="/help-center">{t('Help Center')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="faqs">{t('Faq')}</Link></p>
+                        <p><Link href="/faqs">{t('Faq')}</Link></p>
                       </li>
                       <li>
-                        <p><Link href="contact">{t('Contact')}</Link></p>
+                        <p><Link href="/contact">{t('Contact')}</Link></p>
                       </li>
                     </ul>
                   </div>

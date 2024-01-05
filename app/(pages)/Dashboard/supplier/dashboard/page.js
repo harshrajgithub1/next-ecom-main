@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const supplierDashboard = () => {
   return (
-    <div>
+    <>
      <section className="banner" 
         //   style="background-image:url(assets/img/banner3.jpg)"
     
@@ -50,15 +50,15 @@ const supplierDashboard = () => {
                     <p>User Id : 23</p>
                 </div>
                 <ul className="dashboard_menu">
-                    <li><a href="my profile">My Profile</a></li>
-                    <li><a className="active" href="notification">NOTIFICATION</a></li>
-
-                    <li><a className="" href="add products">ADD PRODUCTS</a></li>
-                    <li><a className="" href="csv">CSV</a></li>
-                    <li><a className="" href="subscription">SUBSCRIPTION</a></li>
-                    <li><a className="" href="logout">Logout</a></li>
+                <li><Link href="profile">My Profile</Link></li>
+                <li><Link href="notification">NOTIFICATION</Link></li>
+                <li><Link href="addProduct">ADD PRODUCTS</Link></li>
+                <li><Link href="csv">CSV</Link></li>
+             
+                <li><Link href="logout">Logout</Link></li>
                 </ul>
             </div>
+            
             <div className="col-xl-9 col-lg-8">
                 <div className="dashboard_content">
                     <h5>My Account</h5>
@@ -270,7 +270,7 @@ const supplierDashboard = () => {
         </div>
     </div>
 </section>
-    </div>
+    </>
   )
 }
 

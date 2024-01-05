@@ -2,11 +2,9 @@
 import React from 'react'
 import Link from 'next/link';
 
-
-
 const electrianDashboard = () => {
   return (
-    <div>
+    <>
      <section className="banner" 
         //   style="background-image:url(assets/img/banner3.jpg)"
     
@@ -51,13 +49,15 @@ const electrianDashboard = () => {
                 </div>
                 <ul className="dashboard_menu">
                 
-                <li><a href="my profile">My Profile</a></li>
-                    <li><a className="active" href="notification">NOTIFICATION</a></li>
+                    <li><Link href="profile">My Profile</Link></li>
+                    <li><Link href="notification">NOTIFICATION</Link></li>
 
-                    <li><a className="" href="add products">ADD PRODUCTS</a></li>
-                    <li><a className="" href="csv">CSV</a></li>
-                    <li><a className="" href="subscription">SUBSCRIPTION</a></li>
-                    <li><a className="" href="submit">Submit Quotes</a></li>
+                    <li><Link href="addProduct">ADD PRODUCTS</Link></li>
+                    <li><Link href="csv">CSV</Link></li>
+                    <li><Link href="subscription">SUBSCRIPTION</Link></li>
+                    <li><Link href="logout">Logout</Link></li>
+
+                    <li><Link href="submit">Submit Quotes</Link></li>
                 </ul>
             </div>
             <div className="col-xl-9 col-lg-8">
@@ -290,7 +290,7 @@ const electrianDashboard = () => {
         </div>
     </div>
 </section>
-    </div>
+    </>
   )
 }
 

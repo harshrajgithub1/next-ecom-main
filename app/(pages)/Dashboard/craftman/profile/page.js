@@ -30,7 +30,7 @@ const Profile = () => {
         </section>
 
 
-    <section className="dashboard content-inner">
+    <section className="dashboard content-inner inner-page-hero mb-5">
     <div className="container">
           <div className="row">
             <div className="col-xl-3 col-lg-4">
@@ -50,24 +50,34 @@ const Profile = () => {
                 
               </div>
               <ul className="dashboard_menu">
-                <li><a href="my profile">My Profile</a></li>
-                <li><a className="active" href="notification">NOTIFICATION</a></li>
-                <li><a className="" href="add products">ADD PRODUCTS</a></li>
-                <li><a className="" href="csv">CSV</a></li>
-                <li><a className="" href="subscription">SUBSCRIPTION</a></li>
-                <li><a className="" href="logout">Log Out</a></li>
+                    <li><Link href="profile">My Profile</Link></li>
+                    <li><Link href="notification">NOTIFICATION</Link></li>
+
+                    <li><Link href="addProduct">ADD PRODUCTS</Link></li>
+                    <li><Link href="csv">CSV</Link></li>
+                    <li><Link href="subscription">SUBSCRIPTION</Link></li>
+                    <li><Link href="logout">Logout</Link></li>
+
+                    <li><Link href="submit">Submit Quotes</Link></li>
               </ul>
             </div>
-            
-          <div className="col-xl-9 col-lg-8">
-            <div className="dashboard_content">
-              <h5>Overview</h5>
              
-              
+
+             
+            <div className="col-xl-9 col-lg-8">
+            <div className="dashboard_content">
+            <div className='d-flex justify-content-between'>
+            <div>
+              <h5>Overview</h5>
+              </div>
+              <div>
+              <Link className='edit-admin' href="edit">Edit</Link> 
+              </div>
+              </div>
             </div>
             
             <div className="dashboard_profile">
-            <a href="/my-account/profile">edit</a>
+            
               <ul>
                
                 <li><span>Name:</span> Harsh raj</li>

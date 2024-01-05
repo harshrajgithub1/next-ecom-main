@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 const page = () => {
   return (
+    <>
     <section
     className="banner"
     style={{
@@ -27,6 +28,40 @@ const page = () => {
     </div>
 
     </section>
+
+    <section className="dashboard content-inner inner-page-hero mb-5">
+    <div className="container">
+        <div className="row">
+            <div className="col-xl-3 col-lg-4">
+                <div className="user_profile">
+                    <div className="user_profile_img">
+                    <img src="assets/img/comment-author-2.jpg" alt="user"
+                            className=" img-fluid w-100"/><label for="profile_photo"><i
+                                className="jki jki-camera-solid"></i></label>
+                                <input id="profile_photo" type="file"
+                            className="d-none"/>
+                    </div>
+                    <h4>User Name</h4>
+                    <p>User Id : 23</p>
+                </div>
+                <ul className="dashboard_menu">
+                    <li><Link href="profile">My Profile</Link></li>
+                    <li><Link href="notification">NOTIFICATION</Link></li>
+
+                    <li><Link href="addProduct">ADD PRODUCTS</Link></li>
+                    <li><Link href="csv">CSV</Link></li>
+                    <li><Link href="subscription">SUBSCRIPTION</Link></li>
+                    <li><Link href="logout">Logout</Link></li>
+
+                    <li><Link href="submit">Submit Quotes</Link></li>
+                </ul>
+            </div>
+            
+           
+        </div>
+    </div>
+</section>
+</>
   )
 }
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 const Information = ({ response }) => {
   return (
+    <>
     <section className="banner" 
     //   style="background-image:url(assets/img/banner3.jpg)"
 
@@ -30,6 +31,7 @@ const Information = ({ response }) => {
     </div>
 </div>
 </section>
+</>
   );
 };
 

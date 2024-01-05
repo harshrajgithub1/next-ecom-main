@@ -30,7 +30,9 @@ const Page = () => {
           </section>
     
           <section>
+          
           <div className="col-xl-9 col-lg-8">
+          
                     <div className="dashboard_content">
                         {/* <h5>Notification</h5> */}
                         <div className="appointment_history">

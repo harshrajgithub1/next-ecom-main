@@ -1,27 +1,30 @@
 "use client";
 import React from "react";
-
+import { useTranslation } from 'react-i18next';
 
 
 const Compare = () => {
+  const { t } = useTranslation();
+
+
   function requestQuotation() {}
 
   return (
     <div>
       <section
         className="banner"
-        style={{ backgroundImage: "url(assets/img/banner2.jpg)" }}
+        style={{ backgroundImage: "url(assets/img/banner4.jpg)" }}
       >
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>Vergleich</h3>
+                <h3>{t('Comparison')}</h3>
                 <ul className="breadcrumb">
                   <li>
-                    <a href="/">Start</a>
+                    <a href="/">{t('Start')}</a>
                   </li>
-                  <li>Vergleich</li>
+                  <li>{t('Comparison')}</li>
                 </ul>
               </div>
             </div>
@@ -34,7 +37,7 @@ const Compare = () => {
           <div className="row justify-content-center">
             <div className="col-md-8">
               <div className="about-2-title mb-60 text-center wow fadeInUp">
-                <span className="section-id">Vergleich</span>
+                <span className="section-id">Comparison</span>
                 <h2 className="s-52 mb-30">
                   We Have <span>Many Services</span> Currently
                 </h2>
