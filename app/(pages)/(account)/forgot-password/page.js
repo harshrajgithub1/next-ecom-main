@@ -40,12 +40,12 @@ const ForgotPassword = () => {
         toast.error(responseJson.message);
       }
 
-    } catch (error) {
-      console.error(error);
-      setMessage({ type: 'error', text: 'An error occurred. Please try again later.' });
-    } finally {
-      setLoading(false);
-    }
+    }   catch (error) {
+        console.error(error);
+        setMessage({ type: 'error', text: 'An error occurred. Please try again later.' });
+         } finally {
+           setLoading(false);
+     }
   };
 
   return (

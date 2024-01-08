@@ -1,10 +1,49 @@
-import React from 'react';
+'use client'
+
+import React,{useState, useEffect} from 'react';
 import Link from 'next/link';
+import axios from 'axios';
+import { apiUrl } from '@/app/constant/constant';
 
 const Profile = () => {
+
+  const [userData, setUserData] = useState(null);
+  
+  
+  useEffect(() => {
+    const fetchData = async () => {
+        const session =  JSON.parse(sessionStorage.getItem('token'));
+        let token = '';
+        if(session !=null){
+          token = session.access_token ;
+        } 
+
+        console.log(token)
+      try {
+        const response = await axios.get(`${apiUrl}api/userprofile`, {
+          headers: {
+            Authorization: 'Bearer '+ token
+       
+          }, 
+        });
+        console.log(response)
+        setUserData(response.data); // Assuming the API response contains user data
+        
+        
+       } catch (error) {
+          console.error('Error fetching user data:', error);
+         }
+    };  
+
+
+    fetchData();
+  }, []); // Empty dependency array ensures that the effect runs only once when the component mounts
+
+  
+ 
   return (
     <>
-<section
+    <section
         className="banner"
         style={{
           backgroundImage: `url(/assets/img/banner3.jpg)`,
@@ -18,10 +57,10 @@ const Profile = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>Admin Profile</h3>
+                <h3>User Profile</h3>
                 <ul className="breadcrumb">
                   <li><Link href="/">Start</Link></li>
-                  <li>Admin Profile</li>
+                  <li>User Profile</li>
                 </ul>
               </div>
             </div>
@@ -68,28 +107,33 @@ const Profile = () => {
               </div>
             </div>
             
+            {userData && (
             <div className="dashboard_profile">
             
               <ul>
+              <li><span>User Type:</span> {userData.user.usertype.name}</li>
+                <li><span>Name:</span> {userData.user.name}</li>
+                <li><span>Phone:</span>{userData.user.contact_no} </li>
                
-                <li><span>Name:</span> Harsh Raj</li>
-                <li><span>Phone:</span>78442***** </li>
-               
-                <li><span>Gender:</span> Male</li>
-                <li><span>Address:</span> Sector-8 Noida</li>
-                <li><span>City:</span>Noida </li>
-                <li><span>State:</span>UP </li>
+                <li><span>Email:</span> {userData.user.email}</li>
+                <li><span>Address:</span> {userData.user.address}</li>
+                <li><span>Pin Code:</span> {userData.user.pincode}</li>
+                
+                <li><span>City:</span>{userData.user.city} </li>
+                <li><span>State:</span>{userData.user.state} </li>
+                <li><span>Country:</span>{userData.user.country} </li>
                 
               </ul>
               
             </div>
+            )}
             
           </div>
         </div>
       </div>
     </section>
     </>
-  );
+  )
 };
 
 export default Profile;

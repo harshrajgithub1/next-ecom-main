@@ -251,7 +251,7 @@ const Header = () => {
   useEffect(()=>{
     const session = sessionStorage.getItem("token");
     if (session) {
-      console.log("something changed", isLoggedIn);
+      //console.log("something changed", isLoggedIn);
       setLoggedInStatus(true);
       //router.replace('/about');
     } else {

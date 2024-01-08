@@ -47,6 +47,7 @@ const Login = () => {
     // Backend API Call operation is handled here.
     try {
       const res = await axios.post(`${apiUrl}api/login?email=${formData.email}&password=${formData.password}&user_type=${formData.user_type}`);
+      console.log(res);
       // Handle the response data here.
       if(res.data.success){
         const obj={
@@ -75,7 +76,6 @@ const Login = () => {
       toast.error("An error occurred");
       // Handle the error here.
     }
-
    
   };
     

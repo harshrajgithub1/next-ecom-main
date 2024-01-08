@@ -13,7 +13,7 @@ const Compare = () => {
     <div>
       <section
         className="banner"
-        style={{ backgroundImage: "url(assets/img/banner4.jpg)" }}
+        style={{ backgroundImage: "url(assets/img/banner3.jpg)" }}
       >
         <div className="container">
           <div className="row">

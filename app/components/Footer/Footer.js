@@ -154,7 +154,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col-md-12">
+            {/* <div className="col-md-12">
               <div className="inline-menu">
                 <ul>
                   <li><Link href="/data-protection">{t('data protection')}</Link></li>
@@ -163,7 +163,7 @@ const Footer = () => {
                   <li><Link href="/dsgvo">DSGVO</Link></li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

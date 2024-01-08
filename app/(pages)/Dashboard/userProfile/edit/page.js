@@ -1,7 +1,46 @@
-import React from 'react'
+'use client'
+
+import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
+import axios from 'axios';
+import { apiUrl } from '@/app/constant/constant';
 
 const Edit = () => {
+
+    const [editData, setEditData] = useState(null);
+  
+  
+  useEffect(() => {
+    const fetchData = async () => {
+        const session =  JSON.parse(sessionStorage.getItem('token'));
+        let token = '';
+        if(session !=null){
+          token = session.access_token ;
+        } 
+
+        console.log(token)
+      try {
+        const response = await axios.get(`${apiUrl}api/userprofile`, {
+          headers: {
+            Authorization: 'Bearer '+ token
+       
+          }, 
+        });
+        console.log(response)
+        setEditData(response.data); // Assuming the API response contains user data
+        
+        
+       } catch (error) {
+          console.error('Error fetching user data:', error);
+         }
+    };  
+
+
+    fetchData();
+  }, []); // Empty dependency array ensures that the effect runs only once when the component mounts
+
+  
+
   return (
     <>
     <section
@@ -18,10 +57,10 @@ const Edit = () => {
       <div className="row">
         <div className="col-md-12">
           <div className="banner-caption">
-            <h3>Edit Supplier Profile</h3>
+            <h3>Edit User Profile</h3>
             <ul className="breadcrumb">
               <li><Link href="/">Start</Link></li>
-              <li>Edit Supplier Profile</li>
+              <li>Edit User Profile</li>
             </ul>
           </div>
         </div>
@@ -49,10 +88,6 @@ const Edit = () => {
                 </div>
                 <ul className="dashboard_menu">
                 <li><Link href="profile">My Profile</Link></li>
-                <li><Link href="notification">NOTIFICATION</Link></li>
-                <li><Link href="addProduct">ADD PRODUCTS</Link></li>
-                <li><Link href="csv">CSV</Link></li>
-             
                 <li><Link href="logout">Logout</Link></li>
                 </ul>
             </div>
@@ -60,30 +95,25 @@ const Edit = () => {
             <div className='col'>
             <div className="dashboard_content dashboard_profile">
             <div className='d-flex justify-content-between'>
-                <div>
-
-               
+            <div>
             <h5>Edit Profile info</h5>
             </div>
             <div>
-            <Link className='edit-admin' href="/Dashboard/supplier/profile">Cancel</Link>
+            <Link  className='edit-user' href="/Dashboard/user/profile">Cancel</Link>
             </div>
             </div>
+
+            {editData && (
             <form className="mb-5">
-            
+                
                 <div className="row">
                     <div className="col-lg-6">
                         <div className="dashboard_profile_form">
-                            <label>Fast Name</label>
+                            <label>Name</label>
                             <input type="text" className='form-control' placeholder="Addition" />
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-6">
-                        <div className="dashboard_profile_form">
-                            <label>last Name</label>
-                            <input type="text" className='form-control' placeholder="Smith" />
-                        </div>
-                    </div>
+                   
                     <div className="col-lg-6 col-md-6">
                         <div className="dashboard_profile_form">
                             <label>phone</label>
@@ -98,19 +128,25 @@ const Edit = () => {
                     </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="dashboard_profile_form">
-                            <label>Weight</label>
+                            <label>Pin Code</label>
                             <input type="text" className='form-control' placeholder="66" />
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="dashboard_profile_form">
-                            <label>Gender</label>
+                            <label>City</label>
                             <input type="text" className='form-control' placeholder="male" />
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="dashboard_profile_form">
-                            <label>Age</label>
+                            <label>State</label>
+                            <input type="text" className='form-control' placeholder="35" />
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6">
+                        <div className="dashboard_profile_form">
+                            <label>Country</label>
                             <input type="text" className='form-control' placeholder="35" />
                         </div>
                     </div>
@@ -125,32 +161,7 @@ const Edit = () => {
                     </div>
                 </div>
             </form>
-            <h5>Change password</h5>
-            <form>
-                <div className="row">
-                    <div className="col-md-6">
-                        <div className="dashboard_profile_form">
-                            <label>old Password</label>
-                            <input type="text" className='form-control' placeholder="Old Password" />
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="dashboard_profile_form">
-                            <label>new Password</label>
-                            <input type="text" className='form-control' placeholder="New Password" />
-                        </div>
-                    </div>
-                    <div className="col-xl-12">
-                        <div className="dashboard_profile_form">
-                            <label>Change Password</label>
-                            <input type="text" className='form-control' placeholder="ChangePassword" />
-                        </div>
-                    </div>
-                    <div className="col-xl-12">
-                        <button className="common_btn">Save Change</button>
-                    </div>
-                </div>
-            </form>
+            )}
         </div>
             
            

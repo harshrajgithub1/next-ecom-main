@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Page = () => {
+const Notification = () => {
     return (
         <>
           <section
@@ -187,4 +187,4 @@ const Page = () => {
       );
 };
 
-export default Page;
+export default Notification;
