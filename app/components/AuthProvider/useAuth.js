@@ -55,6 +55,8 @@ export const useAuth = () => {
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("role");
     sessionStorage.removeItem("user");
+
+    localStorage.clear();
     // Update the isLoggedIn state to reflect that the user is logged out
     setIsLoggedIn(false);
   };

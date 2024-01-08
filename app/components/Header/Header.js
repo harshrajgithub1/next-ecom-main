@@ -307,6 +307,16 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nl-simple">
+                {isLoggedIn && (
+                    <Link href="/dashboard/electrianDashboard" className="btn r-04 btn--theme hover--tra-white last-link">
+                    {t('Dashboard')}
+                    </Link>
+                  )  
+                  
+                }
+                 
+                </li>
+                <li className="nl-simple">
                   {!isLoggedIn ? (
                     <Link href="/login"  onClick={handleLinkClick} className="btn r-04 btn--theme hover--tra-white last-link">
                     {t('Registration')}
