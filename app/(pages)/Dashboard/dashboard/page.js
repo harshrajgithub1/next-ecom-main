@@ -1,8 +1,36 @@
 "use client"
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import Link from 'next/link';
 
-const electrianDashboard = () => {
+const Dashboard = () => {
+
+    const [userTypeRole, setUserTypeRole]=useState();
+    //const []=useState();
+
+    useEffect(() => {
+        const parsedData = JSON.parse(sessionStorage.getItem('user'));
+        
+        if (parsedData !== null && parsedData !== undefined) {
+          const userType = parsedData.user_type;
+    
+          if (userType === 2) {
+            setUserTypeRole('Supplier');
+
+          }
+    
+          if (userType === 3) {
+            setUserTypeRole('Craftsman');
+          }
+
+          if (userType === 4) {
+            setUserTypeRole('User');
+          }
+        }
+      }, []);
+      //console.log(userTypeRole);
+   
+
+
   return (
     <>
      <section className="banner" 
@@ -21,10 +49,10 @@ const electrianDashboard = () => {
         <div className="row">
             <div className="col-md-12">
                 <div className="banner-caption">
-                    <h3>Craftsman/Planner Dashboard</h3>
+                    <h3>{userTypeRole} Dashboard</h3>
                     <ul className="breadcrumb">
                             <li><Link href="/">Start</Link></li>
-                            <li>Craftsman/Planner Dashboard</li>
+                            <li>{userTypeRole} Dashboard</li>
                         </ul>
                 </div>
             </div>
@@ -49,7 +77,7 @@ const electrianDashboard = () => {
                 </div>
                 <ul className="dashboard_menu">
                 
-                    <li><Link href="profile">My Profile</Link></li>
+                    <li><Link href="/Dashboard/userProfile/profile">My Profile</Link></li>
                     <li><Link href="notification">NOTIFICATION</Link></li>
 
                     <li><Link href="addProduct">ADD PRODUCTS</Link></li>
@@ -294,4 +322,4 @@ const electrianDashboard = () => {
   )
 }
 
-export default electrianDashboard
+export default Dashboard

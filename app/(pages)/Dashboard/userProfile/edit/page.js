@@ -4,13 +4,15 @@ import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
 import axios from 'axios';
 import { apiUrl } from '@/app/constant/constant';
+import { useForm } from 'react-hook-form';
 
 const Edit = () => {
 
-    const [editData, setEditData] = useState(null);
+    let editData='';
   
+    const { register, handleSubmit, setValue } = useForm();
   
-  useEffect(() => {
+   useEffect(() => {
     const fetchData = async () => {
         const session =  JSON.parse(sessionStorage.getItem('token'));
         let token = '';
@@ -18,7 +20,7 @@ const Edit = () => {
           token = session.access_token ;
         } 
 
-        console.log(token)
+        //console.log(token)
       try {
         const response = await axios.get(`${apiUrl}api/userprofile`, {
           headers: {
@@ -26,9 +28,15 @@ const Edit = () => {
        
           }, 
         });
-        console.log(response)
-        setEditData(response.data); // Assuming the API response contains user data
-        
+        console.log(response.data)
+        //setEditData(response.data); // Assuming the API response contains user data
+        editData=response.data;
+        if (editData) {
+          // Loop through the properties of editData.user and set them as default values
+          Object.keys(editData.user).forEach((key) => {
+            setValue(key, editData.user[key]);
+          });
+        }
         
        } catch (error) {
           console.error('Error fetching user data:', error);
@@ -37,9 +45,42 @@ const Edit = () => {
 
 
     fetchData();
-  }, []); // Empty dependency array ensures that the effect runs only once when the component mounts
+  }, [editData, setValue]); // Empty dependency array ensures that the effect runs only once when the component mounts
+
+  console.log(editData);
+  const handleInputChange = (name, value) => {
+    // You can use setValue to dynamically update the form values
+    setValue(name, value);
+  };
 
   
+
+
+  const onSubmit = async (formData) => {
+    //event.preventDefault();
+    console.log(formData);
+
+    try {
+      const session = JSON.parse(sessionStorage.getItem('token'));
+      let token = '';
+      if (session != null) {
+        token = session.access_token;
+      }
+
+      const res = await axios.post(`${apiUrl}api/update/userprofile`, formData, {
+        headers: {
+          Authorization: 'Bearer ' + token,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      console.log(res)
+      console.log(res.data); // Assuming res.data contains the response data you want to log.
+      // Handle the response data here.
+    } catch (error) {
+      console.error('Error occurred:', error);
+    }
+  }
 
   return (
     <>
@@ -103,65 +144,87 @@ const Edit = () => {
             </div>
             </div>
 
-            {editData && (
-            <form className="mb-5">
+            {/*editData && ( */}
+             <form className="mb-5" method="post" onSubmit={handleSubmit(onSubmit)}>
                 
                 <div className="row">
-                    <div className="col-lg-6">
-                        <div className="dashboard_profile_form">
-                            <label>Name</label>
-                            <input type="text" className='form-control' placeholder="Addition" />
-                        </div>
-                    </div>
-                   
-                    <div className="col-lg-6 col-md-6">
-                        <div className="dashboard_profile_form">
-                            <label>phone</label>
-                            <input type="text" className='form-control' placeholder="+880-161568-59689 " />
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                        <div className="dashboard_profile_form">
-                            <label>email</label>
-                            <input type="text" className='form-control' placeholder="Company@gmail.com" />
-                        </div>
-                    </div>
+                <div className="col-lg-6">
+                  <div className="dashboard_profile_form">
+                    <label>Name</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Addition"
+                      
+                      {...register('name')}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-md-6">
+                  <div className="dashboard_profile_form">
+                    <label>Phone</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="+880-161568-59689 "
+                      {...register('contact_no')}
+                      
+                      onChange={(e) => handleInputChange('contact_no', e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-md-6">
+                  <div className="dashboard_profile_form">
+                    <label>Email</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Company@gmail.com"
+                      
+                      {...register('email')}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                    />
+                  </div>
+                </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="dashboard_profile_form">
                             <label>Pin Code</label>
-                            <input type="text" className='form-control' placeholder="66" />
+                            <input type="text" className='form-control' placeholder="66" {...register('pincode')} onChange={(e) => handleInputChange('pincode', e.target.value)}/>
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="dashboard_profile_form">
                             <label>City</label>
-                            <input type="text" className='form-control' placeholder="male" />
+                            <input type="text" className='form-control' placeholder="male"  {...register('city')} onChange={(e) => handleInputChange('city', e.target.value)}/>
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="dashboard_profile_form">
                             <label>State</label>
-                            <input type="text" className='form-control' placeholder="35" />
+                            <input type="text" className='form-control' placeholder="35" {...register('state')} onChange={(e) => handleInputChange('state', e.target.value)}/>
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-6">
                         <div className="dashboard_profile_form">
                             <label>Country</label>
-                            <input type="text" className='form-control' placeholder="35" />
+                            <input type="text" className='form-control' placeholder="35"  {...register('country')} onChange={(e) => handleInputChange('country', e.target.value)}/>
                         </div>
                     </div>
                     <div className="col-lg-6">
                         <div className="dashboard_profile_form">
                             <label>Address</label>
-                            <input type="text" className='form-control' placeholder="12/3 Mirpur Dhaka Bangladesh" />
+                            <input type="text" className='form-control' placeholder="12/3 Mirpur Dhaka Bangladesh"  {...register('address')} onChange={(e) => handleInputChange('address', e.target.value)}/>
                         </div>
                     </div>
                     <div className="col-lg-12">
-                        <button className="common_btn">Save Change</button>
+                        <button  type="submit" className="btn btn-primary  btn--theme common_btn">Save Change</button>
                     </div>
                 </div>
-            </form>
-            )}
+             </form>
+           {/*} )*/}
         </div>
             
            
@@ -174,6 +237,7 @@ const Edit = () => {
 
 </>
   )
+
 }
 
 export default Edit

@@ -1,10 +1,30 @@
 "use client"
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import Link from 'next/link';
 
 
 
 const supplierDashboard = () => {
+    const[userTypeRole, setUserTypeRole]=useState();
+    
+      useEffect(() => {
+        
+        const parsedData = JSON.parse(sessionStorage.getItem('user'));
+        const userType = parsedData.user_type;
+      
+        if (userType === 2) {
+          setUserTypeRole('Supplier');
+          
+        }
+    
+        if (userType === 3) {
+          setUserTypeRole('Craftsman');
+          
+         
+        }
+      }, []);
+      console.log(userTypeRole);
+
   return (
     <>
      <section className="banner" 
