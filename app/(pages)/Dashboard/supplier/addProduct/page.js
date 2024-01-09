@@ -51,7 +51,7 @@ const AddProduct = () => {
                 <li><Link href="addProduct">ADD PRODUCTS</Link></li>
                 <li><Link href="csv">CSV</Link></li>
              
-                <li><Link href="logout">Logout</Link></li>
+               
                 </ul>
             </div>
             

@@ -78,12 +78,12 @@ const Dashboard = () => {
                 <ul className="dashboard_menu">
                 
                     <li><Link href="/Dashboard/userProfile/profile">My Profile</Link></li>
-                    <li><Link href="notification">NOTIFICATION</Link></li>
+                    <li><Link href="/Dashboard/userProfile/notification">NOTIFICATION</Link></li>
 
-                    <li><Link href="addProduct">ADD PRODUCTS</Link></li>
-                    <li><Link href="csv">CSV</Link></li>
-                    <li><Link href="subscription">SUBSCRIPTION</Link></li>
-                    <li><Link href="logout">Logout</Link></li>
+                    <li><Link href="/Dashboard/userProfile/addProduct">ADD PRODUCTS</Link></li>
+                    <li><Link href="/Dashboard/userProfile/csv">CSV</Link></li>
+                    <li><Link href="/Dashboard/userProfile/subscription">SUBSCRIPTION</Link></li>
+                   
 
                     <li><Link href="submit">Submit Quotes</Link></li>
                 </ul>

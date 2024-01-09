@@ -11,6 +11,7 @@ const Edit = () => {
     let editData='';
   
     const { register, handleSubmit, setValue } = useForm();
+    const [file, setFile] = useState();
   
    useEffect(() => {
     const fetchData = async () => {
@@ -49,6 +50,8 @@ const Edit = () => {
 
   console.log(editData);
   const handleInputChange = (name, value) => {
+    alert("Saa");
+    console.log(value)
     // You can use setValue to dynamically update the form values
     setValue(name, value);
   };
@@ -66,7 +69,7 @@ const Edit = () => {
       if (session != null) {
         token = session.access_token;
       }
-
+      formData.profile_image="pap.jpg";
       const res = await axios.post(`${apiUrl}api/update/userprofile`, formData, {
         headers: {
           Authorization: 'Bearer ' + token,
@@ -98,10 +101,10 @@ const Edit = () => {
       <div className="row">
         <div className="col-md-12">
           <div className="banner-caption">
-            <h3>Edit User Profile</h3>
+            <h3>Edit Profile</h3>
             <ul className="breadcrumb">
               <li><Link href="/">Start</Link></li>
-              <li>Edit User Profile</li>
+              <li>Edit Profile</li>
             </ul>
           </div>
         </div>
@@ -119,9 +122,9 @@ const Edit = () => {
                 <div className="user_profile">
                     <div className="user_profile_img">
                     <img src="assets/img/comment-author-2.jpg" alt="user"
-                            className=" img-fluid w-100"/><label for="profile_photo"><i
+                            className=" img-fluid w-100"/><label htmlFor="profile_image"><i
                                 className="jki jki-camera-solid"></i></label>
-                                <input id="profile_photo" type="file"
+                                <input id="profile_image" name="profile_image" type="file" onChange={(e) => handleInputChange('profile_image', e.target.value)}
                             className="d-none"/>
                     </div>
                     <h4>User Name</h4>
@@ -129,7 +132,7 @@ const Edit = () => {
                 </div>
                 <ul className="dashboard_menu">
                 <li><Link href="profile">My Profile</Link></li>
-                <li><Link href="logout">Logout</Link></li>
+               
                 </ul>
             </div>
 

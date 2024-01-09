@@ -5,11 +5,12 @@ import Link from 'next/link';
 import axios from 'axios';
 import { apiUrl } from '@/app/constant/constant';
 
+
 const Profile = () => {
 
   const [userData, setUserData] = useState(null);
-  
-  
+
+
   useEffect(() => {
     const fetchData = async () => {
         const session =  JSON.parse(sessionStorage.getItem('token'));
@@ -57,10 +58,10 @@ const Profile = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="banner-caption">
-                <h3>User Profile</h3>
+                <h3>Profile</h3>
                 <ul className="breadcrumb">
                   <li><Link href="/">Start</Link></li>
-                  <li>User Profile</li>
+                  <li>Profile</li>
                 </ul>
               </div>
             </div>
@@ -90,8 +91,7 @@ const Profile = () => {
               </div>
               <ul className="dashboard_menu">
                 <li><Link href="profile">My Profile</Link></li>
-             
-                <li><Link href="logout">Logout</Link></li>
+            
               </ul>
             </div>
             

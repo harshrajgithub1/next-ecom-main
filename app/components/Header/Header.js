@@ -159,11 +159,13 @@
 
 'use client';
 import React, { useEffect, useState } from 'react';
-import { useAuth } from '../AuthProvider/useAuth';
+
+import {useAuth} from '../AuthProvider/useAuth';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import $ from 'jquery'; // Import jQuery
+import { useRouter } from 'next/navigation'
 
 
 const Header = () => {
@@ -217,8 +219,12 @@ const Header = () => {
     };
   }, []);
 
+  const router = useRouter();
+  
   const handleLogout = () => {
     logout();
+    router.push("/login");
+
   };
 
   useEffect(() => {
@@ -251,7 +257,7 @@ const Header = () => {
   useEffect(()=>{
     const session = sessionStorage.getItem("token");
     if (session) {
-      //console.log("something changed", isLoggedIn);
+      //console.log("something changed");
       setLoggedInStatus(true);
       //router.replace('/about');
     } else {
