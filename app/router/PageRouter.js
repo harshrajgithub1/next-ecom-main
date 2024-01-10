@@ -6,7 +6,7 @@ export const PageRouter = () => {
         <Router>
             <Routes>
                 <Route exact path="/" element={<Login />} />
-                <Route exact path="/registration" element={<Register />} />
+                <Route exact path="/registration" element={<Registration />} />
                <Route element={<ProtectedRouteAdmin/>}>
                   {/* <Route exact path="/adminPage" element={<Page />} /> */}
 </Route>

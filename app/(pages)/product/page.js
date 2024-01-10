@@ -121,19 +121,19 @@ const Product = () => {
                         <div className="sidebar-inpup">
                             <div className="form-group">
                                 <input type="checkbox" id="a1"/>
-                                <label for="a1">System</label>
+                                <label htmlFor="a1">System</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="a2"/>
-                                <label for="a2">Compact</label>
+                                <label htmlFor="a2">Compact</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="a3"/>
-                                <label for="a3">Individual</label>
+                                <label htmlFor="a3">Individual</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="a4"/>
-                                <label for="a4">All</label>
+                                <label htmlFor="a4">All</label>
                             </div>
                         </div>
                     </div>
@@ -146,15 +146,15 @@ const Product = () => {
                         <div className="sidebar-inpup">
                             <div className="form-group">
                                 <input type="checkbox" id="b1"/>
-                                <label for="b1">Affordable</label>
+                                <label htmlFor="b1">Affordable</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="b2"/>
-                                <label for="b2">Mid-range</label>
+                                <label htmlFor="b2">Mid-range</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="b3"/>
-                                <label for="b3">Expensive</label>
+                                <label htmlFor="b3">Expensive</label>
                             </div>
                         </div>
                     </div>
@@ -167,15 +167,15 @@ const Product = () => {
                         <div className="sidebar-inpup">
                             <div className="form-group">
                                 <input type="checkbox" id="c1"/>
-                                <label for="c1">Manufacturer</label>
+                                <label htmlFor="c1">Manufacturer</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="c2"/>
-                                <label for="c2">Manufacturer</label>
+                                <label htmlFor="c2">Manufacturer</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="a3"/>
-                                <label for="a3">Manufacturer</label>
+                                <label htmlFor="a3">Manufacturer</label>
                             </div>
                         </div>
                     </div>
@@ -188,19 +188,19 @@ const Product = () => {
                         <div className="sidebar-inpup">
                             <div className="form-group">
                                 <input type="checkbox" id="d1"/>
-                                <label for="d1">iOS</label>
+                                <label htmlFor="d1">iOS</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="d2"/>
-                                <label for="d2">Android</label>
+                                <label htmlFor="d2">Android</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="d3"/>
-                                <label for="d3">Windows</label>
+                                <label htmlFor="d3">Windows</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="d4"/>
-                                <label for="d4">All</label>
+                                <label htmlFor="d4">All</label>
                             </div>
                         </div>
                     </div>
@@ -213,19 +213,19 @@ const Product = () => {
                         <div className="sidebar-inpup">
                             <div className="form-group">
                                 <input type="checkbox" id="e1"/>
-                                <label for="e1">Apple</label>
+                                <label htmlFor="e1">Apple</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="e2"/>
-                                <label for="e2">Google</label>
+                                <label htmlFor="e2">Google</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="e3"/>
-                                <label for="e3">Native Apps</label>
+                                <label htmlFor="e3">Native Apps</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="e4"/>
-                                <label for="e4">All</label>
+                                <label htmlFor="e4">All</label>
                             </div>
                         </div>
                     </div>
@@ -238,15 +238,15 @@ const Product = () => {
                         <div className="sidebar-inpup">
                             <div className="form-group">
                                 <input type="checkbox" id="f1"/>
-                                <label for="f1">Easy</label>
+                                <label htmlFor="f1">Easy</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="f2"/>
-                                <label for="f2">Medium</label>
+                                <label htmlFor="f2">Medium</label>
                             </div>
                             <div className="form-group">
                                 <input type="checkbox" id="f3"/>
-                                <label for="f3">Difficult</label>
+                                <label htmlFor="f3">Difficult</label>
                             </div>
                         </div>
                     </div>
