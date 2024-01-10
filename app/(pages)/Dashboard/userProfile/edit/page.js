@@ -11,8 +11,8 @@ const Edit = () => {
     let editData='';
   
     const { register, handleSubmit, setValue } = useForm();
-    const [file, setFile] = useState();
-  
+    const [file, setFile]=useState()
+   
    useEffect(() => {
     const fetchData = async () => {
         const session =  JSON.parse(sessionStorage.getItem('token'));
@@ -50,8 +50,8 @@ const Edit = () => {
 
   console.log(editData);
   const handleInputChange = (name, value) => {
-    alert("Saa");
-    console.log(value)
+    
+    //console.log(value)
     // You can use setValue to dynamically update the form values
     setValue(name, value);
   };
@@ -62,6 +62,9 @@ const Edit = () => {
   const onSubmit = async (formData) => {
     //event.preventDefault();
     console.log(formData);
+
+    
+
 
     try {
       const session = JSON.parse(sessionStorage.getItem('token'));
@@ -148,7 +151,7 @@ const Edit = () => {
             </div>
 
             {/*editData && ( */}
-             <form className="mb-5" method="post" onSubmit={handleSubmit(onSubmit)}>
+             <form className="mb-5" method="post" onSubmit={handleSubmit(onSubmit)}encType='multipart/form-data'>
                 
                 <div className="row">
                 <div className="col-lg-6">
@@ -222,6 +225,18 @@ const Edit = () => {
                             <input type="text" className='form-control' placeholder="12/3 Mirpur Dhaka Bangladesh"  {...register('address')} onChange={(e) => handleInputChange('address', e.target.value)}/>
                         </div>
                     </div>
+                    <div className="col-lg-6">
+                        <div className="dashboard_profile_form">
+                            <label>Address</label>
+                            <input type="text" className='form-control' placeholder="12/3 Mirpur Dhaka Bangladesh"  {...register('address')} onChange={(e) => handleInputChange('address', e.target.value)}/>
+                        </div>
+                    </div>
+
+                    <div className="form-group">
+                                        <label className="form-label" >Profile Image</label>
+                                        <input type="file" name="file"  onChange={(e)=>setFile(e.target.files?.[0])} accept="image/gif, image/jpeg, image/png" />
+                                    </div>
+
                     <div className="col-lg-12">
                         <button  type="submit" className="btn btn-primary  btn--theme common_btn">Save Change</button>
                     </div>

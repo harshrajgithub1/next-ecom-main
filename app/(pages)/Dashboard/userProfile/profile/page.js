@@ -84,6 +84,7 @@ const Profile = () => {
                   <label htmlFor="profile_photo">
                     <i className="jki jki-camera-solid"></i>
                   </label>
+                  
                   <input id="profile_photo" type="file" className="d-none" />
                 </div>
                 <h4>User Name</h4>
